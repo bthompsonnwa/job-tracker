@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NWA School Jobs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:       #0c1220;
+    --surface:  #141d2e;
+    --border:   #1f2d44;
+    --text:     #e8edf5;
+    --muted:    #6b7f99;
+    --accent:   #4f9cf9;
+    --green:    #22d3a0;
+    --amber:    #f59e0b;
+    --red:      #f87171;
+    --pill-bg:  #1a2740;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* ── Header ─────────────────────────────────────────── */
+  .header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 16px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .site-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    color: var(--text);
+    line-height: 1.1;
+  }
+
+  .site-subtitle {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+
+  .meta-pill {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--pill-bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  .meta-pill span { color: var(--accent); font-weight: 600; }
+
+  /* ── Filter bar ─────────────────────────────────────── */
+  .filter-scroll {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  .filter-scroll::-webkit-scrollbar { display: none; }
+
+  .filter-btn {
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--pill-bg);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all .15s;
+    white-space: nowrap;
+  }
+  .filter-btn:hover  { border-color: var(--accent); color: var(--accent); }
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  /* ── Search ─────────────────────────────────────────── */
+  .search-wrap {
+    padding: 12px 16px 0;
+  }
+  .search-input {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color .15s;
+  }
+  .search-input::placeholder { color: var(--muted); }
+  .search-input:focus { border-color: var(--accent); }
+
+  /* ── Job list ───────────────────────────────────────── */
+  .job-list {
+    padding: 12px 16px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .job-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    transition: border-color .15s, transform .1s;
+    position: relative;
+  }
+  .job-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .job-card:active { transform: translateY(0); }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .job-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.3;
+    flex: 1;
+  }
+
+  .new-badge {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    background: var(--green);
+    color: #052e1c;
+    padding: 2px 7px;
+    border-radius: 999px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+
+  .badge-district {
+    background: rgba(79,156,249,.12);
+    color: var(--accent);
+    border: 1px solid rgba(79,156,249,.25);
+  }
+
+  .badge-match {
+    background: rgba(34,211,160,.1);
+    color: var(--green);
+    border: 1px solid rgba(34,211,160,.2);
+  }
+
+  .badge-platform {
+    background: var(--pill-bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  .card-detail {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .card-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 16px;
+    opacity: .4;
+  }
+
+  /* ── Stats bar ──────────────────────────────────────── */
+  .stats-bar {
+    display: flex;
+    gap: 20px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .stats-bar strong { color: var(--text); }
+
+  /* ── Empty / loading ────────────────────────────────── */
+  .empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+  }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; }
+  .empty h3 { color: var(--text); font-family: 'Syne', sans-serif; margin-bottom: 6px; }
+
+  .loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ── Last updated ───────────────────────────────────── */
+  .last-updated {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    padding: 0 16px 24px;
+  }
+
+  @media (min-width: 600px) {
+    .header { padding: 24px 24px 16px; }
+    .search-wrap { padding: 14px 24px 0; }
+    .job-list { padding: 14px 24px 40px; }
+    .stats-bar { padding: 10px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="site-title">NWA School Jobs</div>
+      <div class="site-subtitle">16 districts · filtered for your skillset</div>
+    </div>
+    <div class="meta-pill" id="total-pill">loading…</div>
+  </div>
+  <div class="filter-scroll" id="filter-bar">
+    <button class="filter-btn active" data-district="all">All Districts</button>
+  </div>
+</div>
+
+<div class="search-wrap">
+  <input class="search-input" id="search" type="search"
+         placeholder="Search jobs…" autocomplete="off">
+</div>
+
+<div class="stats-bar" id="stats-bar">
+  <span>Loading…</span>
+</div>
+
+<div class="job-list" id="job-list">
+  <div class="loading">Fetching jobs…</div>
+</div>
+
+<div class="last-updated" id="last-updated"></div>
+
+<script>
+// District → short abbreviation for badges
+const DISTRICT_SHORT = {
+  "Bentonville SD":           "BPS",
+  "Farmington SD":            "FSD",
+  "Elkins SD":                "ESD",
+  "Greenland SD":             "GRN",
+  "Decatur SD":               "DEC",
+  "Gravette SD":              "GVT",
+  "Gentry SD":                "GNT",
+  "District SD":              "DST",
+  "Huntsville SD":            "HSD",
+  "Pea Ridge SD":             "PRS",
+  "Prairie Grove SD":         "PGS",
+  "Rogers SD":                "RSD",
+  "Siloam Springs SD":        "SSS",
+  "Lincoln Consolidated SD":  "LIN",
+  "Springdale SD":            "SPD",
+  "West Fork SD":             "WFS",
+};
+
+let allJobs      = [];
+let activeFilter = "all";
+let searchQuery  = "";
+const today      = new Date().toISOString().split("T")[0];
+
+async function loadJobs() {
+  try {
+    const r    = await fetch("jobs.json?t=" + Date.now());
+    const data = await r.json();
+    allJobs = data.jobs || [];
+    renderAll();
+    document.getElementById("last-updated").textContent =
+      data.last_updated
+        ? "Last updated: " + new Date(data.last_updated).toLocaleString()
+        : "Not yet updated — run the scraper first.";
+    buildFilters();
+  } catch (e) {
+    document.getElementById("job-list").innerHTML =
+      `<div class="empty">
+        <div class="empty-icon">⚠️</div>
+        <h3>Couldn't load jobs</h3>
+        <p>Run the scraper to generate jobs.json,<br>or check your GitHub Pages setup.</p>
+      </div>`;
+  }
+}
+
+function buildFilters() {
+  const districts = [...new Set(allJobs.map(j => j.district))].sort();
+  const bar       = document.getElementById("filter-bar");
+  // clear existing except "All"
+  bar.querySelectorAll("[data-district]:not([data-district='all'])").forEach(el => el.remove());
+  districts.forEach(d => {
+    const btn = document.createElement("button");
+    btn.className    = "filter-btn";
+    btn.dataset.district = d;
+    btn.textContent  = DISTRICT_SHORT[d] || d.replace(" SD", "");
+    btn.title        = d;
+    btn.onclick      = () => setFilter(d);
+    bar.appendChild(btn);
+  });
+}
+
+function setFilter(district) {
+  activeFilter = district;
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.district === district);
+  });
+  renderAll();
+}
+
+document.getElementById("search").addEventListener("input", e => {
+  searchQuery = e.target.value.toLowerCase();
+  renderAll();
+});
+
+document.querySelector("[data-district='all']").onclick = () => setFilter("all");
+
+function filtered() {
+  return allJobs.filter(j => {
+    const matchDistrict = activeFilter === "all" || j.district === activeFilter;
+    const matchSearch   = !searchQuery ||
+      j.title.toLowerCase().includes(searchQuery) ||
+      j.district.toLowerCase().includes(searchQuery) ||
+      (j.location || "").toLowerCase().includes(searchQuery) ||
+      (j.match_reason || "").toLowerCase().includes(searchQuery);
+    return matchDistrict && matchSearch;
+  });
+}
+
+function renderAll() {
+  const jobs    = filtered();
+  const newOnes = jobs.filter(j => j.first_seen === today);
+  const listEl  = document.getElementById("job-list");
+  const statsEl = document.getElementById("stats-bar");
+  const pillEl  = document.getElementById("total-pill");
+
+  pillEl.innerHTML = `<span>${allJobs.length}</span> matches`;
+
+  statsEl.innerHTML = `
+    <span><strong>${jobs.length}</strong> showing</span>
+    <span><strong>${newOnes.length}</strong> new today</span>
+    <span><strong>${allJobs.length}</strong> total tracked</span>
+  `;
+
+  if (!jobs.length) {
+    listEl.innerHTML = `
+      <div class="empty">
+        <div class="empty-icon">🔍</div>
+        <h3>${allJobs.length ? "No matches" : "No jobs yet"}</h3>
+        <p>${allJobs.length
+          ? "Try clearing your filter or search."
+          : "Run the scraper to populate this dashboard."}</p>
+      </div>`;
+    return;
+  }
+
+  // Sort: new today first, then alphabetical by district
+  const sorted = [...jobs].sort((a, b) => {
+    const aN = a.first_seen === today ? 0 : 1;
+    const bN = b.first_seen === today ? 0 : 1;
+    if (aN !== bN) return aN - bN;
+    return a.district.localeCompare(b.district);
+  });
+
+  listEl.innerHTML = sorted.map(j => {
+    const isNew  = j.first_seen === today;
+    const det    = [j.location, j.posted_date ? "Posted " + j.posted_date : ""]
+                    .filter(Boolean).join(" · ");
+    return `
+    <a class="job-card" href="${j.url}" target="_blank" rel="noopener">
+      <div class="card-top">
+        <div class="job-title">${escHtml(j.title)}</div>
+        ${isNew ? '<span class="new-badge">New</span>' : ""}
+      </div>
+      <div class="card-meta">
+        <span class="badge badge-district">${escHtml(DISTRICT_SHORT[j.district] || j.district)}</span>
+        ${j.match_reason && j.match_reason !== "no_match"
+          ? `<span class="badge badge-match">${escHtml(j.match_reason)}</span>` : ""}
+        <span class="badge badge-platform">${escHtml(j.platform)}</span>
+      </div>
+      ${det ? `<div class="card-detail">${escHtml(det)}</div>` : ""}
+      <span class="card-arrow">›</span>
+    </a>`;
+  }).join("");
+}
+
+function escHtml(s) {
+  return String(s || "")
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+loadJobs();
+</script>
+</body>
+</html>
