@@ -1,0 +1,82 @@
+{
+  "last_updated": "2026-05-04T03:02",
+  "jobs": [
+    {
+      "id": "0adb1fe58bee",
+      "title": "Library Media Specialist",
+      "district": "Greenland SD",
+      "location": "Greenland School District Administration Office",
+      "url": "https://greenlandschools.tedk12.com/hire/ViewJob.aspx?JobID=163",
+      "platform": "PowerSchool",
+      "match_reason": "library media",
+      "posted_date": "03/12/2026",
+      "first_seen": "2026-05-04"
+    },
+    {
+      "id": "b77195453ad0",
+      "title": "21 CCLC Site Coordinator (2026-27 SY)",
+      "district": "Springdale SD",
+      "location": "George Junior High",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013866",
+      "platform": "WinOcular",
+      "match_reason": "cclc",
+      "posted_date": "013866",
+      "first_seen": "2026-05-04"
+    },
+    {
+      "id": "ce2847b0e16d",
+      "title": "21st CCLC Staff",
+      "district": "Springdale SD",
+      "location": "George Junior High",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013533",
+      "platform": "WinOcular",
+      "match_reason": "cclc",
+      "posted_date": "013533",
+      "first_seen": "2026-05-04"
+    },
+    {
+      "id": "2036e00d8ef6",
+      "title": "Part Time CCLC Tutor",
+      "district": "Springdale SD",
+      "location": "Sonora Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013683",
+      "platform": "WinOcular",
+      "match_reason": "cclc",
+      "posted_date": "013683",
+      "first_seen": "2026-05-04"
+    },
+    {
+      "id": "f68e17b35885",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013550",
+      "platform": "WinOcular",
+      "match_reason": "cclc",
+      "posted_date": "013550",
+      "first_seen": "2026-05-04"
+    },
+    {
+      "id": "a195ed7077c0",
+      "title": "Library Media Specialist (1.0 FTE)",
+      "district": "Springdale SD",
+      "location": "Shaw Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013954",
+      "platform": "WinOcular",
+      "match_reason": "library media",
+      "posted_date": "013954",
+      "first_seen": "2026-05-04"
+    },
+    {
+      "id": "c4f2fa8c6155",
+      "title": "Middle School/High School Library Media Specialist",
+      "district": "West Fork SD",
+      "location": "West Fork, AR",
+      "url": "https://flowpoint.wftigers.org/careers/opportunities/entry/1753/",
+      "platform": "FlowPoint",
+      "match_reason": "library media",
+      "posted_date": "",
+      "first_seen": "2026-05-04"
+    }
+  ]
+}
