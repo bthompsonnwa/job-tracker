@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-04T18:07",
+  "last_updated": "2026-05-05T03:15",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -8,8 +8,9 @@
       "location": "George Junior High",
       "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013866",
       "platform": "WinOcular",
+      "category": "school",
       "match_reason": "cclc",
-      "posted_date": "013866",
+      "posted_date": "",
       "first_seen": "2026-05-04"
     },
     {
@@ -19,8 +20,9 @@
       "location": "George Junior High",
       "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013533",
       "platform": "WinOcular",
+      "category": "school",
       "match_reason": "cclc",
-      "posted_date": "013533",
+      "posted_date": "",
       "first_seen": "2026-05-04"
     },
     {
@@ -30,8 +32,9 @@
       "location": "Sonora Elementary",
       "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013683",
       "platform": "WinOcular",
+      "category": "school",
       "match_reason": "cclc",
-      "posted_date": "013683",
+      "posted_date": "",
       "first_seen": "2026-05-04"
     },
     {
@@ -41,20 +44,34 @@
       "location": "Westwood Elementary",
       "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013550",
       "platform": "WinOcular",
+      "category": "school",
       "match_reason": "cclc",
-      "posted_date": "013550",
+      "posted_date": "",
       "first_seen": "2026-05-04"
     },
     {
-      "id": "c4f2fa8c6155",
-      "title": "Middle School/High School Library Media Specialist",
-      "district": "West Fork SD",
-      "location": "West Fork, AR",
-      "url": "https://flowpoint.wftigers.org/careers/opportunities/entry/1753/",
-      "platform": "FlowPoint",
-      "match_reason": "library media",
+      "id": "ce8caed9d2f4",
+      "title": "Digital Services Librarian",
+      "district": "NWACC",
+      "location": "Benton County Campus, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Campus-Arkansas/Digital-Services-Librarian_JR-1151",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "librarian",
+      "posted_date": "Posted 7 Days Ago",
+      "first_seen": "2026-05-05"
+    },
+    {
+      "id": "534a942bb31d",
+      "title": "Youth Services Specialist",
+      "district": "City of Bella Vista",
+      "location": "Bella Vista, AR",
+      "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4057884",
+      "platform": "Paylocity",
+      "category": "community",
+      "match_reason": "youth services",
       "posted_date": "",
-      "first_seen": "2026-05-04"
+      "first_seen": "2026-05-05"
     }
   ]
 }
