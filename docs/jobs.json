@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-05T03:15",
+  "last_updated": "2026-05-05T18:05",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -50,6 +50,18 @@
       "first_seen": "2026-05-04"
     },
     {
+      "id": "30359334a452",
+      "title": "Instructional Designer",
+      "district": "NWACC",
+      "location": "NWACC, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Instructional-Designer_JR-1042",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "instructional design",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-05-05"
+    },
+    {
       "id": "ce8caed9d2f4",
       "title": "Digital Services Librarian",
       "district": "NWACC",
@@ -58,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "librarian",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-05-05"
     },
     {
