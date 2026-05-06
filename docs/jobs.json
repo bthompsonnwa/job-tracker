@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-04T18:07",
+  "last_updated": "2026-05-06T16:45",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -8,8 +8,9 @@
       "location": "George Junior High",
       "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013866",
       "platform": "WinOcular",
+      "category": "school",
       "match_reason": "cclc",
-      "posted_date": "013866",
+      "posted_date": "",
       "first_seen": "2026-05-04"
     },
     {
@@ -19,8 +20,9 @@
       "location": "George Junior High",
       "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013533",
       "platform": "WinOcular",
+      "category": "school",
       "match_reason": "cclc",
-      "posted_date": "013533",
+      "posted_date": "",
       "first_seen": "2026-05-04"
     },
     {
@@ -30,31 +32,341 @@
       "location": "Sonora Elementary",
       "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013683",
       "platform": "WinOcular",
+      "category": "school",
       "match_reason": "cclc",
-      "posted_date": "013683",
-      "first_seen": "2026-05-04"
-    },
-    {
-      "id": "f68e17b35885",
-      "title": "21CCLC Afterschool Program Staff",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013550",
-      "platform": "WinOcular",
-      "match_reason": "cclc",
-      "posted_date": "013550",
-      "first_seen": "2026-05-04"
-    },
-    {
-      "id": "c4f2fa8c6155",
-      "title": "Middle School/High School Library Media Specialist",
-      "district": "West Fork SD",
-      "location": "West Fork, AR",
-      "url": "https://flowpoint.wftigers.org/careers/opportunities/entry/1753/",
-      "platform": "FlowPoint",
-      "match_reason": "library media",
       "posted_date": "",
       "first_seen": "2026-05-04"
+    },
+    {
+      "id": "9d5a2b37cbae",
+      "title": "Community Programs",
+      "district": "Thaden School",
+      "location": "Bentonville, AR",
+      "url": "https://www.thadenschool.org/community-programs",
+      "platform": "Squarespace",
+      "category": "school",
+      "match_reason": "community program",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "d77bc52d4a22",
+      "title": "Audiovisual & XR Studios Manager",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Audiovisual---XR-Studios-Manager_R0085186",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "audiovisual",
+      "posted_date": "Posted 2 Days Ago",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "30359334a452",
+      "title": "Instructional Designer",
+      "district": "NWACC",
+      "location": "NWACC, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Instructional-Designer_JR-1042",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "instructional design",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "ce8caed9d2f4",
+      "title": "Digital Services Librarian",
+      "district": "NWACC",
+      "location": "Benton County Campus, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Campus-Arkansas/Digital-Services-Librarian_JR-1151",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "librarian",
+      "posted_date": "Posted 9 Days Ago",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "ceda56794dc8",
+      "title": "Project Program Specialist",
+      "district": "Arkansas State Univ.",
+      "location": "",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "platform": "Taleo",
+      "category": "community",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "4cc555b15194",
+      "title": "Communications Specialist",
+      "district": "Arkansas State Univ.",
+      "location": "",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "platform": "Taleo",
+      "category": "community",
+      "match_reason": "communications specialist",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "534a942bb31d",
+      "title": "Youth Services Specialist",
+      "district": "City of Bella Vista",
+      "location": "Bella Vista, AR",
+      "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4057884",
+      "platform": "Paylocity",
+      "category": "community",
+      "match_reason": "youth services",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "cd4070c35c73",
+      "title": "Assistive Technology Specialist",
+      "district": "UCA",
+      "location": "Conway, AR",
+      "url": "https://jobs.uca.edu/postings/19048",
+      "platform": "PeopleAdmin",
+      "category": "community",
+      "match_reason": "technology specialist",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "70f802097f9f",
+      "title": "Social Media Content Creator & Manager",
+      "district": "UCA",
+      "location": "Conway, AR",
+      "url": "https://jobs.uca.edu/postings/18997",
+      "platform": "PeopleAdmin",
+      "category": "community",
+      "match_reason": "content creator",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "22ad911cb9a7",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388099700/",
+      "platform": "SuccessFactors",
+      "category": "community",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "25205f9ab023",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388099900/",
+      "platform": "SuccessFactors",
+      "category": "community",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    },
+    {
+      "id": "820c2e3221b3",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-71854/1388099000/",
+      "platform": "SuccessFactors",
+      "category": "community",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-05-06"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Bentonville SD",
+      "url": "https://www.applitrack.com/bentonville/onlineapp/default.aspx?all=1",
+      "category": "school"
+    },
+    {
+      "name": "Farmington SD",
+      "url": "https://www.applitrack.com/farmcards/onlineapp/jobpostings/view.asp?all=1",
+      "category": "school"
+    },
+    {
+      "name": "Elkins SD",
+      "url": "https://elkinsdistrict.tedk12.com/hire/index.aspx",
+      "category": "school"
+    },
+    {
+      "name": "Greenland SD",
+      "url": "https://greenlandschools.tedk12.com/hire/index.aspx",
+      "category": "school"
+    },
+    {
+      "name": "Decatur SD",
+      "url": "https://decatursd.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Gravette SD",
+      "url": "https://gravette.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Gentry SD",
+      "url": "https://gentry.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "District SD",
+      "url": "https://district.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Huntsville SD",
+      "url": "https://hsd.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Pea Ridge SD",
+      "url": "https://pearidge.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Prairie Grove SD",
+      "url": "https://pgtigers.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Rogers SD",
+      "url": "https://rogersschools.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Siloam Springs SD",
+      "url": "https://siloamschools.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Lincoln Consolidated SD",
+      "url": "https://careers.smartrecruiters.com/Lincoln2",
+      "category": "school"
+    },
+    {
+      "name": "Springdale SD",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsJobsMain",
+      "category": "school"
+    },
+    {
+      "name": "West Fork SD",
+      "url": "https://flowpoint.wftigers.org/careers/opportunities/",
+      "category": "school"
+    },
+    {
+      "name": "LISA Academy",
+      "url": "https://lisaacademy.schoolspring.com/",
+      "category": "school"
+    },
+    {
+      "name": "Haas Hall Academy",
+      "url": "https://haashall.org/welcome__trashed/employment/",
+      "category": "school"
+    },
+    {
+      "name": "Thaden School",
+      "url": "https://www.thadenschool.org/about/career-opportunities",
+      "category": "school"
+    },
+    {
+      "name": "Rogers (City)",
+      "url": "https://www.rogersar.gov/Jobs.aspx",
+      "category": "community"
+    },
+    {
+      "name": "Bentonville (City)",
+      "url": "https://www.bentonvillear.com/jobs.aspx",
+      "category": "community"
+    },
+    {
+      "name": "City of Bella Vista",
+      "url": "https://recruiting.paylocity.com/recruiting/jobs/All/b1e8c19e-977f-41ec-89e7-a138ab6e72eb/City-of-Bella-Vista",
+      "category": "community"
+    },
+    {
+      "name": "AR State Jobs",
+      "url": "https://arcareers.arkansas.gov/search/",
+      "category": "community"
+    },
+    {
+      "name": "Springdale Public Library",
+      "url": "https://springdalelibrary.org/employment/",
+      "category": "community"
+    },
+    {
+      "name": "Jones Center",
+      "url": "https://secure7.saashr.com/ta/6214802.careers?CareersSearch=&ein_id=119006097&lang=en-US",
+      "category": "community"
+    },
+    {
+      "name": "University of Arkansas (UAF)",
+      "url": "https://uasys.wd5.myworkdayjobs.com/UAF_External_Career_Site",
+      "category": "community"
+    },
+    {
+      "name": "NWACC",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/NWACC_External_Career_Site",
+      "category": "community"
+    },
+    {
+      "name": "UA System",
+      "url": "https://uasys.wd5.myworkdayjobs.com/UASYS",
+      "category": "community"
+    },
+    {
+      "name": "Arkansas State Univ.",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "category": "community"
+    },
+    {
+      "name": "Arkansas Tech Univ.",
+      "url": "https://atu.csod.com/ux/ats/careersite/1/home?c=atu",
+      "category": "community"
+    },
+    {
+      "name": "UCA",
+      "url": "https://jobs.uca.edu/postings/search",
+      "category": "community"
+    },
+    {
+      "name": "Hendrix College",
+      "url": "https://www.hendrix.edu/humanresources/jobs.aspx",
+      "category": "community"
+    },
+    {
+      "name": "JBU (Staff)",
+      "url": "https://www.jbu.edu/human-resources/staff-job-listings/",
+      "category": "community"
+    },
+    {
+      "name": "JBU (Faculty)",
+      "url": "https://www.jbu.edu/human-resources/faculty-job-listings/",
+      "category": "community"
+    },
+    {
+      "name": "Carl Albert College",
+      "url": "https://carlalbert.edu/about-casc/job-openings/",
+      "category": "community"
+    },
+    {
+      "name": "ArcBest",
+      "url": "https://careers.arcb.com/careersmarketplace/OpenPositions/",
+      "category": "community"
+    },
+    {
+      "name": "ADP (unknown org)",
+      "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=a75698d1-4927-42e2-8b24-4b1e4d60fa54",
+      "category": "community"
     }
   ]
 }
