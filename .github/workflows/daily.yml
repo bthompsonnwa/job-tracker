@@ -25,9 +25,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Install Playwright browsers
-        run: |
-          sudo apt-get install -y libasound2t64 libgbm1 libnss3 libxss1 libasound2t64 libatk-bridge2.0-0 libgtk-3-0
-          playwright install chromium
+        run: playwright install chromium
 
       - name: Run scraper
         env:
@@ -38,6 +36,13 @@ jobs:
         run: |
           git config --global user.name  "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
           git add docs/jobs.json
+      
+          # Only commit if something changed
           git diff --cached --quiet || git commit -m "chore: update jobs $(date -I)"
-          git push
+      
+          # 🔑 Pull latest changes to avoid push rejection
+          git pull --rebase origin main
+      
+          git push origin main
