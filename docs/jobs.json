@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-07T02:36",
+  "last_updated": "2026-05-07T02:49",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -122,11 +122,11 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "1994f1fa02b9",
+      "id": "693a9d6330c4",
       "title": "Information Systems Security Specialist",
       "district": "Arkansas State Univ.",
       "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/requisition.jsp?org=ARKASTAT2&cws=40&rid=38710",
       "platform": "Taleo",
       "category": "it",
       "match_reason": "information systems",
@@ -134,11 +134,11 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "ceda56794dc8",
+      "id": "9d55b6a65596",
       "title": "Project Program Specialist",
       "district": "Arkansas State Univ.",
       "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/requisition.jsp?org=ARKASTAT2&cws=40&rid=38687",
       "platform": "Taleo",
       "category": "community",
       "match_reason": "program specialist",
@@ -146,11 +146,11 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "4cc555b15194",
+      "id": "04190ad1e02d",
       "title": "Communications Specialist",
       "district": "Arkansas State Univ.",
       "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/requisition.jsp?org=ARKASTAT2&cws=40&rid=38689",
       "platform": "Taleo",
       "category": "community",
       "match_reason": "communications specialist",
