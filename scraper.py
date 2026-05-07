@@ -587,12 +587,23 @@ def scrape_taleo_rss(name, rss_url, base_url, category="community"):
         r    = requests.get(rss_url, headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, "xml")
         for item in soup.find_all("item"):
-            title    = (item.find("title").text or "").strip()
-            link_tag = item.find("link")
-            url      = (link_tag.next_sibling.strip()
-                        if link_tag and link_tag.next_sibling else base_url)
-            if not url or not url.startswith("http"):
-                url = base_url
+            title = (item.find("title").text or "").strip()
+
+            # <link> in RSS XML is notoriously tricky
+            url = base_url
+            link = item.find("link")
+            if link:
+                url = (link.next_sibling or "").strip() or (link.string or "").strip() or base_url
+            if not url.startswith("http"):
+                guid = item.find("guid")
+                url  = guid.text.strip() if guid else base_url
+
+            log.info(f"{name} item: title='{title}' url='{url[:60]}'")
+
+            if not title:
+                log.warning(f"{name}: skipping item with blank title")
+                continue
+
             cat, reason = categorize(title, default_category=category)
             if cat:
                 jobs.append(make_job(name, title, url, "Taleo",
