@@ -593,7 +593,9 @@ def scrape_taleo_rss(name, rss_url, base_url, category="community"):
             url = base_url
             link = item.find("link")
             if link:
-                url = (link.next_sibling or "").strip() or (link.string or "").strip() or base_url
+                raw = (link.next_sibling or "").strip() or (link.string or "").strip() or ""
+                m   = re.search(r'https?://[^\s\[\]_*`?]+', raw)
+                url = m.group(0) if m else base_url
             if not url.startswith("http"):
                 guid = item.find("guid")
                 url  = guid.text.strip() if guid else base_url
