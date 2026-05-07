@@ -196,9 +196,9 @@ ALL_SOURCES = [
     {"name": "ADP (NWA)",               "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=a75698d1-4927-42e2-8b24-4b1e4d60fa54", "category": "community"},
     # IT
     {"name": "VA Arkansas (USAJobs)",   "url": "https://www.usajobs.gov/Search/Results/?j=2299&j=2210&j=1550&j=1598&l=arkansas&d=VA&p=1",   "category": "it"},
-    {"name": "J.B. Hunt",               "url": "https://jbhunt.wd1.myworkdayjobs.com/JBH_Jobs",                                              "category": "it"},
     {"name": "Indeed (IT — NW Arkansas)",      "url": "https://www.indeed.com/jobs?q=IT+technician&l=Fayetteville+AR&radius=30",   "category": "it"},
     {"name": "Indeed (Skillset — NW Arkansas)", "url": "https://www.indeed.com/jobs?q=makerspace&l=Fayetteville+AR&radius=50",      "category": "community"},
+    {"name": "J.B. Hunt",               "url": "https://jbhunt.wd1.myworkdayjobs.com/JBH_Jobs",                                              "category": "it"},
 ]
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -880,22 +880,25 @@ def scrape_usajobs_va():
     log.info(f"{name}: {len(jobs)} jobs")
     return jobs
 
+
 def scrape_indeed_rss():
     """Indeed RSS — multiple targeted searches, deduped by URL."""
     SEARCHES = [
-        # IT searches → tagged 'it'
-        ("IT technician NW Arkansas",     "https://rss.indeed.com/rss?q=IT+technician&l=Fayetteville+AR&radius=30",          "it"),
-        ("help desk NW Arkansas",          "https://rss.indeed.com/rss?q=help+desk&l=Fayetteville+AR&radius=30",              "it"),
-        ("desktop support NW Arkansas",    "https://rss.indeed.com/rss?q=desktop+support&l=Fayetteville+AR&radius=30",        "it"),
-        ("sysadmin NW Arkansas",           "https://rss.indeed.com/rss?q=systems+administrator&l=Fayetteville+AR&radius=30",  "it"),
-        ("cybersecurity NW Arkansas",      "https://rss.indeed.com/rss?q=cybersecurity&l=Fayetteville+AR&radius=30",          "it"),
-        # Primary skillset searches → let keyword filter decide category
-        ("makerspace NW Arkansas",         "https://rss.indeed.com/rss?q=makerspace&l=Fayetteville+AR&radius=50",             "community"),
-        ("STEM coordinator NW Arkansas",   "https://rss.indeed.com/rss?q=STEM+coordinator&l=Fayetteville+AR&radius=50",       "community"),
-        ("instructional technology NWA",   "https://rss.indeed.com/rss?q=instructional+technology&l=Fayetteville+AR&radius=50","community"),
-        ("media specialist NW Arkansas",   "https://rss.indeed.com/rss?q=media+specialist&l=Fayetteville+AR&radius=50",       "community"),
-        ("CTE teacher NW Arkansas",        "https://rss.indeed.com/rss?q=CTE+teacher&l=Fayetteville+AR&radius=50",            "school"),
-        ("audio visual technician NWA",    "https://rss.indeed.com/rss?q=audio+visual+technician&l=Fayetteville+AR&radius=50","community"),
+        # IT → always tagged 'it'
+        ("IT technician",          "https://rss.indeed.com/rss?q=IT+technician&l=Fayetteville+AR&radius=30",           "it"),
+        ("help desk",              "https://rss.indeed.com/rss?q=help+desk&l=Fayetteville+AR&radius=30",               "it"),
+        ("desktop support",        "https://rss.indeed.com/rss?q=desktop+support&l=Fayetteville+AR&radius=30",         "it"),
+        ("systems administrator",  "https://rss.indeed.com/rss?q=systems+administrator&l=Fayetteville+AR&radius=30",   "it"),
+        ("cybersecurity",          "https://rss.indeed.com/rss?q=cybersecurity&l=Fayetteville+AR&radius=30",           "it"),
+        ("network administrator",  "https://rss.indeed.com/rss?q=network+administrator&l=Fayetteville+AR&radius=30",   "it"),
+        # Primary skillset → keyword filter decides category
+        ("makerspace",             "https://rss.indeed.com/rss?q=makerspace&l=Fayetteville+AR&radius=50",              "community"),
+        ("STEM coordinator",       "https://rss.indeed.com/rss?q=STEM+coordinator&l=Fayetteville+AR&radius=50",        "community"),
+        ("instructional technology","https://rss.indeed.com/rss?q=instructional+technology&l=Fayetteville+AR&radius=50","community"),
+        ("media specialist",       "https://rss.indeed.com/rss?q=media+specialist&l=Fayetteville+AR&radius=50",        "community"),
+        ("CTE teacher",            "https://rss.indeed.com/rss?q=CTE+teacher&l=Fayetteville+AR&radius=50",             "school"),
+        ("audio visual technician","https://rss.indeed.com/rss?q=audio+visual+technician&l=Fayetteville+AR&radius=50", "community"),
+        ("program coordinator",    "https://rss.indeed.com/rss?q=program+coordinator+education&l=Fayetteville+AR&radius=50","community"),
     ]
 
     all_jobs  = []
@@ -903,11 +906,54 @@ def scrape_indeed_rss():
 
     for label, url, default_cat in SEARCHES:
         try:
-            r    = requests.get(url, headers=HEADERS, timeout=15)
+            r = requests.get(url, headers=HEADERS, timeout=15)
             if r.status_code != 200:
-                log.warning(f"Indeed RSS {label}: HTTP {r.status_code}")
+                log.warning(f"Indeed [{label}]: HTTP {r.status_code}")
+                time.sleep(1)
                 continue
-            soup = BeautifulSoup(r.t
+            soup = BeautifulSoup(r.text, "xml")
+            count = 0
+            for item in soup.find_all("item"):
+                title    = (item.find("title").text or "").strip()
+                link_tag = item.find("link")
+                job_url  = (link_tag.next_sibling or "").strip() if link_tag else ""
+                if not job_url:
+                    guid = item.find("guid")
+                    job_url = guid.text.strip() if guid else ""
+                if not job_url or job_url in seen_urls:
+                    continue
+                seen_urls.add(job_url)
+                desc      = (item.find("description").text or "").strip()
+                desc_text = BeautifulSoup(desc, "html.parser").get_text(" ")
+
+                if default_cat == "it":
+                    combined = (title + " " + desc_text).lower()
+                    if any(kw in combined for kw in HARD_EXCLUDE_KEYWORDS):
+                        continue
+                    cat, reason = categorize_it_source(title, desc_text)
+                    if not cat:
+                        cat, reason = "it", "IT (Indeed)"
+                else:
+                    cat, reason = categorize(title, desc_text, default_category=default_cat)
+                    if not cat:
+                        continue
+
+                all_jobs.append(make_job(
+                    f"Indeed ({label})",
+                    title, job_url, "Indeed",
+                    category=cat, match_reason=reason
+                ))
+                count += 1
+
+            log.info(f"Indeed [{label}]: {count} jobs")
+            time.sleep(1)
+        except Exception as e:
+            log.error(f"Indeed [{label}]: {e}")
+
+    log.info(f"Indeed total: {len(all_jobs)} jobs")
+    return all_jobs
+
+
 # ──────────────────────────────────────────────────────────────────────────────
 # ORCHESTRATION
 # ──────────────────────────────────────────────────────────────────────────────
@@ -953,7 +999,7 @@ def scrape_all():
     log.info("── IT sources ──")
     all_jobs.extend(scrape_usajobs_va()); time.sleep(2)
     all_jobs.extend(scrape_indeed_rss()); time.sleep(2)
-    
+
     seen, unique = set(), []
     for j in all_jobs:
         if j["id"] not in seen:
