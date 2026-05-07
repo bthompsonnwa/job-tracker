@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-07T02:59",
+  "last_updated": "2026-05-07T18:20",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -38,6 +38,18 @@
       "first_seen": "2026-05-04"
     },
     {
+      "id": "1e10e842bf7e",
+      "title": "LIBRARY: Library Assistant II (Part-Time) - Teens",
+      "district": "Rogers (City)",
+      "location": "Rogers (City)",
+      "url": "https://www.rogersar.gov/Jobs.aspx?UniqueId=98&From=All&CommunityJobs=False&JobID=LIBRARY-Library-Assistant-II-PartTime-Te-239",
+      "platform": "CivicPlus",
+      "category": "school",
+      "match_reason": "library assistant",
+      "posted_date": "5/7/2026",
+      "first_seen": "2026-05-07"
+    },
+    {
       "id": "b88215d7b1c7",
       "title": "RISK REDUCTION: Permit Technician",
       "district": "Rogers (City)",
@@ -58,7 +70,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "information technology",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-05-07"
     },
     {
@@ -70,7 +82,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "network engineer",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-07"
     },
     {
@@ -82,19 +94,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "network administrator",
-      "posted_date": "Posted 2 Days Ago",
-      "first_seen": "2026-05-07"
-    },
-    {
-      "id": "d77bc52d4a22",
-      "title": "Audiovisual & XR Studios Manager",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Audiovisual---XR-Studios-Manager_R0085186",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "audiovisual",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-07"
     },
     {
@@ -106,19 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional design",
-      "posted_date": "Posted Yesterday",
-      "first_seen": "2026-05-07"
-    },
-    {
-      "id": "ce8caed9d2f4",
-      "title": "Digital Services Librarian",
-      "district": "NWACC",
-      "location": "Benton County Campus, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Campus-Arkansas/Digital-Services-Librarian_JR-1151",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "librarian",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-05-07"
     },
     {
@@ -194,11 +182,23 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "22ad911cb9a7",
+      "id": "580842791436",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388099700/",
+      "url": "https://arcareers.arkansas.gov/job/Beebe-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388098600/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-05-07"
+    },
+    {
+      "id": "820c2e3221b3",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-71854/1388099000/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
@@ -218,11 +218,11 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "820c2e3221b3",
+      "id": "22ad911cb9a7",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-71854/1388099000/",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388099700/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
