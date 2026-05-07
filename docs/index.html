@@ -16,12 +16,12 @@
     --accent:   #4f9cf9;
     --green:    #22d3a0;
     --teal:     #2dd4bf;
+    --purple:   #a78bfa;
     --pill-bg:  #1a2740;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; font-size: 15px; }
 
-  /* Header */
   .header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 16px 14px; position: sticky; top: 0; z-index: 100; }
   .header-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
   .site-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -.5px; line-height: 1.1; }
@@ -29,52 +29,50 @@
   .meta-pill { font-size: 11px; padding: 4px 10px; border-radius: 999px; background: var(--pill-bg); color: var(--muted); border: 1px solid var(--border); white-space: nowrap; }
   .meta-pill span { color: var(--accent); font-weight: 600; }
 
-  /* Nav tabs */
-  .tab-bar { display: flex; gap: 4px; margin-bottom: 10px; }
-  .tab-btn { flex: 1; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 7px 6px; border-radius: 8px; border: 1px solid var(--border); background: var(--pill-bg); color: var(--muted); cursor: pointer; transition: all .15s; text-align: center; }
+  .tab-bar { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tab-btn { flex: 1; min-width: 60px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; padding: 6px 4px; border-radius: 8px; border: 1px solid var(--border); background: var(--pill-bg); color: var(--muted); cursor: pointer; transition: all .15s; text-align: center; white-space: nowrap; }
   .tab-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .tab-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .tab-btn.active.teal { background: var(--teal); border-color: var(--teal); }
-  .tab-btn.active.amber { background: #f59e0b; border-color: #f59e0b; }
+  .tab-btn.active         { background: var(--accent);  border-color: var(--accent);  color: #fff; }
+  .tab-btn.active.teal    { background: var(--teal);    border-color: var(--teal);    color: #052e1c; }
+  .tab-btn.active.purple  { background: #7c3aed;        border-color: #7c3aed;        color: #fff; }
+  .tab-btn.active.amber   { background: #f59e0b;        border-color: #f59e0b;        color: #fff; }
 
-  /* Source filter chips */
   .filter-scroll { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
   .filter-scroll::-webkit-scrollbar { display: none; }
   .filter-btn { flex-shrink: 0; font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--pill-bg); color: var(--muted); cursor: pointer; transition: all .15s; white-space: nowrap; }
   .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
   .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
-  /* Search */
   .search-wrap { padding: 12px 16px 0; }
   .search-input { width: 100%; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 9px 14px; border-radius: 8px; outline: none; transition: border-color .15s; }
   .search-input::placeholder { color: var(--muted); }
   .search-input:focus { border-color: var(--accent); }
 
-  /* Stats bar */
-  .stats-bar { display: flex; gap: 20px; padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--muted); }
+  .stats-bar { display: flex; gap: 20px; padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--muted); flex-wrap: wrap; }
   .stats-bar strong { color: var(--text); }
 
-  /* Job cards */
   .job-list { padding: 12px 16px 32px; display: flex; flex-direction: column; gap: 10px; }
   .job-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 36px 14px 16px; text-decoration: none; display: block; transition: border-color .15s, transform .1s; position: relative; }
-  .job-card:hover { border-color: var(--accent); transform: translateY(-1px); }
-  .job-card.community:hover { border-color: var(--teal); }
+  .job-card:hover              { border-color: var(--accent); transform: translateY(-1px); }
+  .job-card.community:hover    { border-color: var(--teal); }
+  .job-card.it:hover           { border-color: var(--purple); }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
   .job-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px; color: var(--text); line-height: 1.3; flex: 1; }
   .new-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: var(--green); color: #052e1c; padding: 2px 7px; border-radius: 999px; flex-shrink: 0; margin-top: 2px; }
   .card-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
   .badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 500; }
-  .badge-district { background: rgba(79,156,249,.12); color: var(--accent); border: 1px solid rgba(79,156,249,.25); }
-  .badge-district.community { background: rgba(45,212,191,.1); color: var(--teal); border: 1px solid rgba(45,212,191,.2); }
-  .badge-match { background: rgba(34,211,160,.1); color: var(--green); border: 1px solid rgba(34,211,160,.2); }
+  .badge-district            { background: rgba(79,156,249,.12);  color: var(--accent);  border: 1px solid rgba(79,156,249,.25); }
+  .badge-district.community  { background: rgba(45,212,191,.10);  color: var(--teal);    border: 1px solid rgba(45,212,191,.20); }
+  .badge-district.it         { background: rgba(167,139,250,.10); color: var(--purple);  border: 1px solid rgba(167,139,250,.20); }
+  .badge-match    { background: rgba(34,211,160,.10);  color: var(--green);  border: 1px solid rgba(34,211,160,.20); }
   .badge-platform { background: var(--pill-bg); color: var(--muted); border: 1px solid var(--border); }
   .card-detail { font-size: 12px; color: var(--muted); margin-top: 6px; }
   .card-arrow { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 18px; opacity: .35; }
 
-  /* Section headers */
   .section-header { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 16px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 8px; display: flex; justify-content: space-between; }
-  .section-header .count { color: var(--accent); }
-  .section-header.community .count { color: var(--teal); }
+  .section-header .count          { color: var(--accent); }
+  .section-header.community .count{ color: var(--teal); }
+  .section-header.it .count       { color: var(--purple); }
 
   /* Sources panel */
   .sources-panel { padding: 12px 16px 32px; }
@@ -82,12 +80,14 @@
   .sources-group-label { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 20px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
   .sources-grid { display: flex; flex-direction: column; gap: 6px; }
   .source-row { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; transition: border-color .15s; }
-  .source-row:hover { border-color: var(--accent); }
+  .source-row:hover           { border-color: var(--accent); }
   .source-row.community:hover { border-color: var(--teal); }
+  .source-row.it:hover        { border-color: var(--purple); }
   .source-name { font-size: 13px; font-weight: 500; color: var(--text); }
   .source-count { font-size: 11px; color: var(--muted); }
-  .source-count span { color: var(--accent); font-weight: 600; }
-  .source-count span.teal { color: var(--teal); }
+  .source-count .n            { color: var(--accent); font-weight: 600; }
+  .source-count .n.teal       { color: var(--teal); }
+  .source-count .n.purple     { color: var(--purple); }
 
   .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
   .empty-icon { font-size: 40px; margin-bottom: 12px; }
@@ -98,6 +98,7 @@
     .header, .search-wrap, .stats-bar { padding-left: 24px; padding-right: 24px; }
     .job-list, .sources-panel { padding: 14px 24px 40px; }
     .sources-grid { display: grid; grid-template-columns: 1fr 1fr; }
+    .tab-btn { font-size: 13px; padding: 7px 6px; }
   }
 </style>
 </head>
@@ -107,15 +108,16 @@
   <div class="header-top">
     <div>
       <div class="site-title">NWA Job Tracker</div>
-      <div class="site-subtitle" id="source-count-label">Loading sources…</div>
+      <div class="site-subtitle" id="source-count-label">Loading…</div>
     </div>
     <div class="meta-pill" id="total-pill">loading…</div>
   </div>
   <div class="tab-bar">
-    <button class="tab-btn active"  id="tab-all"       onclick="setTab('all')">All Jobs</button>
-    <button class="tab-btn"         id="tab-school"    onclick="setTab('school')">🏫 Schools</button>
-    <button class="tab-btn teal"    id="tab-community" onclick="setTab('community')">🏛️ Community</button>
-    <button class="tab-btn amber"   id="tab-sources"   onclick="setTab('sources')">📋 Sources</button>
+    <button class="tab-btn active"        id="tab-all"       onclick="setTab('all')">All</button>
+    <button class="tab-btn"               id="tab-school"    onclick="setTab('school')">🏫 Schools</button>
+    <button class="tab-btn teal"          id="tab-community" onclick="setTab('community')">🏛️ Community</button>
+    <button class="tab-btn purple"        id="tab-it"        onclick="setTab('it')">💻 IT</button>
+    <button class="tab-btn amber"         id="tab-sources"   onclick="setTab('sources')">📋 Sources</button>
   </div>
   <div class="filter-scroll" id="filter-bar">
     <button class="filter-btn active" data-source="all" onclick="setSource('all')">All</button>
@@ -125,7 +127,6 @@
 <div class="search-wrap" id="search-wrap">
   <input class="search-input" id="search" type="search" placeholder="Search jobs, orgs, skills…" autocomplete="off">
 </div>
-
 <div class="stats-bar" id="stats-bar"><span>Loading…</span></div>
 <div id="main-content">
   <div class="job-list"><div style="text-align:center;padding:60px;color:var(--muted);">Fetching jobs…</div></div>
@@ -142,8 +143,11 @@ async function loadJobs() {
     const data = await r.json();
     allJobs    = data.jobs    || [];
     allSources = data.sources || [];
+    const sc = allSources.filter(s => s.category === "school").length;
+    const cc = allSources.filter(s => s.category === "community").length;
+    const ic = allSources.filter(s => s.category === "it").length;
     document.getElementById("source-count-label").textContent =
-      `${allSources.length} sources · filtered for your skillset`;
+      `${sc} schools · ${cc} community · ${ic} IT sources`;
     buildFilters();
     renderAll();
     document.getElementById("last-updated").textContent =
@@ -197,6 +201,7 @@ function filtered() {
     const cat = j.category || "school";
     if (activeTab === "school"    && cat !== "school")    return false;
     if (activeTab === "community" && cat !== "community") return false;
+    if (activeTab === "it"        && cat !== "it")        return false;
     if (activeSource !== "all"    && j.district !== activeSource) return false;
     if (searchQuery && ![j.title, j.district, j.location||"", j.match_reason||""].some(s => s.toLowerCase().includes(searchQuery))) return false;
     return true;
@@ -205,18 +210,19 @@ function filtered() {
 
 function renderAll() {
   const mc = document.getElementById("main-content");
-
-  if (activeTab === "sources") {
-    renderSources(mc); return;
-  }
+  if (activeTab === "sources") { renderSources(mc); return; }
 
   const jobs    = filtered();
   const newOnes = jobs.filter(j => j.first_seen === today);
+  const schoolC = allJobs.filter(j => (j.category||"school") === "school").length;
+  const commC   = allJobs.filter(j => j.category === "community").length;
+  const itC     = allJobs.filter(j => j.category === "it").length;
+
   document.getElementById("total-pill").innerHTML = `<span>${allJobs.length}</span> matches`;
   document.getElementById("stats-bar").innerHTML  =
     `<span><strong>${jobs.length}</strong> showing</span>
      <span><strong>${newOnes.length}</strong> new today</span>
-     <span><strong>${allJobs.length}</strong> total</span>`;
+     <span>🏫 ${schoolC} &nbsp;🏛️ ${commC} &nbsp;💻 ${itC}</span>`;
 
   if (!jobs.length) {
     mc.innerHTML = `<div class="job-list"><div class="empty"><div class="empty-icon">🔍</div>
@@ -228,20 +234,27 @@ function renderAll() {
   const sorted = [...jobs].sort((a,b) => {
     const aN = a.first_seen === today ? 0 : 1, bN = b.first_seen === today ? 0 : 1;
     if (aN !== bN) return aN - bN;
-    return (a.category||"school").localeCompare(b.category||"school") || a.district.localeCompare(b.district);
+    const catOrder = {school:0, community:1, it:2};
+    const ao = catOrder[a.category||"school"] ?? 9, bo = catOrder[b.category||"school"] ?? 9;
+    return ao - bo || a.district.localeCompare(b.district);
   });
 
   let html = '<div class="job-list">';
   if (activeTab === "all") {
     const school = sorted.filter(j => (j.category||"school") === "school");
     const comm   = sorted.filter(j => j.category === "community");
+    const it     = sorted.filter(j => j.category === "it");
     if (school.length) {
       html += `<div class="section-header"><span>🏫 School Districts</span><span class="count">${school.length}</span></div>`;
       html += school.map(cardHTML).join("");
     }
     if (comm.length) {
-      html += `<div class="section-header community"><span>🏛️ Libraries, Universities & City</span><span class="count" style="color:var(--teal)">${comm.length}</span></div>`;
+      html += `<div class="section-header community"><span>🏛️ Libraries, Universities & City</span><span class="count">${comm.length}</span></div>`;
       html += comm.map(cardHTML).join("");
+    }
+    if (it.length) {
+      html += `<div class="section-header it"><span>💻 IT Jobs</span><span class="count">${it.length}</span></div>`;
+      html += it.map(cardHTML).join("");
     }
   } else {
     html += sorted.map(cardHTML).join("");
@@ -252,45 +265,46 @@ function renderAll() {
 
 function renderSources(mc) {
   document.getElementById("total-pill").innerHTML = `<span>${allSources.length}</span> sources`;
-
-  // Count jobs per source
   const jobsBySource = {};
   allJobs.forEach(j => { jobsBySource[j.district] = (jobsBySource[j.district]||0) + 1; });
 
   const schools = allSources.filter(s => s.category === "school");
   const comm    = allSources.filter(s => s.category === "community");
+  const it      = allSources.filter(s => s.category === "it");
 
   function sourceRow(s) {
-    const count   = jobsBySource[s.name] || 0;
-    const isCom   = s.category === "community";
-    const countEl = count > 0
-      ? `<span class="source-count"><span class="${isCom ? 'teal' : ''}">${count}</span> match${count !== 1 ? 'es' : ''}</span>`
+    const count = jobsBySource[s.name] || 0;
+    const cls   = s.category === "community" ? "teal" : s.category === "it" ? "purple" : "";
+    const ct    = count > 0
+      ? `<span class="source-count"><span class="n ${cls}">${count}</span> match${count!==1?"es":""}</span>`
       : `<span class="source-count">0 matches</span>`;
-    return `<a class="source-row${isCom ? ' community' : ''}" href="${esc(s.url)}" target="_blank" rel="noopener">
-      <span class="source-name">${esc(s.name)}</span>${countEl}</a>`;
+    return `<a class="source-row ${s.category}" href="${esc(s.url)}" target="_blank" rel="noopener">
+      <span class="source-name">${esc(s.name)}</span>${ct}</a>`;
   }
 
   mc.innerHTML = `<div class="sources-panel">
-    <p class="sources-intro">All sources the scraper checks daily. Click any to visit the job board directly.</p>
+    <p class="sources-intro">Every source the scraper checks daily. Tap any to visit directly. Match counts show jobs found <em>for your skillset</em> — a 0 just means nothing matched the filter, not that the board is empty.</p>
     <div class="sources-group-label">🏫 School Districts (${schools.length})</div>
     <div class="sources-grid">${schools.map(sourceRow).join("")}</div>
     <div class="sources-group-label">🏛️ Libraries, Universities & City Jobs (${comm.length})</div>
     <div class="sources-grid">${comm.map(sourceRow).join("")}</div>
+    <div class="sources-group-label">💻 IT Sources (${it.length})</div>
+    <div class="sources-grid">${it.map(sourceRow).join("")}</div>
   </div>`;
 }
 
 function cardHTML(j) {
   const isNew = j.first_seen === today;
-  const isCom = j.category === "community";
+  const cat   = j.category || "school";
   const det   = [j.location, j.posted_date ? "Posted " + j.posted_date : ""].filter(Boolean).join(" · ");
   return `
-  <a class="job-card${isCom ? ' community' : ''}" href="${esc(j.url)}" target="_blank" rel="noopener">
+  <a class="job-card ${cat}" href="${esc(j.url)}" target="_blank" rel="noopener">
     <div class="card-top">
       <div class="job-title">${esc(j.title)}</div>
       ${isNew ? '<span class="new-badge">New</span>' : ""}
     </div>
     <div class="card-meta">
-      <span class="badge badge-district${isCom ? ' community' : ''}">${esc(j.district)}</span>
+      <span class="badge badge-district ${cat}">${esc(j.district)}</span>
       ${j.match_reason && j.match_reason !== "no_match" ? `<span class="badge badge-match">${esc(j.match_reason)}</span>` : ""}
       <span class="badge badge-platform">${esc(j.platform)}</span>
     </div>
