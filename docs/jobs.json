@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-07T02:19",
+  "last_updated": "2026-05-07T02:36",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -420,6 +420,16 @@
       "name": "VA Arkansas (USAJobs)",
       "url": "https://www.usajobs.gov/Search/Results/?j=2299&j=2210&j=1550&j=1598&l=arkansas&d=VA&p=1",
       "category": "it"
+    },
+    {
+      "name": "Indeed (IT \u2014 NW Arkansas)",
+      "url": "https://www.indeed.com/jobs?q=IT+technician&l=Fayetteville+AR&radius=30",
+      "category": "it"
+    },
+    {
+      "name": "Indeed (Skillset \u2014 NW Arkansas)",
+      "url": "https://www.indeed.com/jobs?q=makerspace&l=Fayetteville+AR&radius=50",
+      "category": "community"
     },
     {
       "name": "J.B. Hunt",
