@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-07T18:20",
+  "last_updated": "2026-05-08T17:02",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -70,30 +70,6 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "information technology",
-      "posted_date": "Posted 2 Days Ago",
-      "first_seen": "2026-05-07"
-    },
-    {
-      "id": "af412f4c0eeb",
-      "title": "Enterprise Network Engineer",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Enterprise-Network-Engineer_R0085096",
-      "platform": "Workday",
-      "category": "it",
-      "match_reason": "network engineer",
-      "posted_date": "Posted 3 Days Ago",
-      "first_seen": "2026-05-07"
-    },
-    {
-      "id": "336f831be738",
-      "title": "Network Administrator",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Network-Administrator_R0085097",
-      "platform": "Workday",
-      "category": "it",
-      "match_reason": "network administrator",
       "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-07"
     },
@@ -106,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional design",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-07"
     },
     {
@@ -199,30 +175,6 @@
       "district": "AR State Jobs",
       "location": "NW Arkansas",
       "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-71854/1388099000/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-05-07"
-    },
-    {
-      "id": "25205f9ab023",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388099900/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-05-07"
-    },
-    {
-      "id": "22ad911cb9a7",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388099700/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
