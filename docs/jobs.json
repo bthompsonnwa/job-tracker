@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-09T15:41",
+  "last_updated": "2026-05-10T16:16",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "information technology",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-05-07"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional design",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-05-07"
     },
     {
@@ -158,18 +158,6 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "580842791436",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Beebe-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388098600/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-05-07"
-    },
-    {
       "id": "820c2e3221b3",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
@@ -180,6 +168,18 @@
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-05-07"
+    },
+    {
+      "id": "c9e6d6ce5fdf",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Fort-Smith-HEALTH-PROGRAM-SPECIALIST-AR-72903/1387070900/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-05-10"
     }
   ],
   "sources": [
