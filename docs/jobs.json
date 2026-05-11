@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-10T16:16",
+  "last_updated": "2026-05-11T19:22",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -62,18 +62,6 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "699b8a0fa914",
-      "title": "Chief Business Officer - University Information Technology (UITS)",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Chief-Business-Officer---University-Information-Technology--UITS-_R0084961",
-      "platform": "Workday",
-      "category": "it",
-      "match_reason": "information technology",
-      "posted_date": "Posted 5 Days Ago",
-      "first_seen": "2026-05-07"
-    },
-    {
       "id": "30359334a452",
       "title": "Instructional Designer",
       "district": "NWACC",
@@ -82,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional design",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted Today",
       "first_seen": "2026-05-07"
     },
     {
@@ -170,16 +158,16 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "c9e6d6ce5fdf",
-      "title": "HEALTH PROGRAM SPECIALIST",
+      "id": "7f8721bc1a72",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fort-Smith-HEALTH-PROGRAM-SPECIALIST-AR-72903/1387070900/",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1374067200/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-05-10"
+      "first_seen": "2026-05-11"
     }
   ],
   "sources": [
