@@ -1,4 +1,4 @@
-# NWA School District Job Tracker
+# Job Tracker
 
 Automatically scrapes 16 NWA school district job boards daily, filters for
 your skillset, and sends an email digest of new matches.
@@ -94,6 +94,4 @@ then commit the change. The next run will use the updated filters.
 
 ## Troubleshooting
 - **No email received:** Check that `GMAIL_APP_PASSWORD` secret is set correctly
-- **SchoolSpring shows 0 jobs:** SchoolSpring's DOM may have changed — open
-  an issue or check the scraper logs in the Actions tab
 - **A district fails:** Look at the Actions run log for error messages
