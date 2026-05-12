@@ -25,24 +25,21 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Install Playwright browsers
-        run: playwright install chromium
+        run: |
+          sudo apt-get install -y libasound2t64
+          playwright install chromium
 
       - name: Run scraper
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ADZUNA_APP_ID:      ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY:     ${{ secrets.ADZUNA_APP_KEY }}
         run: python scraper.py
 
       - name: Commit updated jobs.json
         run: |
           git config --global user.name  "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
           git add docs/jobs.json
-      
-          # Only commit if something changed
           git diff --cached --quiet || git commit -m "chore: update jobs $(date -I)"
-      
-          # 🔑 Pull latest changes to avoid push rejection
-          git pull --rebase origin main
-      
-          git push origin main
+          git push
