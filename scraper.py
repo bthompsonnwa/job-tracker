@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
 """
-Amy's Job Tracker — Freight / Banking / Corporate / Remote / Funeral
-Scrapes 13+ sources across AR, OK, MO, KS + Remote.
-Updates docs/jobs.json for the GitHub Pages dashboard.
-No email — dashboard only.
+NWA Job Tracker — Schools + Community + IT
+Three categories, 35+ sources, daily email digest.
 """
 
 import requests
 from bs4 import BeautifulSoup
-import json, os, hashlib, logging, re, time
+import json, os, hashlib, logging, smtplib, re, time
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 from datetime import datetime
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
 
-JOBS_FILE = "docs/jobs.json"
+RECIPIENT          = "bthompsonnwa@gmail.com"
+SENDER             = "bthompsonnwa@gmail.com"
+GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
+JOBS_FILE          = "docs/jobs.json"
+DASHBOARD_URL      = "https://bthompsonnwa.github.io/job-tracker/"
 
 HEADERS = {
     "User-Agent": (
@@ -25,204 +29,184 @@ HEADERS = {
 }
 
 # ──────────────────────────────────────────────────────────────────────────────
-# GEOGRAPHIC FILTER  (AR · OK · MO · KS · TX · Remote)
-# ──────────────────────────────────────────────────────────────────────────────
-
-VALID_STATES = {
-    "ar", "arkansas",
-    "ok", "oklahoma",
-    "mo", "missouri",
-    "ks", "kansas",
-    # Texas removed per user request
-}
-
-REMOTE_WORDS = {"remote", "work from home", "wfh", "virtual", "anywhere", "telecommute"}
-
-
-def is_valid_location(loc: str) -> bool:
-    """Return True if the location is blank (unknown) or in a target state/remote."""
-    if not loc or loc.strip() == "":
-        return True          # can't tell → don't exclude
-    l = loc.lower()
-    for kw in REMOTE_WORDS:
-        if kw in l:
-            return True
-    for state in VALID_STATES:
-        # word-boundary style check
-        if re.search(r"\b" + re.escape(state) + r"\b", l):
-            return True
-    return False
-
-
-# ──────────────────────────────────────────────────────────────────────────────
 # KEYWORD FILTERS
 # ──────────────────────────────────────────────────────────────────────────────
 
+# Primary skillset — jobs matching these go in Schools or Community tabs
 INCLUDE_KEYWORDS = [
-    # Customer-facing
-    "customer service", "customer support", "customer care", "customer success",
-    "customer relations", "customer experience", "client services", "client support",
-    "client relations", "guest services",
-    # AV / Media / Broadcast
-    "audiovisual", "audio visual", "av technician", "av specialist", "av coordinator",
-    "broadcast", "broadcast technician", "broadcast specialist", "broadcast engineer",
-    "multimedia", "multimedia specialist", "multimedia producer", "multimedia coordinator",
-    "media specialist", "media coordinator", "media production", "media producer",
-    "photo and video", "photography", "videography", "video production", "video specialist",
-    "xr studio", "extended reality", "virtual reality", "augmented reality", "mixed reality",
-    "streaming", "live streaming", "production technician", "production coordinator",
-    "sound technician", "lighting technician", "stage technician",
-    # STEM / Making / Fabrication
-    "stem", "steam",
-    "makerspace", "maker space", "makespace",
-    "fabrication lab", "fab lab", "fabrication specialist",
-    "3d printing", "3d print", "additive manufacturing",
-    "laser cutter", "laser engraver", "laser technician",
-    "robotics", "arduino", "electronics technician",
-    "tinkering", "tinkering facilitator",
-    # Technology / IT support
-    "technology specialist", "technology support", "technology coordinator",
-    "technology technician", "it support", "it technician", "it specialist",
-    "help desk technician", "computer technician", "desktop support",
-    "instructional technology", "instructional technologist",
-    "digital learning", "e-learning", "edtech",
-    # Arts / Museum / Community
-    "exhibit", "exhibition coordinator", "gallery", "museum educator",
-    "community programs", "community engagement coordinator",
-    "arts education", "art education",
-    "communications specialist", "photo", "video",
-    # Summer camp / Youth programs
-    "camp counselor", "camp coordinator", "camp director", "camp instructor",
-    "summer camp", "day camp", "overnight camp",
-    "youth program", "youth instructor", "youth facilitator",
-    "outdoor education", "nature educator",
-    "activity director", "activity coordinator",
-    "stem camp", "technology camp",
-    # Account / Admin support (no sales)
-    "account coordinator", "account representative",
-    "account specialist",
-    # Admin / Office
-    "administrative assistant", "administrative coordinator", "administrative specialist",
-    "office manager", "office coordinator", "office administrator",
-    "executive assistant", "operations assistant", "operations coordinator",
-    "operations specialist", "operations support", "operations analyst",
-    "data entry", "data coordinator", "records coordinator",
-    "receptionist", "front desk", "office support", "office clerk",
-    "file clerk", "records clerk", "document specialist",
-    # Entry-level / General
-    "entry level", "entry-level",
-    "associate", "trainee", "clerk",
-    "support representative", "service representative",
-    # Freight / Logistics
-    "logistics coordinator", "logistics specialist", "logistics analyst",
-    "logistics support", "supply chain coordinator", "supply chain analyst",
-    "freight coordinator", "freight agent", "freight operations",
-    "freight billing", "freight claims",
-    "dispatch", "dispatcher", "load planner", "load coordinator",
-    "shipment coordinator", "shipping coordinator", "transportation coordinator",
-    "transportation analyst", "carrier relations", "carrier coordinator",
-    "claims coordinator", "claims specialist", "billing coordinator",
-    "billing specialist", "billing representative", "billing analyst",
-    "rating coordinator", "yield coordinator", "pricing coordinator",
-    "pricing analyst", "brokerage", "truckload",
-    "intermodal coordinator", "drayage coordinator",
-    # Banking / Finance
-    "bank teller", "teller", "personal banker", "relationship banker",
-    "branch coordinator", "loan processor", "loan coordinator", "loan officer",
-    "mortgage coordinator", "mortgage processor",
-    "financial services", "financial representative", "financial specialist",
-    "collections coordinator", "collections specialist", "collections representative",
-    "compliance coordinator", "compliance specialist", "fraud analyst",
-    "credit analyst", "banking associate", "banking specialist",
-    "treasury coordinator", "wire transfer",
-    # Call center / Communication
-    "call center", "contact center", "help desk", "support specialist",
+    "makerspace", "maker space", "maker lab",
+    "stem lab", "stem coordinator", "stem teacher", "steam teacher",
+    "fabrication lab", "fab lab", "innovation lab",
+    "digital fabrication", "3d print", "laser engraving", "laser cutting",
+    "cnc", "vinyl cutting", "large-format",
+    "arduino", "robotics", "electronics teacher",
+    "audio/video", "audio visual", "audiovisual", "a/v technician",
+    "av technician", "av coordinator", "av specialist", "av manager",
+    "av tech", "av teacher", "av support",
+    "media production", "media technician", "media technology",
+    "broadcast technician", "broadcast specialist", "broadcast production",
+    "broadcast tech", "broadcast technologies",
+    "production specialist", "production coordinator", "production technician",
+    "video production", "audio production", "recording studio",
+    "multimedia", "multimedia specialist", "multimedia coordinator",
+    "xr studio", "xr lab", "extended reality", "virtual reality", "augmented reality",
+    "tinkering", "tinkering facilitator", "tinkering studio",
+    "library media", "media specialist", "digital media",
+    "librarian", "library assistant", "library technician", "library coordinator",
+    "technology integration", "technology specialist", "technology coordinator",
+    "technology teacher", "technology support", "technology coach",
+    "instructional technology", "digital learning", "digital services",
+    "cte teacher", "cte coordinator", "career and technical",
+    "after school coordinator", "after-school coordinator",
+    "cclc", "21st cclc", "21cclc", "21st century",
+    "college and career", "college & career", "career coach", "career center",
+    "program coordinator", "program director", "program specialist",
+    "workshop facilitator", "workshop instructor", "workshop coordinator",
+    "learning coordinator", "instructional design", "instructional designer",
+    "curriculum developer", "curriculum coordinator", "curriculum designer",
+    "theater technical", "technical theatre", "technical theater",
+    "stagecraft", "theatre arts", "performing arts coordinator",
+    "computer science", "computer teacher", "coding teacher",
+    "tinkercad", "blender", "adobe creative",
+    "community outreach", "volunteer coordinator", "event coordinator",
+    "outreach coordinator", "community program", "public services",
     "communications coordinator", "communications specialist",
-    # General coordinator
-    "program coordinator", "project coordinator",
-    # Funeral / Death care (remote services)
-    "funeral", "mortuary", "death care", "bereavement",
-    "funeral home", "funeral service", "cremation coordinator",
-    "funeral coordinator", "funeral administrative", "funeral answering",
-    "after-loss", "afterloss", "grief support coordinator",
+    "graphic designer", "graphic design", "web designer",
+    "content creator", "social media coordinator",
+    "training coordinator", "workforce development",
+    "youth program", "youth services", "youth coordinator",
+    "innovation coach", "tech coach", "maker education",
 ]
 
-# Applied only to remote job board scrapers (WWR, Remote.co) — much tighter
-REMOTE_EXCLUDE_KEYWORDS = [
-    "crypto", "blockchain", "web3", "nft", "defi",
-    "video editor", "video production", "videographer",
-    "graphic design", "graphic designer", "ux designer", "ui designer",
-    "motion design", "illustrator",
-    "copywriter", "content writer", "technical writer", "writer",
-    "game developer", "game designer", "game artist",
-    "software", "developer", "engineer", "coding", "programmer",
-    "devops", "sre ", "cloud architect",
-    "animator", "3d artist", "photographer",
-    "trader", "trading", "quant",
-    "attorney", "lawyer", "paralegal",
-    "therapist", "counselor", "social worker",
-    "teacher", "tutor", "instructor",
-    "recruiter", "talent acquisition",
-    "cfo", "coo", "cto", "vice president", "vp ",
+# IT jobs — matches go in the IT tab regardless of source
+IT_KEYWORDS = [
+    "help desk", "help-desk", "service desk", "service-desk",
+    "desktop support", "it support", "it technician", "it specialist",
+    "it assistant", "it coordinator", "it manager", "it director",
+    "systems administrator", "sysadmin", "network technician",
+    "network administrator", "network engineer", "network support",
+    "computer technician", "hardware technician", "field technician",
+    "technical support", "tech support", "tier 1", "tier 2", "tier i", "tier ii",
+    "systems support", "application support", "software support",
+    "cybersecurity", "cyber security", "information security", "security analyst",
+    "data analyst", "database administrator", "dba",
+    "cloud support", "cloud administrator", "cloud engineer",
+    "sharepoint", "microsoft 365 admin", "office 365 admin",
+    "active directory", "azure admin", "endpoint management",
+    "information technology", "information systems",
+    "it infrastructure", "it operations",
 ]
 
 HARD_EXCLUDE_KEYWORDS = [
-    # Driving / physical labour
-    "truck driver", "cdl driver", "forklift operator", "warehouse associate",
-    "warehouse worker", "picker", "packer", "stocker", "dock worker",
-    "material handler", "janitor", "custodian", "groundskeeper",
-    # Medical
-    "registered nurse", "school nurse", " rn ", "nurse practitioner",
-    "physician", "pharmacist", "physical therapist", "occupational therapist",
-    # Technical / Engineering (too senior/specialized)
-    "software engineer", "software developer", "web developer", "devops",
-    "data scientist", "machine learning", "cybersecurity", "network engineer",
-    "electrical engineer", "mechanical engineer", "civil engineer",
-    "maintenance mechanic", "hvac technician", "electrician", "plumber",
-    # Senior management (keep account manager, branch manager, office manager)
-    "vice president", "vp ", "chief ", "cto", "cfo", "coo",
-    "regional manager", "district manager", "general manager",
-    "senior manager", "store manager", "marketing manager",
-    "product manager", "people manager", "hiring manager",
-    # Academic
-    "professor", "faculty", "instructor", "teacher",
-    # Echo / marketing noise
-    "request a quote", "get a quote", "truck load quote",
-    "full truckload", "less than truckload", "learn more",
-    "view all", "see all jobs", "see open", "join our team",
+    "bus driver", "bus monitor",
+    "custodian", "custodial",
+    "food service", "cafeteria worker",
+    "school nurse", "registered nurse", " rn ",
+    "school psychologist", "psychologist",
+    "speech language", "speech-language",
+    "occupational therapist", "physical therapist",
+    "groundskeeper", "maintenance mechanic", "plumber", "electrician",
+    "bookkeeper", "accountant", "accounts payable",
+    "wastewater", "water treatment", "utility worker",
+    "police officer", "firefighter", "dispatcher",
+    "animal control", "code enforcement",
+    "truck driver", "cdl driver", "freight driver",
 ]
 
 # ──────────────────────────────────────────────────────────────────────────────
-# SOURCE REGISTRY  (shown in dashboard Sources panel)
+# SOURCE CONFIG
 # ──────────────────────────────────────────────────────────────────────────────
 
+APPLITRACK_DISTRICTS = [
+    {"id": "bentonville", "name": "Bentonville SD",
+     "list_url": "https://www.applitrack.com/bentonville/onlineapp/default.aspx?all=1"},
+    {"id": "farmcards",   "name": "Farmington SD",
+     "list_url": "https://www.applitrack.com/farmcards/onlineapp/jobpostings/view.asp?internaltransferform.Url=&all=1"},
+]
+
+TEDK12_DISTRICTS = [
+    {"name": "Elkins SD",    "url": "https://elkinsdistrict.tedk12.com/hire/index.aspx"},
+    {"name": "Greenland SD", "url": "https://greenlandschools.tedk12.com/hire/index.aspx"},
+]
+
+SCHOOLSPRING_DISTRICTS = [
+    {"subdomain": "decatursd",     "name": "Decatur SD"},
+    {"subdomain": "gravette",      "name": "Gravette SD"},
+    {"subdomain": "gentry",        "name": "Gentry SD"},
+    {"subdomain": "district",      "name": "District SD"},
+    {"subdomain": "hsd",           "name": "Huntsville SD"},
+    {"subdomain": "pearidge",      "name": "Pea Ridge SD"},
+    {"subdomain": "pgtigers",      "name": "Prairie Grove SD"},
+    {"subdomain": "rogersschools", "name": "Rogers SD"},
+    {"subdomain": "siloamschools", "name": "Siloam Springs SD"},
+    {"subdomain": "lisaacademy",   "name": "LISA Academy"},
+]
+
+WORKDAY_SOURCES = [
+    {"name": "University of Arkansas (UAF)", "category": "community",
+     "api_url":  "https://uasys.wd5.myworkdayjobs.com/wday/cxs/uasys/UAF_External_Career_Site/jobs",
+     "base_url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site"},
+    {"name": "NWACC", "category": "community",
+     "api_url":  "https://nwacc.wd1.myworkdayjobs.com/wday/cxs/nwacc/NWACC_External_Career_Site/jobs",
+     "base_url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site"},
+    {"name": "UA System", "category": "community",
+     "api_url":  "https://uasys.wd5.myworkdayjobs.com/wday/cxs/uasys/UASYS/jobs",
+     "base_url": "https://uasys.wd5.myworkdayjobs.com/en-US/UASYS"},
+    {"name": "J.B. Hunt", "category": "it",
+     "api_url":  "https://jbhunt.wd1.myworkdayjobs.com/wday/cxs/jbhunt/JBH_Jobs/jobs",
+     "base_url": "https://jbhunt.wd1.myworkdayjobs.com/en-US/JBH_Jobs"},
+    {"name": "Crystal Bridges / AWE", "category": "community",
+     "api_url":  "https://awe.wd1.myworkdayjobs.com/wday/cxs/awe/Art_and_Wellness/jobs",
+     "base_url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness"},
+]
+
 ALL_SOURCES = [
-    # Freight & Logistics
-    {"name": "ArcBest",        "url": "https://careers.arcb.com/",                                             "category": "freight"},
-    {"name": "J.B. Hunt",      "url": "https://jbhunt.wd501.myworkdayjobs.com/Careers",                        "category": "freight"},
-    {"name": "Tyson Foods",    "url": "https://www.tysonfoods.com/careers",                                    "category": "freight"},
-    {"name": "XPO",            "url": "https://jobs.xpo.com/search/",                                          "category": "freight"},
-    {"name": "Echo Global",    "url": "https://www.echo.com/company/careers/open-positions/",                  "category": "freight"},
-    # Banking
-    {"name": "Arvest Bank",    "url": "https://css-arvest-prd.inforcloudsuite.com/hcm/Jobs/form/JobBoard%28ARV,EXTERNAL%29.JobSearchCompositeForm?navigation=JobBoard%28ARV,EXTERNAL%29.JobSearchCompositeFormNav&csk.JobBoard=EXTERNAL&csk.showusingxi=true&csk.HROrganization=ARV", "category": "banking"},
-    {"name": "Simmons Bank",   "url": "https://simmonsbank.wd5.myworkdayjobs.com/SimmonsCareers",              "category": "banking"},
-    {"name": "First National Bank", "url": "https://recruiting.paylocity.com/recruiting/jobs/All/dcb49edc-c676-411b-8b7b-104a72fec402/The-First-National-Bank-of-Fort-Smith", "category": "banking"},
-    {"name": "Regions Bank",   "url": "https://careers.regions.com/us/en/search-results",                     "category": "banking"},
-    {"name": "Bank of America","url": "https://careers.bankofamerica.com/en-us/job-search?ref=search&start=0&rows=10&search=getAllJobs&filters=area%3DAdministration%2Carea%3DCustomer+Service%2Carea%3DOperations+%26+Support", "category": "banking"},
-    # Corporate
-    {"name": "Walmart",        "url": "https://walmart.wd5.myworkdayjobs.com/WalmartExternal",                 "category": "corporate"},
-    # Remote
-    {"name": "We Work Remotely", "url": "https://weworkremotely.com/categories/remote-customer-service-jobs", "category": "remote"},
-    {"name": "Remote.co",      "url": "https://remote.co/remote-jobs/customer-service/",                      "category": "remote"},
-    # Funeral / Death care
-    {"name": "NFDA Career Center",        "url": "https://www.nfda.org/career-center",              "category": "funeral"},
-    {"name": "Connecting Directors Jobs",  "url": "https://www.connectingdirectors.com/jobs",        "category": "funeral"},
-    # Education
-    {"name": "UA System (UAF)",  "url": "https://uasys.wd5.myworkdayjobs.com/UAF_External_Career_Site", "category": "education"},
-    {"name": "UA System (UAFS)", "url": "https://uasys.wd5.myworkdayjobs.com/UASYS",                    "category": "education"},
-    # Arts & Community
-    {"name": "Crystal Bridges / AWE", "url": "https://awe.wd1.myworkdayjobs.com/Art_and_Wellness",    "category": "arts"},
-    {"name": "Scott Family Amazeum",  "url": "https://talent.careersnwa.com/companies/scott-family-amazeum", "category": "arts"},
+    # Schools
+    {"name": "Bentonville SD",          "url": "https://www.applitrack.com/bentonville/onlineapp/default.aspx?all=1",                         "category": "school"},
+    {"name": "Farmington SD",           "url": "https://www.applitrack.com/farmcards/onlineapp/jobpostings/view.asp?all=1",                    "category": "school"},
+    {"name": "Elkins SD",               "url": "https://elkinsdistrict.tedk12.com/hire/index.aspx",                                           "category": "school"},
+    {"name": "Greenland SD",            "url": "https://greenlandschools.tedk12.com/hire/index.aspx",                                         "category": "school"},
+    {"name": "Decatur SD",              "url": "https://decatursd.schoolspring.com/",                                                          "category": "school"},
+    {"name": "Gravette SD",             "url": "https://gravette.schoolspring.com/",                                                           "category": "school"},
+    {"name": "Gentry SD",               "url": "https://gentry.schoolspring.com/",                                                             "category": "school"},
+    {"name": "District SD",             "url": "https://district.schoolspring.com/",                                                           "category": "school"},
+    {"name": "Huntsville SD",           "url": "https://hsd.schoolspring.com/",                                                                "category": "school"},
+    {"name": "Pea Ridge SD",            "url": "https://pearidge.schoolspring.com/",                                                           "category": "school"},
+    {"name": "Prairie Grove SD",        "url": "https://pgtigers.schoolspring.com/",                                                           "category": "school"},
+    {"name": "Rogers SD",               "url": "https://rogersschools.schoolspring.com/",                                                      "category": "school"},
+    {"name": "Siloam Springs SD",       "url": "https://siloamschools.schoolspring.com/",                                                      "category": "school"},
+    {"name": "Lincoln Consolidated SD", "url": "https://careers.smartrecruiters.com/Lincoln2",                                                 "category": "school"},
+    {"name": "Springdale SD",           "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsJobsMain",                    "category": "school"},
+    {"name": "West Fork SD",            "url": "https://flowpoint.wftigers.org/careers/opportunities/",                                       "category": "school"},
+    {"name": "LISA Academy",            "url": "https://lisaacademy.schoolspring.com/",                                                        "category": "school"},
+    {"name": "Haas Hall Academy",       "url": "https://haashall.org/welcome__trashed/employment/",                                           "category": "school"},
+    {"name": "Thaden School",           "url": "https://www.thadenschool.org/about/career-opportunities",                                     "category": "school"},
+    # Community
+    {"name": "Rogers (City)",           "url": "https://www.rogersar.gov/Jobs.aspx",                                                          "category": "community"},
+    {"name": "Bentonville (City)",      "url": "https://www.bentonvillear.com/jobs.aspx",                                                      "category": "community"},
+    {"name": "City of Bella Vista",     "url": "https://recruiting.paylocity.com/recruiting/jobs/All/b1e8c19e-977f-41ec-89e7-a138ab6e72eb/City-of-Bella-Vista", "category": "community"},
+    {"name": "Springdale Public Library","url": "https://springdalelibrary.org/employment/",                                                  "category": "community"},
+    {"name": "Jones Center",            "url": "https://secure7.saashr.com/ta/6214802.careers?CareersSearch=&ein_id=119006097&lang=en-US",    "category": "community"},
+    {"name": "University of Arkansas (UAF)", "url": "https://uasys.wd5.myworkdayjobs.com/UAF_External_Career_Site",                          "category": "community"},
+    {"name": "NWACC",                   "url": "https://nwacc.wd1.myworkdayjobs.com/NWACC_External_Career_Site",                              "category": "community"},
+    {"name": "UA System",               "url": "https://uasys.wd5.myworkdayjobs.com/UASYS",                                                   "category": "community"},
+    {"name": "Arkansas State Univ.",    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",           "category": "community"},
+    {"name": "Arkansas Tech Univ.",     "url": "https://atu.csod.com/ux/ats/careersite/1/home?c=atu",                                         "category": "community"},
+    {"name": "UCA",                     "url": "https://jobs.uca.edu/postings/search",                                                         "category": "community"},
+    {"name": "Hendrix College",         "url": "https://www.hendrix.edu/humanresources/jobs.aspx",                                            "category": "community"},
+    {"name": "JBU (Staff)",             "url": "https://www.jbu.edu/human-resources/staff-job-listings/",                                     "category": "community"},
+    {"name": "JBU (Faculty)",           "url": "https://www.jbu.edu/human-resources/faculty-job-listings/",                                   "category": "community"},
+    {"name": "Carl Albert College",     "url": "https://carlalbert.edu/about-casc/job-openings/",                                             "category": "community"},
+    {"name": "ArcBest",                 "url": "https://careers.arcb.com/careersmarketplace/OpenPositions/",                                  "category": "community"},
+    {"name": "AR State Jobs",           "url": "https://arcareers.arkansas.gov/search/",                                                       "category": "community"},
+    {"name": "ADP (NWA)",               "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=a75698d1-4927-42e2-8b24-4b1e4d60fa54", "category": "community"},
+    {"name": "Crystal Bridges / AWE", "url": "https://awe.wd1.myworkdayjobs.com/Art_and_Wellness",              "category": "community"},
+    {"name": "Scott Family Amazeum",  "url": "https://talent.careersnwa.com/companies/scott-family-amazeum",   "category": "community"},
+    # IT
+    {"name": "VA Arkansas (USAJobs)",   "url": "https://www.usajobs.gov/Search/Results/?j=2299&j=2210&j=1550&j=1598&l=arkansas&d=VA&p=1",   "category": "it"},
+    {"name": "Indeed (IT — NW Arkansas)",      "url": "https://www.indeed.com/jobs?q=IT+technician&l=Fayetteville+AR&radius=30",   "category": "it"},
+    {"name": "Indeed (Skillset — NW Arkansas)", "url": "https://www.indeed.com/jobs?q=makerspace&l=Fayetteville+AR&radius=50",      "category": "community"},
+    {"name": "J.B. Hunt",               "url": "https://jbhunt.wd1.myworkdayjobs.com/JBH_Jobs",                                              "category": "it"},
     # Summer Camp
     {"name": "ACA Camp Jobs",  "url": "https://jobs.aca.camp/",               "category": "summer"},
     {"name": "CoolWorks",      "url": "https://www.coolworks.com/summer-jobs", "category": "summer"},
@@ -236,24 +220,45 @@ ALL_SOURCES = [
 def make_id(source, title, url=""):
     return hashlib.md5(f"{source}|{title}|{url}".encode()).hexdigest()[:12]
 
-
-def is_relevant(title: str, extra: str = ""):
+def categorize(title, extra="", default_category="school"):
+    """
+    Returns (category, match_reason) or (None, reason) if excluded/no match.
+    Primary skillset keywords take precedence over IT keywords.
+    """
     combined = (title + " " + extra).lower()
     for kw in HARD_EXCLUDE_KEYWORDS:
-        if kw.strip() in combined:
-            return False, f"excluded:{kw.strip()}"
+        if kw in combined:
+            return None, f"excluded:{kw.strip()}"
     for kw in INCLUDE_KEYWORDS:
         if kw in combined:
-            return True, kw
-    return False, "no_match"
+            return default_category, kw
+    for kw in IT_KEYWORDS:
+        if kw in combined:
+            return "it", kw
+    return None, "no_match"
 
+def categorize_it_source(title, extra=""):
+    """For dedicated IT sources — only IT keywords filter, result always tagged 'it'."""
+    combined = (title + " " + extra).lower()
+    for kw in HARD_EXCLUDE_KEYWORDS:
+        if kw in combined:
+            return None, f"excluded:{kw.strip()}"
+    for kw in IT_KEYWORDS:
+        if kw in combined:
+            return "it", kw
+    # Also catch generic tech titles on IT sources
+    for kw in ["analyst", "engineer", "developer", "programmer", "administrator",
+                "architect", "technologist", "specialist", "coordinator", "manager"]:
+        if kw in combined and any(t in combined for t in ["technology", "digital", "computer", "data", "software", "hardware", "system", "network", "cyber", "cloud", "information"]):
+            return "it", kw
+    return None, "no_match"
 
-def make_job(source, title, url, platform, category="freight",
+def make_job(source, title, url, platform, category="school",
              location="", posted="", match_reason=""):
     return {
         "id":           make_id(source, title, url),
         "title":        title,
-        "district":     source,      # "district" kept for dashboard compat
+        "district":     source,
         "location":     location,
         "url":          url,
         "platform":     platform,
@@ -263,23 +268,19 @@ def make_job(source, title, url, platform, category="freight",
         "first_seen":   datetime.now().strftime("%Y-%m-%d"),
     }
 
-
 def load_jobs():
     if os.path.exists(JOBS_FILE):
         with open(JOBS_FILE) as f:
             return json.load(f)
     return {"last_updated": None, "jobs": [], "sources": []}
 
-
 def save_jobs(data):
     os.makedirs("docs", exist_ok=True)
     with open(JOBS_FILE, "w") as f:
         json.dump(data, f, indent=2, default=str)
-    log.info(f"Saved {len(data['jobs'])} jobs to {JOBS_FILE}")
 
-
-def pw_get_soup(url, wait=4):
-    """Playwright helper — renders JS-heavy pages, returns BeautifulSoup or None."""
+def pw_get_soup(url, wait=3):
+    """Shared Playwright helper."""
     try:
         from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
     except ImportError:
@@ -291,7 +292,7 @@ def pw_get_soup(url, wait=4):
             ctx     = browser.new_context(user_agent=HEADERS["User-Agent"])
             page    = ctx.new_page()
             try:
-                page.goto(url, wait_until="networkidle", timeout=40000)
+                page.goto(url, wait_until="networkidle", timeout=30000)
             except PWTimeout:
                 page.wait_for_timeout(5000)
             time.sleep(wait)
@@ -302,120 +303,508 @@ def pw_get_soup(url, wait=4):
         log.error(f"Playwright error on {url}: {e}")
         return None
 
+# ──────────────────────────────────────────────────────────────────────────────
+# SCHOOL SCRAPERS
+# ──────────────────────────────────────────────────────────────────────────────
+
+def scrape_applitrack(district):
+    name, list_url, did = district["name"], district["list_url"], district["id"]
+    jobs = []
+    xml_url = f"https://www.applitrack.com/{did}/onlineapp/JobPostingFeed.aspx"
+    try:
+        r = requests.get(xml_url, headers=HEADERS, timeout=15)
+        if r.status_code == 200 and "<item>" in r.text:
+            soup = BeautifulSoup(r.text, "xml")
+            for item in soup.find_all("item"):
+                title = (item.find("title").text or "").strip()
+                url   = (item.find("link").text or list_url).strip()
+                desc  = (item.find("description").text or "").strip()
+                cat, reason = categorize(title, desc)
+                if cat:
+                    jobs.append(make_job(name, title, url, "AppliTrack", category=cat, match_reason=reason))
+            log.info(f"{name}: {len(jobs)} jobs (XML)")
+            return jobs
+    except Exception as e:
+        log.warning(f"{name} XML: {e}")
+    try:
+        r    = requests.get(list_url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if not any(x in href for x in ["JobDetails", "ViewJob", "jobpostings"]):
+                continue
+            title = a.get_text(strip=True)
+            if not title or len(title) < 4:
+                continue
+            full_url = href if href.startswith("http") else f"https://www.applitrack.com{href}"
+            cat, reason = categorize(title)
+            if cat:
+                jobs.append(make_job(name, title, full_url, "AppliTrack", category=cat, match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs (HTML)")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_tedk12(district):
+    name, base_url = district["name"], district["url"]
+    jobs = []
+    try:
+        r    = requests.get(base_url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for a in soup.find_all("a", href=re.compile(r"ViewJob\.aspx")):
+            title    = a.get_text(strip=True)
+            href     = a["href"]
+            full_url = href if href.startswith("http") else base_url.rsplit("/", 1)[0] + "/" + href.lstrip("/")
+            row      = a.find_parent("tr")
+            cells    = row.find_all("td") if row else []
+            posted   = cells[1].get_text(strip=True) if len(cells) > 1 else ""
+            location = cells[3].get_text(strip=True) if len(cells) > 3 else ""
+            cat, reason = categorize(title)
+            if cat:
+                jobs.append(make_job(name, title, full_url, "PowerSchool",
+                                     category=cat, location=location, posted=posted, match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_smartrecruiters():
+    name = "Lincoln Consolidated SD"
+    url  = "https://careers.smartrecruiters.com/Lincoln2"
+    jobs = []
+    try:
+        r    = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for a in soup.find_all("a", href=re.compile(r"jobs\.smartrecruiters\.com")):
+            el    = a.find(["h4", "h3", "h2", "strong"])
+            title = el.get_text(strip=True) if el else a.get_text(strip=True)
+            if not title:
+                continue
+            cat, reason = categorize(title)
+            if cat:
+                jobs.append(make_job(name, title, a["href"], "SmartRecruiters",
+                                     category=cat, location="Lincoln, AR", match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_springdale_sd():
+    name = "Springdale SD"
+    url  = "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsJobsMain"
+    jobs = []
+    try:
+        r    = requests.get(url, headers=HEADERS, timeout=20)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for a in soup.find_all("a", href=re.compile(r"ViewJobPosting")):
+            title = a.get_text(strip=True)
+            if not title:
+                continue
+            m   = re.search(r"ViewJobPosting\('(\w+)'", a["href"])
+            pid = m.group(1) if m else ""
+            job_url = (f"https://apply.sdale.org/winocular/workspace/wSpace.exe"
+                       f"?Action=wsViewPosting&postingID={pid}") if pid else url
+            row   = a.find_parent("tr")
+            cells = row.find_all("td") if row else []
+            jtype  = cells[1].get_text(strip=True) if len(cells) > 1 else ""
+            posted = cells[4].get_text(strip=True) if len(cells) > 4 else ""
+            loc    = cells[7].get_text(strip=True) if len(cells) > 7 else ""
+            if posted and not re.search(r"\d{1,2}/\d{1,2}/\d{4}", posted):
+                posted = ""
+            cat, reason = categorize(title, jtype)
+            if cat:
+                jobs.append(make_job(name, title, job_url, "WinOcular",
+                                     category=cat, location=loc, posted=posted, match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_westfork():
+    name = "West Fork SD"
+    url  = "https://flowpoint.wftigers.org/careers/opportunities/"
+    jobs = []
+    try:
+        r    = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        seen = set()
+        for a in soup.find_all("a", href=re.compile(r"/careers/opportunities/entry/")):
+            title = a.get_text(strip=True)
+            if not title:
+                parent = a.find_parent(["h2", "h3", "h4"])
+                title  = parent.get_text(strip=True) if parent else ""
+            if not title or title in seen:
+                continue
+            seen.add(title)
+            full_url = a["href"] if a["href"].startswith("http") else "https://flowpoint.wftigers.org" + a["href"]
+            cat, reason = categorize(title)
+            if cat:
+                jobs.append(make_job(name, title, full_url, "FlowPoint",
+                                     category=cat, location="West Fork, AR", match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_schoolspring(district):
+    name = district["name"]
+    sub  = district["subdomain"]
+    url  = f"https://{sub}.schoolspring.com/"
+    jobs = []
+    soup = pw_get_soup(url, wait=3)
+    if not soup:
+        return jobs
+    added = set()
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        text = a.get_text(strip=True)
+        is_job = "/job/" in href or "jobID" in href.lower() or "job-listing" in href
+        if not is_job or not text or len(text) < 5 or href in added:
+            continue
+        added.add(href)
+        full_url = href if href.startswith("http") else f"https://{sub}.schoolspring.com{href}"
+        cat, reason = categorize(text)
+        if cat:
+            jobs.append(make_job(name, text, full_url, "SchoolSpring", category=cat, match_reason=reason))
+    log.info(f"{name}: {len(jobs)} jobs")
+    return jobs
+
+
+def scrape_haashall():
+    name = "Haas Hall Academy"
+    url  = "https://haashall.org/welcome__trashed/employment/"
+    jobs = []
+    try:
+        r       = requests.get(url, headers=HEADERS, timeout=15)
+        soup    = BeautifulSoup(r.text, "html.parser")
+        content = soup.find("main") or soup.find(class_=re.compile(r"entry|content|post", re.I)) or soup
+        if any(x in content.get_text().lower() for x in ["no open", "no current", "no position"]):
+            log.info(f"{name}: no open positions")
+            return jobs
+        for a in content.find_all("a", href=True):
+            title = a.get_text(strip=True)
+            if not title or len(title) < 5:
+                continue
+            href = a["href"]
+            if any(x in href for x in ["#", "mailto", "tel:", "facebook", "twitter", "instagram"]):
+                continue
+            cat, reason = categorize(title)
+            if cat:
+                full_url = href if href.startswith("http") else "https://haashall.org" + href
+                jobs.append(make_job(name, title, full_url, "WordPress",
+                                     category=cat, match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
 
 # ──────────────────────────────────────────────────────────────────────────────
-# WORKDAY  (all Workday-platform sources)
+# COMMUNITY SCRAPERS
 # ──────────────────────────────────────────────────────────────────────────────
 
-WORKDAY_SOURCES = [
-    # Freight & Logistics
-    {
-        "name":           "J.B. Hunt",
-        "category":       "freight",
-        "api_url":        "https://jbhunt.wd501.myworkdayjobs.com/wday/cxs/jbhunt/Careers/jobs",
-        "base_url":       "https://jbhunt.wd501.myworkdayjobs.com/en-US/Careers",
-        "location_facet": None,
-    },
-    # Banking
-    {
-        "name":           "Simmons Bank",
-        "category":       "banking",
-        "api_url":        "https://simmonsbank.wd5.myworkdayjobs.com/wday/cxs/simmonsbank/SimmonsCareers/jobs",
-        "base_url":       "https://simmonsbank.wd5.myworkdayjobs.com/en-US/SimmonsCareers",
-        "location_facet": None,
-    },
-    # Corporate
-    {
-        "name":           "Walmart",
-        "category":       "corporate",
-        "api_url":        "https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs",
-        "base_url":       "https://walmart.wd5.myworkdayjobs.com/en-US/WalmartExternal",
-        "location_facet": None,
-    },
-    # Education - UA System
-    {
-        "name":           "UA System (UAF)",
-        "category":       "education",
-        "api_url":        "https://uasys.wd5.myworkdayjobs.com/wday/cxs/uasys/UAF_External_Career_Site/jobs",
-        "base_url":       "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site",
-        "location_facet": None,
-    },
-    {
-        "name":           "UA System (UAFS)",
-        "category":       "education",
-        "api_url":        "https://uasys.wd5.myworkdayjobs.com/wday/cxs/uasys/UASYS/jobs",
-        "base_url":       "https://uasys.wd5.myworkdayjobs.com/en-US/UASYS",
-        "location_facet": "764b2d014314010f624ed3006e08cec1",
-    },
-    # Arts - Crystal Bridges / Momentary / Alice Walton School of Medicine
-    {
-        "name":           "Crystal Bridges / AWE",
-        "category":       "arts",
-        "api_url":        "https://awe.wd1.myworkdayjobs.com/wday/cxs/awe/Art_and_Wellness/jobs",
-        "base_url":       "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness",
-        "location_facet": None,
-    },
-]
+def scrape_civicengage(name, jobs_url, base_url):
+    jobs = []
+    try:
+        r    = requests.get(jobs_url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for a in soup.find_all("a", href=re.compile(r"UniqueId|JobID", re.I)):
+            title = a.get_text(strip=True)
+            if not title or len(title) < 5:
+                continue
+            href     = a["href"]
+            full_url = href if href.startswith("http") else base_url.rstrip("/") + href
+            parent   = a.find_parent(["li", "div", "tr", "article"])
+            date_m   = re.search(r"\d{1,2}/\d{1,2}/\d{4}", parent.get_text() if parent else "")
+            posted   = date_m.group(0) if date_m else ""
+            cat, reason = categorize(title)
+            if cat:
+                jobs.append(make_job(name, title, full_url, "CivicPlus",
+                                     category=cat, location=name, posted=posted, match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_springdale_library():
+    name = "Springdale Public Library"
+    url  = "https://springdalelibrary.org/employment/"
+    jobs = []
+    try:
+        r       = requests.get(url, headers=HEADERS, timeout=15)
+        soup    = BeautifulSoup(r.text, "html.parser")
+        content = soup.find("main") or soup.find(class_=re.compile(r"content|entry|post", re.I)) or soup
+        if any(x in content.get_text().lower() for x in ["no open position", "no current"]):
+            log.info(f"{name}: no open positions")
+            return jobs
+        for a in content.find_all("a", href=True):
+            title = a.get_text(strip=True)
+            if not title or len(title) < 5:
+                continue
+            href = a["href"]
+            if any(x in href for x in ["#", "mailto", "tel:", "/wp-"]):
+                continue
+            cat, reason = categorize(title)
+            if cat:
+                full_url = href if href.startswith("http") else "https://springdalelibrary.org" + href
+                jobs.append(make_job(name, title, full_url, "Library",
+                                     category=cat, location="Springdale, AR", match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
 
 
 def scrape_workday(source):
     name     = source["name"]
     api_url  = source["api_url"]
-    category = source["category"]
-    facet    = source.get("location_facet")
+    src_cat  = source.get("category", "community")
     jobs     = []
     offset   = 0
     limit    = 20
-    api_headers = {**HEADERS, "Content-Type": "application/json", "Accept": "application/json"}
+    api_hdrs = {**HEADERS, "Content-Type": "application/json", "Accept": "application/json"}
 
     while True:
-        facets  = {"locationHierarchy1": [facet]} if facet else {}
-        payload = {"limit": limit, "offset": offset, "searchText": "", "appliedFacets": facets}
+        payload = {"limit": limit, "offset": offset, "searchText": "", "appliedFacets": {}}
         try:
-            r    = requests.post(api_url, json=payload, headers=api_headers, timeout=25)
-            data = r.json()
+            r        = requests.post(api_url, json=payload, headers=api_hdrs, timeout=20)
+            data     = r.json()
+            postings = data.get("jobPostings", [])
+            total    = data.get("total", 0)
+            if offset == 0:
+                log.info(f"{name}: {total} total from Workday API")
+            for p in postings:
+                title    = p.get("title", "").strip()
+                ext_url  = p.get("externalPath", "")
+                full_url = source["base_url"].rstrip("/") + ext_url if ext_url else source["base_url"]
+                posted   = p.get("postedOn", "")
+                loc      = p.get("locationsText", "") or p.get("primaryLocation", "")
+                if src_cat == "it":
+                    cat, reason = categorize_it_source(title)
+                else:
+                    cat, reason = categorize(title, default_category=src_cat)
+                if cat:
+                    jobs.append(make_job(name, title, full_url, "Workday",
+                                         category=cat, location=loc, posted=posted, match_reason=reason))
+            offset += limit
+            if not postings or offset >= total:
+                break
+            time.sleep(0.4)
         except Exception as e:
-            log.error(f"{name} Workday API error: {e}")
+            log.error(f"{name} Workday: {e}")
             break
 
-        postings = data.get("jobPostings", [])
-        if not postings:
-            break
-
-        for p in postings:
-            title = p.get("title", "").strip()
-            loc   = p.get("locationsText", "") or p.get("primaryLocation", "")
-            if not is_valid_location(loc):
-                continue
-            ext_url  = p.get("externalPath", "")
-            full_url = source["base_url"].rstrip("/") + ext_url if ext_url else source["base_url"]
-            posted   = p.get("postedOn", "")
-            ok, reason = is_relevant(title)
-            if ok:
-                jobs.append(make_job(name, title, full_url, "Workday",
-                                     category=category, location=loc,
-                                     posted=posted, match_reason=reason))
-
-        total = data.get("total", 0)
-        offset += limit
-        if offset >= total:
-            break
-        time.sleep(0.5)
-
-    log.info(f"{name}: {len(jobs)} relevant jobs (Workday)")
+    log.info(f"{name}: {len(jobs)} relevant jobs")
     return jobs
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# ARCBEST  (CareersMarketplace — Playwright)
-# ──────────────────────────────────────────────────────────────────────────────
+def scrape_taleo_rss(name, rss_url, base_url, category="community"):
+    jobs = []
+    try:
+        r    = requests.get(rss_url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "xml")
+        for item in soup.find_all("item"):
+            title    = (item.find("title").text or "").strip()
+            link_tag = item.find("link")
+            url      = (link_tag.next_sibling.strip()
+                        if link_tag and link_tag.next_sibling else base_url)
+            if not url or not url.startswith("http"):
+                url = base_url
+            cat, reason = categorize(title, default_category=category)
+            if cat:
+                jobs.append(make_job(name, title, url, "Taleo",
+                                     category=cat, match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs (RSS)")
+    except Exception as e:
+        log.error(f"{name} Taleo RSS: {e}")
+    return jobs
+
+
+def scrape_jbu(url, name):
+    jobs = []
+    try:
+        r       = requests.get(url, headers=HEADERS, timeout=15)
+        soup    = BeautifulSoup(r.text, "html.parser")
+        content = soup.find("main") or soup.find(id=re.compile(r"content|main", re.I)) or soup
+        skip    = ["#", "mailto", "facebook", "twitter", "linkedin", "instagram",
+                   "jbu.edu/about", "jbu.edu/admissions", "jbu.edu/student",
+                   "jbu.edu/academic", "eaglenet", "catalog", "calendar", "news", "giving", "alumni"]
+        for a in content.find_all("a", href=True):
+            title = a.get_text(strip=True)
+            if not title or len(title) < 5:
+                continue
+            href = a["href"]
+            if any(x in href for x in skip):
+                continue
+            cat, reason = categorize(title)
+            if cat:
+                full_url = href if href.startswith("http") else "https://www.jbu.edu" + href
+                jobs.append(make_job(name, title, full_url, "HubSpot",
+                                     category=cat, location="Siloam Springs, AR", match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_hendrix():
+    name = "Hendrix College"
+    url  = "https://www.hendrix.edu/humanresources/jobs.aspx"
+    jobs = []
+    try:
+        r       = requests.get(url, headers=HEADERS, timeout=15)
+        soup    = BeautifulSoup(r.text, "html.parser")
+        content = soup.find("main") or soup.find(id=re.compile(r"content|main", re.I)) or soup
+        skip    = ["#", "mailto", "facebook", "twitter", "hendrix.edu/academics",
+                   "hendrix.edu/apply", "hendrix.edu/giving"]
+        for a in content.find_all("a", href=True):
+            title = a.get_text(strip=True)
+            if not title or len(title) < 5:
+                continue
+            href = a["href"]
+            if any(x in href for x in skip):
+                continue
+            cat, reason = categorize(title)
+            if cat:
+                full_url = href if href.startswith("http") else "https://www.hendrix.edu" + href
+                jobs.append(make_job(name, title, full_url, "HTML",
+                                     category=cat, location="Conway, AR", match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_carl_albert():
+    name = "Carl Albert State College"
+    url  = "https://carlalbert.edu/about-casc/job-openings/"
+    jobs = []
+    try:
+        r       = requests.get(url, headers=HEADERS, timeout=15)
+        soup    = BeautifulSoup(r.text, "html.parser")
+        content = soup.find("main") or soup.find(class_=re.compile(r"content|entry", re.I)) or soup
+        if any(x in content.get_text().lower() for x in ["no open", "no position", "no current"]):
+            log.info(f"{name}: no open positions")
+            return jobs
+        skip = ["#", "mailto", "tel:", "carlalbert.edu/admissions",
+                "carlalbert.edu/student", "carlalbert.edu/about-casc/job"]
+        for a in content.find_all("a", href=True):
+            title = a.get_text(strip=True)
+            if not title or len(title) < 5:
+                continue
+            href = a["href"]
+            if any(x in href for x in skip):
+                continue
+            cat, reason = categorize(title)
+            if cat:
+                full_url = href if href.startswith("http") else "https://carlalbert.edu" + href
+                jobs.append(make_job(name, title, full_url, "WordPress",
+                                     category=cat, location="Poteau, OK", match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_saashr(name, url, category="community"):
+    jobs = []
+    try:
+        r    = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for a in soup.find_all("a", href=re.compile(r"CareerID|CareersDetail|career_id", re.I)):
+            title = a.get_text(strip=True)
+            if not title or len(title) < 4:
+                continue
+            href     = a["href"]
+            full_url = href if href.startswith("http") else "https://secure7.saashr.com" + href
+            cat, reason = categorize(title, default_category=category)
+            if cat:
+                jobs.append(make_job(name, title, full_url, "SaaSHR",
+                                     category=cat, match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def scrape_bella_vista():
+    name = "City of Bella Vista"
+    url  = "https://recruiting.paylocity.com/recruiting/jobs/All/b1e8c19e-977f-41ec-89e7-a138ab6e72eb/City-of-Bella-Vista"
+    jobs = []
+    soup = pw_get_soup(url, wait=4)
+    if not soup:
+        return jobs
+    added = set()
+    for a in soup.find_all("a", href=True):
+        href  = a["href"]
+        title = a.get_text(strip=True)
+        if not title or len(title) < 5 or href in added:
+            continue
+        if not any(x in href for x in ["recruiting/jobs", "Details", "b1e8c19e"]):
+            continue
+        added.add(href)
+        full_url = href if href.startswith("http") else "https://recruiting.paylocity.com" + href
+        cat, reason = categorize(title)
+        if cat:
+            jobs.append(make_job(name, title, full_url, "Paylocity",
+                                 category=cat, location="Bella Vista, AR", match_reason=reason))
+    log.info(f"{name}: {len(jobs)} jobs")
+    return jobs
+
+
+def scrape_uca():
+    name = "UCA"
+    url  = "https://jobs.uca.edu/postings/search"
+    jobs = []
+    soup = pw_get_soup(url, wait=4)
+    if not soup:
+        return jobs
+    for a in soup.find_all("a", href=re.compile(r"/postings/\d+")):
+        title    = a.get_text(strip=True)
+        href     = a["href"]
+        full_url = href if href.startswith("http") else "https://jobs.uca.edu" + href
+        cat, reason = categorize(title)
+        if cat:
+            jobs.append(make_job(name, title, full_url, "PeopleAdmin",
+                                 category=cat, location="Conway, AR", match_reason=reason))
+    log.info(f"{name}: {len(jobs)} jobs")
+    return jobs
+
+
+def scrape_atu():
+    name = "Arkansas Tech Univ."
+    url  = "https://atu.csod.com/ux/ats/careersite/1/home?c=atu"
+    jobs = []
+    soup = pw_get_soup(url, wait=5)
+    if not soup:
+        return jobs
+    added = set()
+    for a in soup.find_all("a", href=re.compile(r"requisition|careersite.*req", re.I)):
+        title    = a.get_text(strip=True)
+        href     = a["href"]
+        if not title or len(title) < 5 or href in added:
+            continue
+        added.add(href)
+        full_url = href if href.startswith("http") else "https://atu.csod.com" + href
+        cat, reason = categorize(title)
+        if cat:
+            jobs.append(make_job(name, title, full_url, "Cornerstone",
+                                 category=cat, location="Russellville, AR", match_reason=reason))
+    log.info(f"{name}: {len(jobs)} jobs")
+    return jobs
+
 
 def scrape_arcbest():
     name = "ArcBest"
-    # Base job list — unfiltered so we catch all office/admin roles
-    url  = "https://careers.arcb.com/"
+    url  = "https://careers.arcb.com/careersmarketplace/OpenPositions/?10509=%5B27807%2C27810%2C36756%2C56719%2C28134%2C1738333%2C36692%2C36697%2C36733%2C36821%5D&10509_format=3533&10508=8400047&10508_format=3532&listFilterMode=1&jobRecordsPerPage=6&"
     jobs = []
-    soup = pw_get_soup(url, wait=5)
+    soup = pw_get_soup(url, wait=4)
     if not soup:
         return jobs
     added = set()
@@ -424,550 +813,68 @@ def scrape_arcbest():
         title = a.get_text(strip=True)
         if not title or len(title) < 5 or href in added:
             continue
-        if not any(x in href.lower() for x in ["openposition", "jobdetail", "careers.arcb", "position", "req"]):
+        if not any(x in href for x in ["OpenPosition", "JobDetail", "careers.arcb"]):
             continue
         added.add(href)
-        # Try to get location from parent element
-        parent = a.find_parent(["li", "div", "tr", "article"])
-        loc    = ""
-        if parent:
-            loc_m = re.search(r"\b(Fort Smith|Fayetteville|Springdale|Rogers|Bentonville|NWA|Remote|Arkansas|AR)\b",
-                              parent.get_text(), re.I)
-            if loc_m:
-                loc = loc_m.group(0)
-        if not is_valid_location(loc):
-            continue
-        full_url   = href if href.startswith("http") else "https://careers.arcb.com" + href
-        ok, reason = is_relevant(title)
-        if ok:
+        full_url = href if href.startswith("http") else "https://careers.arcb.com" + href
+        cat, reason = categorize(title)
+        if cat:
             jobs.append(make_job(name, title, full_url, "CareersMarketplace",
-                                 category="freight", location=loc, match_reason=reason))
+                                 category=cat, match_reason=reason))
     log.info(f"{name}: {len(jobs)} jobs")
     return jobs
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# TYSON FOODS  (custom site — requests)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_tyson():
-    name = "Tyson Foods"
-    # Tyson uses a custom careers site. Try the JSON API first, fall back to HTML.
+def scrape_ar_state_jobs():
+    name = "AR State Jobs"
+    url  = "https://arcareers.arkansas.gov/search/?searchby=location&q=&locationsearch=northwest+arkansas"
     jobs = []
-
-    # Attempt: SmartRecruiters-style JSON endpoint
-    api_url = "https://careers.tysonfoods.com/api/apply/v2/jobs?domain=tysonfoods.com&start=0&num=100&exclude_pid=&pid=&domain=tysonfoods.com&sort_by=relevance"
-    try:
-        r    = requests.get(api_url, headers=HEADERS, timeout=20)
-        data = r.json()
-        for item in data.get("positions", []):
-            title  = item.get("name", "").strip()
-            loc    = item.get("location", {}).get("name", "")
-            job_id = item.get("id", "")
-            url    = f"https://careers.tysonfoods.com/job/{job_id}" if job_id else "https://www.tysonfoods.com/careers"
-            if not is_valid_location(loc):
-                continue
-            ok, reason = is_relevant(title)
-            if ok:
-                jobs.append(make_job(name, title, url, "Tyson",
-                                     category="freight", location=loc, match_reason=reason))
-        if jobs:
-            log.info(f"{name}: {len(jobs)} jobs (API)")
-            return jobs
-    except Exception as e:
-        log.warning(f"{name} API attempt: {e}")
-
-    # Fallback: Playwright on careers page
-    soup = pw_get_soup("https://www.tysonfoods.com/careers", wait=5)
-    if not soup:
-        return jobs
-    added = set()
-    for a in soup.find_all("a", href=True):
-        href  = a["href"]
-        title = a.get_text(strip=True)
-        if not title or len(title) < 5 or href in added:
-            continue
-        if not any(x in href.lower() for x in ["job", "career", "posting", "req", "position"]):
-            continue
-        added.add(href)
-        parent = a.find_parent(["li", "div", "tr", "article"])
-        loc    = ""
-        if parent:
-            loc_m = re.search(r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote)\b",
-                              parent.get_text(), re.I)
-            loc   = loc_m.group(0) if loc_m else ""
-        if not is_valid_location(loc):
-            continue
-        full_url   = href if href.startswith("http") else "https://www.tysonfoods.com" + href
-        ok, reason = is_relevant(title)
-        if ok:
-            jobs.append(make_job(name, title, full_url, "Tyson",
-                                 category="freight", location=loc, match_reason=reason))
-    log.info(f"{name}: {len(jobs)} jobs (Playwright fallback)")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# XPO  (requests)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_xpo():
-    name = "XPO"
-    # Try their JSON API first
-    jobs = []
-    api_url = "https://jobs.xpo.com/api/apply/v2/jobs?domain=jobs.xpo.com&num=100&start=0"
-    try:
-        r    = requests.get(api_url, headers=HEADERS, timeout=20)
-        data = r.json()
-        for item in data.get("positions", []):
-            title  = item.get("name", "").strip()
-            loc    = item.get("location", {}).get("name", "")
-            job_id = item.get("id", "")
-            url    = f"https://jobs.xpo.com/job/{job_id}" if job_id else "https://jobs.xpo.com"
-            if not is_valid_location(loc):
-                continue
-            ok, reason = is_relevant(title)
-            if ok:
-                jobs.append(make_job(name, title, url, "XPO",
-                                     category="freight", location=loc, match_reason=reason))
-        if jobs:
-            log.info(f"{name}: {len(jobs)} jobs (API)")
-            return jobs
-    except Exception as e:
-        log.warning(f"{name} API: {e}")
-
-    # Fallback: scrape the search page
-    url  = "https://jobs.xpo.com/search/?searchby=distance&createNewAlert=false&q=&d=75&lat=35.8&lon=-93.3"
     soup = pw_get_soup(url, wait=5)
     if not soup:
         return jobs
     added = set()
-    for a in soup.find_all("a", href=re.compile(r"/job/", re.I)):
+    for a in soup.find_all("a", href=re.compile(r"/job/|/go/|requisition", re.I)):
         title    = a.get_text(strip=True)
         href     = a["href"]
-        if not title or href in added:
-            continue
-        added.add(href)
-        parent = a.find_parent(["li", "div", "tr", "article"])
-        loc    = ""
-        if parent:
-            loc_m = re.search(r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote)\b",
-                              parent.get_text(), re.I)
-            loc   = loc_m.group(0) if loc_m else ""
-        if not is_valid_location(loc):
-            continue
-        full_url   = href if href.startswith("http") else "https://jobs.xpo.com" + href
-        ok, reason = is_relevant(title)
-        if ok:
-            jobs.append(make_job(name, title, full_url, "XPO",
-                                 category="freight", location=loc, match_reason=reason))
-    log.info(f"{name}: {len(jobs)} jobs (HTML fallback)")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# ECHO GLOBAL LOGISTICS  (Playwright — JS button-rendered)
-# ──────────────────────────────────────────────────────────────────────────────
-
-# Words that must appear in a title for it to be treated as a job listing
-_ECHO_JOB_WORDS = re.compile(
-    r"\b(coordinator|specialist|representative|analyst|associate|agent|"
-    r"manager|advisor|support|service|administrator|assistant|"
-    r"recruiter|broker|planner|processor|clerk|trainee|"
-    r"brokerage|logistics|operations|sales|billing|claims|"
-    r"executive|account|dispatcher|dispatch)\b",
-    re.I
-)
-
-def scrape_echo():
-    name = "Echo Global"
-    url  = "https://www.echo.com/company/careers/open-positions/"
-    jobs = []
-    soup = pw_get_soup(url, wait=6)
-    if not soup:
-        return jobs
-    added = set()
-    for a in soup.find_all("a", href=True):
-        href  = a["href"]
-        title = a.get_text(strip=True)
         if not title or len(title) < 5 or href in added:
             continue
-        # Must link to something that looks like a job posting
-        if not any(x in href.lower() for x in ["job", "career", "lever.co", "greenhouse", "workday",
-                                                 "position", "req", "apply", "opening"]):
-            continue
-        # Title must contain at least one job-role word
-        if not _ECHO_JOB_WORDS.search(title):
-            continue
-        # Skip obvious CTAs and nav items
-        if any(x in title.lower() for x in ["request", "quote", "learn more", "view all",
-                                              "see all", "join our", "login", "apply now",
-                                              "home", "about", "contact", "truckload freight",
-                                              "less than", "full truckload"]):
-            continue
         added.add(href)
-        parent = a.find_parent(["li", "div", "section", "article"])
-        loc    = ""
-        if parent:
-            loc_m = re.search(r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote|Chicago)\b",
-                              parent.get_text(), re.I)
-            loc   = loc_m.group(0) if loc_m else ""
-        if not is_valid_location(loc):
-            continue
-        full_url   = href if href.startswith("http") else "https://www.echo.com" + href
-        ok, reason = is_relevant(title)
-        if ok:
-            jobs.append(make_job(name, title, full_url, "Echo",
-                                 category="freight", location=loc, match_reason=reason))
+        full_url = href if href.startswith("http") else "https://arcareers.arkansas.gov" + href
+        cat, reason = categorize(title)
+        if cat:
+            jobs.append(make_job(name, title, full_url, "SuccessFactors",
+                                 category=cat, location="NW Arkansas", match_reason=reason))
     log.info(f"{name}: {len(jobs)} jobs")
     return jobs
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# ARVEST BANK  (Infor CloudSuite — Playwright)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_arvest():
-    name = "Arvest Bank"
-    url  = (
-        "https://css-arvest-prd.inforcloudsuite.com/hcm/Jobs/form/"
-        "JobBoard%28ARV,EXTERNAL%29.JobSearchCompositeForm"
-        "?navigation=JobBoard%28ARV,EXTERNAL%29.JobSearchCompositeFormNav"
-        "&csk.JobBoard=EXTERNAL&csk.showusingxi=true&csk.HROrganization=ARV"
-    )
-    jobs = []
-    soup = pw_get_soup(url, wait=6)
-    if not soup:
-        return jobs
-    added = set()
-    for a in soup.find_all("a", href=True):
-        href  = a["href"]
-        title = a.get_text(strip=True)
-        if not title or len(title) < 5 or href in added:
-            continue
-        if not any(x in href.lower() for x in ["job", "requisition", "posting", "career", "req"]):
-            continue
-        added.add(href)
-        parent = a.find_parent(["li", "div", "tr", "article"])
-        loc    = ""
-        if parent:
-            loc_m = re.search(
-                r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote"
-                r"|Fayetteville|Bentonville|Rogers|Springdale|Fort Smith"
-                r"|Tulsa|Oklahoma City|Kansas City|Springfield)\b",
-                parent.get_text(), re.I)
-            loc = loc_m.group(0) if loc_m else ""
-        if not is_valid_location(loc):
-            continue
-        full_url   = href if href.startswith("http") else "https://css-arvest-prd.inforcloudsuite.com" + href
-        ok, reason = is_relevant(title)
-        if ok:
-            jobs.append(make_job(name, title, full_url, "Infor",
-                                 category="banking", location=loc, match_reason=reason))
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# FIRST NATIONAL BANK OF FORT SMITH  (Paylocity — Playwright)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_first_national():
-    name = "First National Bank"
-    url  = (
-        "https://recruiting.paylocity.com/recruiting/jobs/All/"
-        "dcb49edc-c676-411b-8b7b-104a72fec402/The-First-National-Bank-of-Fort-Smith"
-    )
+def scrape_adp():
+    name = "ADP (NWA)"
+    url  = "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=a75698d1-4927-42e2-8b24-4b1e4d60fa54&ccId=19000101_000001&lang=en_US"
     jobs = []
     soup = pw_get_soup(url, wait=5)
     if not soup:
         return jobs
     added = set()
     for a in soup.find_all("a", href=True):
-        href  = a["href"]
         title = a.get_text(strip=True)
+        href  = a["href"]
         if not title or len(title) < 5 or href in added:
             continue
-        if not any(x in href for x in ["recruiting/jobs", "Details", "dcb49edc"]):
+        if not any(x in href for x in ["recruitment", "job", "posting", "req"]):
             continue
         added.add(href)
-        full_url   = href if href.startswith("http") else "https://recruiting.paylocity.com" + href
-        ok, reason = is_relevant(title)
-        if ok:
-            jobs.append(make_job(name, title, full_url, "Paylocity",
-                                 category="banking", location="Fort Smith, AR",
-                                 match_reason=reason))
+        full_url = href if href.startswith("http") else "https://workforcenow.adp.com" + href
+        cat, reason = categorize(title)
+        if cat:
+            jobs.append(make_job(name, title, full_url, "ADP",
+                                 category=cat, match_reason=reason))
     log.info(f"{name}: {len(jobs)} jobs")
     return jobs
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# REGIONS BANK  (paginated — Playwright)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_regions():
-    name = "Regions Bank"
-    base = "https://careers.regions.com/us/en/search-results"
-    jobs = []
-    soup = pw_get_soup(base, wait=6)
-    if not soup:
-        return jobs
-    added = set()
-
-    def _parse_page(s):
-        for a in s.find_all("a", href=True):
-            href  = a["href"]
-            title = a.get_text(strip=True)
-            if not title or len(title) < 5 or href in added:
-                continue
-            if not any(x in href.lower() for x in ["/job/", "jobdetails", "careers.regions"]):
-                continue
-            added.add(href)
-            parent = a.find_parent(["li", "div", "tr", "article"])
-            loc    = ""
-            if parent:
-                loc_m = re.search(
-                    r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote"
-                    r"|Little Rock|Fort Smith|Fayetteville|Tulsa|Kansas City|St\.? Louis)\b",
-                    parent.get_text(), re.I)
-                loc = loc_m.group(0) if loc_m else ""
-            if not is_valid_location(loc):
-                continue
-            full_url   = href if href.startswith("http") else "https://careers.regions.com" + href
-            ok, reason = is_relevant(title)
-            if ok:
-                jobs.append(make_job(name, title, full_url, "Regions",
-                                     category="banking", location=loc, match_reason=reason))
-
-    _parse_page(soup)
-
-    # Paginate: try pages 2–10
-    for page in range(2, 11):
-        page_url = f"{base}?pg={page}"
-        s = pw_get_soup(page_url, wait=4)
-        if not s:
-            break
-        prev_count = len(jobs)
-        _parse_page(s)
-        if len(jobs) == prev_count:
-            break     # no new jobs → stop paginating
-        time.sleep(1)
-
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# BANK OF AMERICA  (pre-filtered URL — Playwright)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_bofa():
-    name = "Bank of America"
-    url  = (
-        "https://careers.bankofamerica.com/en-us/job-search"
-        "?ref=search&start=0&rows=25&search=getAllJobs"
-        "&filters=area%3DAdministration%2Carea%3DCustomer+Service%2Carea%3DOperations+%26+Support"
-    )
-    jobs = []
-    soup = pw_get_soup(url, wait=6)
-    if not soup:
-        return jobs
-    added = set()
-    for a in soup.find_all("a", href=True):
-        href  = a["href"]
-        title = a.get_text(strip=True)
-        if not title or len(title) < 5 or href in added:
-            continue
-        if not any(x in href.lower() for x in ["/job-detail/", "job/", "careers.bankofamerica"]):
-            continue
-        added.add(href)
-        parent = a.find_parent(["li", "div", "tr", "article"])
-        loc    = ""
-        if parent:
-            loc_m = re.search(
-                r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote"
-                r"|Little Rock|Tulsa|Kansas City|St\.? Louis)\b",
-                parent.get_text(), re.I)
-            loc = loc_m.group(0) if loc_m else ""
-        if not is_valid_location(loc):
-            continue
-        full_url   = href if href.startswith("http") else "https://careers.bankofamerica.com" + href
-        ok, reason = is_relevant(title)
-        if ok:
-            jobs.append(make_job(name, title, full_url, "BofA",
-                                 category="banking", location=loc, match_reason=reason))
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# WE WORK REMOTELY  (public HTML — requests, strict remote filter)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def _is_good_remote_title(title: str) -> bool:
-    """Extra guard for remote boards — reject noise categories."""
-    t = title.lower()
-    for bad in REMOTE_EXCLUDE_KEYWORDS:
-        if bad.strip() in t:
-            return False
-    return True
-
-
-def scrape_weworkremotely():
-    name = "We Work Remotely"
-    urls = [
-        "https://weworkremotely.com/categories/remote-customer-service-jobs",
-        "https://weworkremotely.com/categories/remote-management-and-finance-jobs",
-    ]
-    jobs  = []
-    added = set()
-    for url in urls:
-        try:
-            r    = requests.get(url, headers=HEADERS, timeout=15)
-            soup = BeautifulSoup(r.text, "html.parser")
-            for a in soup.find_all("a", href=re.compile(r"/remote-jobs/")):
-                href  = a["href"]
-                title = a.get_text(strip=True)
-                if not title or len(title) < 5 or href in added:
-                    continue
-                if not _is_good_remote_title(title):
-                    continue
-                added.add(href)
-                full_url   = "https://weworkremotely.com" + href if href.startswith("/") else href
-                ok, reason = is_relevant(title)
-                if ok:
-                    jobs.append(make_job(name, title, full_url, "WWR",
-                                         category="remote", location="Remote",
-                                         match_reason=reason))
-        except Exception as e:
-            log.error(f"{name} ({url}): {e}")
-        time.sleep(1)
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# REMOTE.CO  (public HTML — requests, strict remote filter)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_remoteco():
-    name = "Remote.co"
-    urls = [
-        "https://remote.co/remote-jobs/customer-service/",
-        "https://remote.co/remote-jobs/administrative/",
-    ]
-    jobs  = []
-    added = set()
-    for url in urls:
-        try:
-            r    = requests.get(url, headers=HEADERS, timeout=15)
-            soup = BeautifulSoup(r.text, "html.parser")
-            for a in soup.find_all("a", href=re.compile(r"/remote-jobs/")):
-                href  = a["href"]
-                title = a.get_text(strip=True)
-                if not title or len(title) < 5 or href in added:
-                    continue
-                # Skip category index links
-                if re.search(r"/remote-jobs/[^/]+/?$", href) and "/" not in href.split("/remote-jobs/")[1].rstrip("/"):
-                    continue
-                if not _is_good_remote_title(title):
-                    continue
-                added.add(href)
-                full_url   = "https://remote.co" + href if href.startswith("/") else href
-                ok, reason = is_relevant(title)
-                if ok:
-                    jobs.append(make_job(name, title, full_url, "Remote.co",
-                                         category="remote", location="Remote",
-                                         match_reason=reason))
-        except Exception as e:
-            log.error(f"{name} ({url}): {e}")
-        time.sleep(1)
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# NFDA CAREER CENTER  (funeral industry — requests)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_nfda():
-    name = "NFDA Career Center"
-    url  = "https://www.nfda.org/career-center"
-    jobs = []
-    try:
-        r    = requests.get(url, headers=HEADERS, timeout=20)
-        soup = BeautifulSoup(r.text, "html.parser")
-        added = set()
-        for a in soup.find_all("a", href=True):
-            href  = a["href"]
-            title = a.get_text(strip=True)
-            if not title or len(title) < 5 or href in added:
-                continue
-            if not any(x in href.lower() for x in ["job", "career", "posting", "position", "listing"]):
-                continue
-            added.add(href)
-            parent = a.find_parent(["li", "div", "tr", "article"])
-            loc    = ""
-            if parent:
-                loc_m = re.search(
-                    r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote|Online|Virtual)\b",
-                    parent.get_text(), re.I)
-                loc = loc_m.group(0) if loc_m else ""
-            if not is_valid_location(loc):
-                continue
-            full_url   = href if href.startswith("http") else "https://www.nfda.org" + href
-            ok, reason = is_relevant(title)
-            if ok:
-                jobs.append(make_job(name, title, full_url, "NFDA",
-                                     category="funeral", location=loc, match_reason=reason))
-    except Exception as e:
-        log.error(f"{name}: {e}")
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# CONNECTING DIRECTORS  (funeral industry — requests)
-# ──────────────────────────────────────────────────────────────────────────────
-
-def scrape_connecting_directors():
-    name = "Connecting Directors"
-    url  = "https://www.connectingdirectors.com/jobs"
-    jobs = []
-    try:
-        r    = requests.get(url, headers=HEADERS, timeout=20)
-        soup = BeautifulSoup(r.text, "html.parser")
-        added = set()
-        for a in soup.find_all("a", href=True):
-            href  = a["href"]
-            title = a.get_text(strip=True)
-            if not title or len(title) < 5 or href in added:
-                continue
-            if not any(x in href.lower() for x in ["job", "career", "position", "listing", "opportunity"]):
-                continue
-            added.add(href)
-            parent = a.find_parent(["li", "div", "tr", "article"])
-            loc    = ""
-            if parent:
-                loc_m = re.search(
-                    r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote|Online|Virtual)\b",
-                    parent.get_text(), re.I)
-                loc = loc_m.group(0) if loc_m else ""
-            if not is_valid_location(loc):
-                continue
-            full_url   = href if href.startswith("http") else "https://www.connectingdirectors.com" + href
-            ok, reason = is_relevant(title)
-            if ok:
-                jobs.append(make_job(name, title, full_url, "ConnectingDirectors",
-                                     category="funeral", location=loc, match_reason=reason))
-    except Exception as e:
-        log.error(f"{name}: {e}")
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# SCOTT FAMILY AMAZEUM  (via CareersNWA — requests)
+# AMAZEUM  (via CareersNWA)
 # ──────────────────────────────────────────────────────────────────────────────
 
 def scrape_amazeum():
@@ -987,11 +894,10 @@ def scrape_amazeum():
                 continue
             added.add(href)
             full_url   = href if href.startswith("http") else "https://talent.careersnwa.com" + href
-            ok, reason = is_relevant(title)
-            if ok:
+            cat, reason = categorize(title, default_category="community")
+            if cat:
                 jobs.append(make_job(name, title, full_url, "CareersNWA",
-                                     category="arts", location="Bentonville, AR",
-                                     match_reason=reason))
+                                     category=cat, location="Bentonville, AR", match_reason=reason))
     except Exception as e:
         log.error(f"{name}: {e}")
     log.info(f"{name}: {len(jobs)} jobs")
@@ -999,7 +905,7 @@ def scrape_amazeum():
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# SUMMER CAMP BOARDS
+# SUMMER CAMP SCRAPERS
 # ──────────────────────────────────────────────────────────────────────────────
 
 SUMMER_KEYWORDS = [
@@ -1011,16 +917,19 @@ SUMMER_KEYWORDS = [
     "recreation coordinator", "recreation specialist",
 ]
 
-def _is_camp_relevant(title: str) -> tuple:
+def _camp_categorize(title):
     t = title.lower()
     for kw in HARD_EXCLUDE_KEYWORDS:
-        if kw.strip() in t:
-            return False, f"excluded:{kw}"
+        if kw in t:
+            return None, f"excluded:{kw}"
     for kw in SUMMER_KEYWORDS:
         if kw in t:
-            return True, kw
-    # Also check against main keywords
-    return is_relevant(title)
+            return "summer", kw
+    # Also catch primary skillset matches
+    cat, reason = categorize(title, default_category="summer")
+    if cat:
+        return "summer", reason
+    return None, "no_match"
 
 
 def scrape_aca():
@@ -1042,15 +951,12 @@ def scrape_aca():
         parent = a.find_parent(["li", "div", "tr", "article"])
         loc    = ""
         if parent:
-            loc_m = re.search(
-                r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote)\b",
-                parent.get_text(), re.I)
+            loc_m = re.search(r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas)\b",
+                              parent.get_text(), re.I)
             loc = loc_m.group(0) if loc_m else ""
-        if not is_valid_location(loc):
-            continue
-        full_url   = href if href.startswith("http") else "https://jobs.aca.camp" + href
-        ok, reason = _is_camp_relevant(title)
-        if ok:
+        full_url    = href if href.startswith("http") else "https://jobs.aca.camp" + href
+        cat, reason = _camp_categorize(title)
+        if cat:
             jobs.append(make_job(name, title, full_url, "ACA",
                                  category="summer", location=loc, match_reason=reason))
     log.info(f"{name}: {len(jobs)} jobs")
@@ -1058,17 +964,13 @@ def scrape_aca():
 
 
 def scrape_coolworks():
-    name = "CoolWorks"
-    urls = [
-        "https://www.coolworks.com/summer-jobs?state=Arkansas",
-        "https://www.coolworks.com/summer-jobs?state=Oklahoma",
-        "https://www.coolworks.com/summer-jobs?state=Missouri",
-        "https://www.coolworks.com/summer-jobs?state=Kansas",
-    ]
+    name  = "CoolWorks"
+    states = ["Arkansas", "Oklahoma", "Missouri", "Kansas"]
     jobs  = []
     added = set()
-    for url in urls:
+    for state in states:
         try:
+            url  = f"https://www.coolworks.com/summer-jobs?state={state}"
             r    = requests.get(url, headers=HEADERS, timeout=15)
             soup = BeautifulSoup(r.text, "html.parser")
             for a in soup.find_all("a", href=re.compile(r"/jobs/|/job/")):
@@ -1077,13 +979,13 @@ def scrape_coolworks():
                 if not title or len(title) < 5 or href in added:
                     continue
                 added.add(href)
-                full_url   = href if href.startswith("http") else "https://www.coolworks.com" + href
-                ok, reason = _is_camp_relevant(title)
-                if ok:
+                full_url    = href if href.startswith("http") else "https://www.coolworks.com" + href
+                cat, reason = _camp_categorize(title)
+                if cat:
                     jobs.append(make_job(name, title, full_url, "CoolWorks",
-                                         category="summer", location="", match_reason=reason))
+                                         category="summer", location=state, match_reason=reason))
         except Exception as e:
-            log.error(f"{name} ({url}): {e}")
+            log.error(f"{name} ({state}): {e}")
         time.sleep(1)
     log.info(f"{name}: {len(jobs)} jobs")
     return jobs
@@ -1108,15 +1010,12 @@ def scrape_camphiring():
             parent = a.find_parent(["li", "div", "tr", "article"])
             loc    = ""
             if parent:
-                loc_m = re.search(
-                    r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas|Remote)\b",
-                    parent.get_text(), re.I)
+                loc_m = re.search(r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas)\b",
+                                  parent.get_text(), re.I)
                 loc = loc_m.group(0) if loc_m else ""
-            if not is_valid_location(loc):
-                continue
-            full_url   = href if href.startswith("http") else "https://www.camphiring.com" + href
-            ok, reason = _is_camp_relevant(title)
-            if ok:
+            full_url    = href if href.startswith("http") else "https://www.camphiring.com" + href
+            cat, reason = _camp_categorize(title)
+            if cat:
                 jobs.append(make_job(name, title, full_url, "CampHiring",
                                      category="summer", location=loc, match_reason=reason))
     except Exception as e:
@@ -1126,64 +1025,166 @@ def scrape_camphiring():
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+# IT SCRAPERS
+# ──────────────────────────────────────────────────────────────────────────────
+
+def scrape_usajobs_va():
+    """VA Arkansas IT jobs via USAJobs — Playwright required (React SPA)."""
+    name = "VA Arkansas (USAJobs)"
+    url  = "https://www.usajobs.gov/Search/Results/?j=2299&j=2210&j=1550&j=1598&l=arkansas&d=VA&p=1&r=25"
+    jobs = []
+    soup = pw_get_soup(url, wait=5)
+    if not soup:
+        return jobs
+    added = set()
+    # USAJobs job cards have links to /Job/...
+    for a in soup.find_all("a", href=re.compile(r"/Job/\d+|/job/\d+", re.I)):
+        title    = a.get_text(strip=True)
+        href     = a["href"]
+        if not title or len(title) < 5 or href in added:
+            continue
+        added.add(href)
+        full_url = href if href.startswith("http") else "https://www.usajobs.gov" + href
+        # All results from this search are pre-filtered IT/VA jobs, so accept all non-excluded
+        combined = title.lower()
+        excluded = any(kw in combined for kw in HARD_EXCLUDE_KEYWORDS)
+        if not excluded:
+            jobs.append(make_job(name, title, full_url, "USAJobs",
+                                 category="it", location="Arkansas", match_reason="VA IT"))
+    log.info(f"{name}: {len(jobs)} jobs")
+    return jobs
+
+
+def scrape_indeed_rss():
+    """Indeed RSS — multiple targeted searches, deduped by URL."""
+    SEARCHES = [
+        # IT → always tagged 'it'
+        ("IT technician",          "https://rss.indeed.com/rss?q=IT+technician&l=Fayetteville+AR&radius=30",           "it"),
+        ("help desk",              "https://rss.indeed.com/rss?q=help+desk&l=Fayetteville+AR&radius=30",               "it"),
+        ("desktop support",        "https://rss.indeed.com/rss?q=desktop+support&l=Fayetteville+AR&radius=30",         "it"),
+        ("systems administrator",  "https://rss.indeed.com/rss?q=systems+administrator&l=Fayetteville+AR&radius=30",   "it"),
+        ("cybersecurity",          "https://rss.indeed.com/rss?q=cybersecurity&l=Fayetteville+AR&radius=30",           "it"),
+        ("network administrator",  "https://rss.indeed.com/rss?q=network+administrator&l=Fayetteville+AR&radius=30",   "it"),
+        # Primary skillset → keyword filter decides category
+        ("makerspace",             "https://rss.indeed.com/rss?q=makerspace&l=Fayetteville+AR&radius=50",              "community"),
+        ("STEM coordinator",       "https://rss.indeed.com/rss?q=STEM+coordinator&l=Fayetteville+AR&radius=50",        "community"),
+        ("instructional technology","https://rss.indeed.com/rss?q=instructional+technology&l=Fayetteville+AR&radius=50","community"),
+        ("media specialist",       "https://rss.indeed.com/rss?q=media+specialist&l=Fayetteville+AR&radius=50",        "community"),
+        ("CTE teacher",            "https://rss.indeed.com/rss?q=CTE+teacher&l=Fayetteville+AR&radius=50",             "school"),
+        ("audio visual technician","https://rss.indeed.com/rss?q=audio+visual+technician&l=Fayetteville+AR&radius=50", "community"),
+        ("program coordinator",    "https://rss.indeed.com/rss?q=program+coordinator+education&l=Fayetteville+AR&radius=50","community"),
+    ]
+
+    all_jobs  = []
+    seen_urls = set()
+
+    for label, url, default_cat in SEARCHES:
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                log.warning(f"Indeed [{label}]: HTTP {r.status_code}")
+                time.sleep(1)
+                continue
+            soup = BeautifulSoup(r.text, "xml")
+            count = 0
+            for item in soup.find_all("item"):
+                title    = (item.find("title").text or "").strip()
+                link_tag = item.find("link")
+                job_url  = (link_tag.next_sibling or "").strip() if link_tag else ""
+                if not job_url:
+                    guid = item.find("guid")
+                    job_url = guid.text.strip() if guid else ""
+                if not job_url or job_url in seen_urls:
+                    continue
+                seen_urls.add(job_url)
+                desc      = (item.find("description").text or "").strip()
+                desc_text = BeautifulSoup(desc, "html.parser").get_text(" ")
+
+                if default_cat == "it":
+                    combined = (title + " " + desc_text).lower()
+                    if any(kw in combined for kw in HARD_EXCLUDE_KEYWORDS):
+                        continue
+                    cat, reason = categorize_it_source(title, desc_text)
+                    if not cat:
+                        cat, reason = "it", "IT (Indeed)"
+                else:
+                    cat, reason = categorize(title, desc_text, default_category=default_cat)
+                    if not cat:
+                        continue
+
+                all_jobs.append(make_job(
+                    f"Indeed ({label})",
+                    title, job_url, "Indeed",
+                    category=cat, match_reason=reason
+                ))
+                count += 1
+
+            log.info(f"Indeed [{label}]: {count} jobs")
+            time.sleep(1)
+        except Exception as e:
+            log.error(f"Indeed [{label}]: {e}")
+
+    log.info(f"Indeed total: {len(all_jobs)} jobs")
+    return all_jobs
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ORCHESTRATION
 # ──────────────────────────────────────────────────────────────────────────────
 
 def scrape_all():
     all_jobs = []
 
-    log.info("── Freight & Logistics ──")
-    all_jobs.extend(scrape_arcbest());          time.sleep(2)
+    log.info("── School districts ──")
+    for d in APPLITRACK_DISTRICTS:
+        all_jobs.extend(scrape_applitrack(d)); time.sleep(1)
+    for d in TEDK12_DISTRICTS:
+        all_jobs.extend(scrape_tedk12(d)); time.sleep(1)
+    all_jobs.extend(scrape_smartrecruiters()); time.sleep(1)
+    all_jobs.extend(scrape_springdale_sd()); time.sleep(1)
+    all_jobs.extend(scrape_westfork()); time.sleep(1)
+    all_jobs.extend(scrape_haashall()); time.sleep(1)
+    for d in SCHOOLSPRING_DISTRICTS:
+        all_jobs.extend(scrape_schoolspring(d)); time.sleep(2)
+
+    log.info("── Community sources ──")
+    all_jobs.extend(scrape_civicengage("Rogers (City)", "https://www.rogersar.gov/Jobs.aspx", "https://www.rogersar.gov")); time.sleep(1)
+    all_jobs.extend(scrape_civicengage("Bentonville (City)", "https://www.bentonvillear.com/jobs.aspx", "https://www.bentonvillear.com")); time.sleep(1)
+    all_jobs.extend(scrape_springdale_library()); time.sleep(1)
+    all_jobs.extend(scrape_saashr("Jones Center", "https://secure7.saashr.com/ta/6214802.careers?CareersSearch=&ein_id=119006097&lang=en-US")); time.sleep(1)
     for s in WORKDAY_SOURCES:
-        if s["category"] == "freight":
-            all_jobs.extend(scrape_workday(s)); time.sleep(1)
-    all_jobs.extend(scrape_tyson());            time.sleep(2)
-    all_jobs.extend(scrape_xpo());              time.sleep(2)
-    all_jobs.extend(scrape_echo());             time.sleep(2)
+        all_jobs.extend(scrape_workday(s)); time.sleep(1)
+    all_jobs.extend(scrape_taleo_rss(
+        "Arkansas State Univ.",
+        "https://phe.tbe.taleo.net/phe02/ats/servlet/Rss?org=ARKASTAT2&cws=40&WebPage=SRCHR_V2&WebVersion=0&_rss_version=2",
+        "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40"
+    )); time.sleep(1)
+    all_jobs.extend(scrape_jbu("https://www.jbu.edu/human-resources/staff-job-listings/", "JBU (Staff)")); time.sleep(1)
+    all_jobs.extend(scrape_jbu("https://www.jbu.edu/human-resources/faculty-job-listings/", "JBU (Faculty)")); time.sleep(1)
+    all_jobs.extend(scrape_hendrix()); time.sleep(1)
+    all_jobs.extend(scrape_carl_albert()); time.sleep(1)
+    all_jobs.extend(scrape_bella_vista()); time.sleep(2)
+    all_jobs.extend(scrape_uca()); time.sleep(2)
+    all_jobs.extend(scrape_atu()); time.sleep(2)
+    all_jobs.extend(scrape_ar_state_jobs()); time.sleep(2)
+    all_jobs.extend(scrape_arcbest()); time.sleep(2)
+    all_jobs.extend(scrape_adp()); time.sleep(2)
+    all_jobs.extend(scrape_amazeum()); time.sleep(2)
 
-    log.info("── Banking ──")
-    all_jobs.extend(scrape_arvest());           time.sleep(2)
-    for s in WORKDAY_SOURCES:
-        if s["category"] == "banking":
-            all_jobs.extend(scrape_workday(s)); time.sleep(1)
-    all_jobs.extend(scrape_first_national());   time.sleep(2)
-    all_jobs.extend(scrape_regions());          time.sleep(2)
-    all_jobs.extend(scrape_bofa());             time.sleep(2)
+    log.info("── IT sources ──")
+    all_jobs.extend(scrape_usajobs_va()); time.sleep(2)
 
-    log.info("── Corporate ──")
-    for s in WORKDAY_SOURCES:
-        if s["category"] == "corporate":
-            all_jobs.extend(scrape_workday(s)); time.sleep(1)
+    log.info("── Summer camp ──")
+    all_jobs.extend(scrape_aca()); time.sleep(2)
+    all_jobs.extend(scrape_coolworks()); time.sleep(2)
+    all_jobs.extend(scrape_camphiring()); time.sleep(2)
+    all_jobs.extend(scrape_indeed_rss()); time.sleep(2)
 
-    log.info("── Remote ──")
-    all_jobs.extend(scrape_weworkremotely());   time.sleep(1)
-    all_jobs.extend(scrape_remoteco());         time.sleep(1)
-
-    log.info("── Funeral / Death care ──")
-    all_jobs.extend(scrape_nfda());             time.sleep(2)
-    all_jobs.extend(scrape_connecting_directors()); time.sleep(2)
-
-    log.info("── Education ──")
-    for s in WORKDAY_SOURCES:
-        if s["category"] == "education":
-            all_jobs.extend(scrape_workday(s)); time.sleep(1)
-
-    log.info("── Arts & Community ──")
-    for s in WORKDAY_SOURCES:
-        if s["category"] == "arts":
-            all_jobs.extend(scrape_workday(s)); time.sleep(1)
-    all_jobs.extend(scrape_amazeum());          time.sleep(2)
-
-    log.info("── Summer Camp ──")
-    all_jobs.extend(scrape_aca());              time.sleep(2)
-    all_jobs.extend(scrape_coolworks());        time.sleep(2)
-    all_jobs.extend(scrape_camphiring());       time.sleep(2)
-
-    # Deduplicate by ID    seen, unique = set(), []
+    seen, unique = set(), []
     for j in all_jobs:
         if j["id"] not in seen:
             seen.add(j["id"])
             unique.append(j)
-
     log.info(f"Total relevant jobs: {len(unique)}")
     return unique
 
@@ -1194,30 +1195,90 @@ def find_new_jobs(old_data, new_jobs):
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+# EMAIL
+# ──────────────────────────────────────────────────────────────────────────────
+
+def build_section_html(jobs, label, accent):
+    if not jobs:
+        return ""
+    rows = ""
+    for j in jobs:
+        det  = " · ".join(x for x in [j.get("location",""), ("Posted " + j["posted_date"]) if j.get("posted_date") else ""] if x)
+        rows += f"""<tr><td style="padding:12px 8px;border-bottom:1px solid #f3f4f6;">
+            <a href="{j['url']}" style="font-weight:600;color:{accent};text-decoration:none;">{j['title']}</a><br>
+            <small style="color:#6b7280;">{j['district']}{(' · ' + det) if det else ''}</small><br>
+            <span style="font-size:11px;background:#eff6ff;color:#1d4ed8;padding:2px 6px;border-radius:999px;">{j.get('match_reason','')}</span>
+        </td></tr>"""
+    return f"""<h3 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+        color:#374151;margin:24px 0 10px;padding-bottom:6px;border-bottom:2px solid {accent};">
+        {label} — {len(jobs)} new</h3>
+        <table style="width:100%;border-collapse:collapse;margin-bottom:8px;">{rows}</table>"""
+
+
+def build_email_html(new_jobs, total_jobs):
+    today  = datetime.now().strftime("%B %d, %Y")
+    school = [j for j in new_jobs if j.get("category","school") == "school"]
+    comm   = [j for j in new_jobs if j.get("category") == "community"]
+    it     = [j for j in new_jobs if j.get("category") == "it"]
+    body   = (build_section_html(school, "🏫 School Districts",                    "#1a56db") +
+              build_section_html(comm,   "🏛️ Libraries, Universities & City Jobs", "#059669") +
+              build_section_html(it,     "💻 IT Jobs",                              "#7c3aed"))
+    if not new_jobs:
+        body = "<p style='color:#6b7280;'>No new matching positions today.</p>"
+    return f"""<html><body style="font-family:sans-serif;max-width:640px;margin:0 auto;padding:20px;">
+      <h2 style="color:#111827;margin-bottom:4px;">Daily Job Report — {today}</h2>
+      <p style="color:#6b7280;font-size:13px;margin-bottom:8px;">
+        <strong style="color:#111">{len(new_jobs)} new match(es)</strong> &nbsp;·&nbsp;
+        {total_jobs} total tracked &nbsp;·&nbsp;
+        <a href="{DASHBOARD_URL}" style="color:#1a56db;">View Dashboard →</a>
+      </p>{body}
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin-top:32px;">
+      <p style="font-size:11px;color:#9ca3af;margin-top:12px;">Runs daily at 8 AM CDT.</p>
+    </body></html>"""
+
+
+def send_email(new_jobs, total_jobs):
+    if not GMAIL_APP_PASSWORD:
+        log.warning("GMAIL_APP_PASSWORD not set — skipping email"); return
+    if not new_jobs:
+        log.info("No new jobs — skipping email"); return
+    today   = datetime.now().strftime("%B %d, %Y")
+    subject = f"🎓 {len(new_jobs)} New Job Match(es) — {today}"
+    msg     = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"]    = SENDER
+    msg["To"]      = RECIPIENT
+    msg.attach(MIMEText(build_email_html(new_jobs, total_jobs), "html"))
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(SENDER, GMAIL_APP_PASSWORD)
+            server.sendmail(SENDER, RECIPIENT, msg.as_string())
+        log.info(f"Email sent — {len(new_jobs)} new jobs")
+    except Exception as e:
+        log.error(f"Email failed: {e}")
+
+
+# ──────────────────────────────────────────────────────────────────────────────
 # MAIN
 # ──────────────────────────────────────────────────────────────────────────────
 
 def main():
-    log.info("── Amy's Job Tracker starting ──")
+    log.info("── NWA Job Tracker starting ──")
     old_data  = load_jobs()
     new_jobs  = scrape_all()
-
-    # Preserve first_seen dates for existing jobs
-    existing = {j["id"]: j for j in old_data.get("jobs", [])}
+    existing  = {j["id"]: j for j in old_data.get("jobs", [])}
     for j in new_jobs:
         if j["id"] in existing:
             j["first_seen"] = existing[j["id"]]["first_seen"]
-
     brand_new = find_new_jobs(old_data, new_jobs)
     log.info(f"New since last run: {len(brand_new)}")
-
     save_jobs({
         "last_updated": datetime.now().isoformat(timespec="minutes"),
-        "jobs":         new_jobs,
-        "sources":      ALL_SOURCES,
+        "jobs":    new_jobs,
+        "sources": ALL_SOURCES,
     })
+    send_email(brand_new, len(new_jobs))
     log.info("── Done ──")
-
 
 if __name__ == "__main__":
     main()
