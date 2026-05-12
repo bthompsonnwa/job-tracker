@@ -17,6 +17,8 @@ log = logging.getLogger(__name__)
 RECIPIENT          = "bthompsonnwa@gmail.com"
 SENDER             = "bthompsonnwa@gmail.com"
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
+ADZUNA_APP_ID      = os.environ.get("ADZUNA_APP_ID", "")
+ADZUNA_APP_KEY     = os.environ.get("ADZUNA_APP_KEY", "")
 JOBS_FILE          = "docs/jobs.json"
 DASHBOARD_URL      = "https://bthompsonnwa.github.io/job-tracker/"
 
@@ -204,8 +206,9 @@ ALL_SOURCES = [
     {"name": "Scott Family Amazeum",  "url": "https://talent.careersnwa.com/companies/scott-family-amazeum",   "category": "community"},
     # IT
     {"name": "VA Arkansas (USAJobs)",   "url": "https://www.usajobs.gov/Search/Results/?j=2299&j=2210&j=1550&j=1598&l=arkansas&d=VA&p=1",   "category": "it"},
-    {"name": "Indeed (IT — NW Arkansas)",      "url": "https://www.indeed.com/jobs?q=IT+technician&l=Fayetteville+AR&radius=30",   "category": "it"},
-    {"name": "Indeed (Skillset — NW Arkansas)", "url": "https://www.indeed.com/jobs?q=makerspace&l=Fayetteville+AR&radius=50",      "category": "community"},
+    {"name": "Walmart / Sam's Club",           "url": "https://careers.walmart.com",                                                 "category": "it"},
+    {"name": "Adzuna (IT — NW Arkansas)",       "url": "https://www.adzuna.com/jobs/search?q=IT+technician&w=Fayetteville+AR&r=30",  "category": "it"},
+    {"name": "Adzuna (Skillset — NW Arkansas)", "url": "https://www.adzuna.com/jobs/search?q=makerspace&w=Fayetteville+AR&r=50",     "category": "community"},
     {"name": "J.B. Hunt",               "url": "https://jbhunt.wd1.myworkdayjobs.com/JBH_Jobs",                                              "category": "it"},
     # Summer Camp
     {"name": "ACA Camp Jobs",  "url": "https://jobs.aca.camp/",               "category": "summer"},
@@ -611,11 +614,19 @@ def scrape_taleo_rss(name, rss_url, base_url, category="community"):
         soup = BeautifulSoup(r.text, "xml")
         for item in soup.find_all("item"):
             title    = (item.find("title").text or "").strip()
-            link_tag = item.find("link")
-            url      = (link_tag.next_sibling.strip()
-                        if link_tag and link_tag.next_sibling else base_url)
-            if not url or not url.startswith("http"):
-                url = base_url
+            if not title:
+                continue
+            # Taleo embeds URLs in markdown-like formatting inside <link>
+            # e.g. __https://...__ or [?](url) — extract the raw URL robustly
+            url  = base_url
+            link = item.find("link")
+            if link:
+                raw = (link.next_sibling or "").strip() or (link.string or "").strip() or ""
+                m   = re.search(r'https?://[^ []_*`<>]+', raw)
+                url = m.group(0).rstrip("?)") if m else base_url
+            if not url.startswith("http"):
+                guid = item.find("guid")
+                url  = guid.text.strip() if guid else base_url
             cat, reason = categorize(title, default_category=category)
             if cat:
                 jobs.append(make_job(name, title, url, "Taleo",
@@ -909,12 +920,29 @@ def scrape_amazeum():
 # ──────────────────────────────────────────────────────────────────────────────
 
 SUMMER_KEYWORDS = [
+    # Camp-specific
     "camp counselor", "camp coordinator", "camp director", "camp instructor",
     "camp educator", "camp specialist", "camp program", "summer camp",
-    "day camp", "overnight camp", "youth program", "outdoor education",
-    "activity director", "activity coordinator", "stem camp",
-    "technology camp", "nature educator", "outdoor educator",
-    "recreation coordinator", "recreation specialist",
+    "day camp", "overnight camp", "stem camp", "technology camp",
+    "camp staff", "camp leader", "camp facilitator", "camp technician",
+    "camp supervisor", "camp manager", "camp assistant",
+    # Summer/seasonal
+    "summer instructor", "summer staff", "summer program", "summer position",
+    "summer educator", "summer teacher", "summer coordinator", "summer job",
+    "summer employment", "summer hire", "summer opening",
+    "seasonal instructor", "seasonal staff", "seasonal educator",
+    "seasonal coordinator", "seasonal position", "seasonal employee",
+    # Activity / recreation
+    "activity leader", "activity specialist", "activity coordinator",
+    "activity director", "recreation coordinator", "recreation specialist",
+    "recreation leader", "recreation director", "recreation staff",
+    "outdoor education", "outdoor educator", "nature educator",
+    "outdoor recreation", "adventure educator", "experiential educator",
+    # Youth / program (broad — these sites are summer-focused so cast wider)
+    "youth program", "youth coordinator", "youth leader", "youth director",
+    "youth specialist", "youth educator", "youth instructor",
+    "program staff", "program leader", "program assistant",
+    "counselor",  # on these sites "counselor" almost always = camp counselor
 ]
 
 def _camp_categorize(title):
@@ -964,29 +992,36 @@ def scrape_aca():
 
 
 def scrape_coolworks():
+    """CoolWorks — Playwright needed, site is JS-heavy.
+    Searches AR, OK, MO for summer/seasonal camp-type roles."""
     name  = "CoolWorks"
-    states = ["Arkansas", "Oklahoma", "Missouri", "Kansas"]
     jobs  = []
     added = set()
+    states = ["Arkansas", "Oklahoma", "Missouri"]
     for state in states:
-        try:
-            url  = f"https://www.coolworks.com/summer-jobs?state={state}"
-            r    = requests.get(url, headers=HEADERS, timeout=15)
-            soup = BeautifulSoup(r.text, "html.parser")
-            for a in soup.find_all("a", href=re.compile(r"/jobs/|/job/")):
-                href  = a["href"]
-                title = a.get_text(strip=True)
-                if not title or len(title) < 5 or href in added:
-                    continue
-                added.add(href)
-                full_url    = href if href.startswith("http") else "https://www.coolworks.com" + href
-                cat, reason = _camp_categorize(title)
-                if cat:
-                    jobs.append(make_job(name, title, full_url, "CoolWorks",
-                                         category="summer", location=state, match_reason=reason))
-        except Exception as e:
-            log.error(f"{name} ({state}): {e}")
-        time.sleep(1)
+        url  = f"https://www.coolworks.com/find-a-job?state={state}"
+        soup = pw_get_soup(url, wait=4)
+        if not soup:
+            continue
+        for a in soup.find_all("a", href=True):
+            href  = a["href"]
+            title = a.get_text(strip=True)
+            if not title or len(title) < 5 or href in added:
+                continue
+            # CoolWorks job links contain /jobs/ or employer slugs
+            if not any(x in href for x in ["/jobs/", "/job/", "/position/", "coolworks.com/"]):
+                continue
+            # Skip nav/generic links
+            if any(x in title.lower() for x in ["sign in", "sign up", "login", "register",
+                                                  "home", "about", "contact", "help", "search"]):
+                continue
+            added.add(href)
+            full_url    = href if href.startswith("http") else "https://www.coolworks.com" + href
+            cat, reason = _camp_categorize(title)
+            if cat:
+                jobs.append(make_job(name, title, full_url, "CoolWorks",
+                                     category="summer", location=state, match_reason=reason))
+        time.sleep(2)
     log.info(f"{name}: {len(jobs)} jobs")
     return jobs
 
@@ -1004,7 +1039,13 @@ def scrape_camphiring():
             title = a.get_text(strip=True)
             if not title or len(title) < 5 or href in added:
                 continue
-            if not any(x in href.lower() for x in ["job", "position", "listing", "camp"]):
+            if any(x in href.lower() for x in ["mailto", "tel:", "facebook", "twitter",
+                                           "instagram", "linkedin", "#", "/about",
+                                           "/contact", "/faq", "/privacy", "/terms"]):
+                continue
+            if not any(x in href.lower() for x in ["job", "position", "listing", "camp",
+                                                   "opening", "role", "career", "work",
+                                                   "hire", "staff", "employ"]):
                 continue
             added.add(href)
             parent = a.find_parent(["li", "div", "tr", "article"])
@@ -1055,76 +1096,144 @@ def scrape_usajobs_va():
     return jobs
 
 
-def scrape_indeed_rss():
-    """Indeed RSS — multiple targeted searches, deduped by URL."""
+def scrape_walmart():
+    """Walmart / Sam's Club careers — REST API, IT roles in NW Arkansas."""
+    name = "Walmart / Sam's Club"
+    jobs = []
+    searches = [
+        "information technology",
+        "IT technician",
+        "help desk",
+        "systems administrator",
+        "network engineer",
+        "cybersecurity",
+        "desktop support",
+    ]
+    seen = set()
+    for query in searches:
+        try:
+            api_url = "https://careers.walmart.com/api/jobs"
+            params  = {
+                "offset":   0,
+                "limit":    20,
+                "query":    query,
+                "location": "Bentonville, AR",
+                "country":  "US",
+                "lang":     "en",
+            }
+            r    = requests.get(api_url, params=params, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                log.warning(f"{name} [{query}]: HTTP {r.status_code}")
+                time.sleep(1)
+                continue
+            data = r.json()
+            jobs_data = data.get("jobs", data.get("data", {}).get("jobs", []))
+            for j in jobs_data:
+                title    = (j.get("title") or j.get("jobTitle") or "").strip()
+                job_id   = j.get("jobId") or j.get("id") or ""
+                job_url  = f"https://careers.walmart.com/us/jobs/{job_id}/detail" if job_id else "https://careers.walmart.com"
+                if not title or job_url in seen:
+                    continue
+                seen.add(job_url)
+                cat, reason = categorize_it_source(title)
+                if not cat:
+                    cat, reason = "it", "IT (Walmart)"
+                combined = title.lower()
+                if any(kw in combined for kw in HARD_EXCLUDE_KEYWORDS):
+                    continue
+                jobs.append(make_job(name, title, job_url, "Walmart Careers",
+                                     category="it", location="NW Arkansas",
+                                     match_reason=reason))
+            time.sleep(1)
+        except Exception as e:
+            log.error(f"{name} [{query}]: {e}")
+    log.info(f"{name}: {len(jobs)} jobs")
+    return jobs
+
+
+def scrape_adzuna():
+    """Adzuna job aggregator — covers Indeed, LinkedIn, company sites.
+    Requires ADZUNA_APP_ID and ADZUNA_APP_KEY secrets in GitHub.
+    Register free at developer.adzuna.com (250 calls/month free tier).
+    """
+    if not ADZUNA_APP_ID or not ADZUNA_APP_KEY:
+        log.warning("Adzuna: ADZUNA_APP_ID or ADZUNA_APP_KEY not set — skipping")
+        return []
+
     SEARCHES = [
-        # IT → always tagged 'it'
-        ("IT technician",          "https://rss.indeed.com/rss?q=IT+technician&l=Fayetteville+AR&radius=30",           "it"),
-        ("help desk",              "https://rss.indeed.com/rss?q=help+desk&l=Fayetteville+AR&radius=30",               "it"),
-        ("desktop support",        "https://rss.indeed.com/rss?q=desktop+support&l=Fayetteville+AR&radius=30",         "it"),
-        ("systems administrator",  "https://rss.indeed.com/rss?q=systems+administrator&l=Fayetteville+AR&radius=30",   "it"),
-        ("cybersecurity",          "https://rss.indeed.com/rss?q=cybersecurity&l=Fayetteville+AR&radius=30",           "it"),
-        ("network administrator",  "https://rss.indeed.com/rss?q=network+administrator&l=Fayetteville+AR&radius=30",   "it"),
-        # Primary skillset → keyword filter decides category
-        ("makerspace",             "https://rss.indeed.com/rss?q=makerspace&l=Fayetteville+AR&radius=50",              "community"),
-        ("STEM coordinator",       "https://rss.indeed.com/rss?q=STEM+coordinator&l=Fayetteville+AR&radius=50",        "community"),
-        ("instructional technology","https://rss.indeed.com/rss?q=instructional+technology&l=Fayetteville+AR&radius=50","community"),
-        ("media specialist",       "https://rss.indeed.com/rss?q=media+specialist&l=Fayetteville+AR&radius=50",        "community"),
-        ("CTE teacher",            "https://rss.indeed.com/rss?q=CTE+teacher&l=Fayetteville+AR&radius=50",             "school"),
-        ("audio visual technician","https://rss.indeed.com/rss?q=audio+visual+technician&l=Fayetteville+AR&radius=50", "community"),
-        ("program coordinator",    "https://rss.indeed.com/rss?q=program+coordinator+education&l=Fayetteville+AR&radius=50","community"),
+        # IT searches
+        ("IT technician",           "Fayetteville AR",  30, "it"),
+        ("help desk",               "Fayetteville AR",  30, "it"),
+        ("desktop support",         "Fayetteville AR",  30, "it"),
+        ("systems administrator",   "Fayetteville AR",  30, "it"),
+        ("cybersecurity",           "Fayetteville AR",  30, "it"),
+        ("network administrator",   "Fayetteville AR",  30, "it"),
+        ("IT support",              "Bentonville AR",   30, "it"),
+        # Primary skillset
+        ("makerspace coordinator",  "Fayetteville AR",  50, "community"),
+        ("STEM coordinator",        "Fayetteville AR",  50, "community"),
+        ("instructional technology","Fayetteville AR",  50, "community"),
+        ("media specialist",        "Fayetteville AR",  50, "community"),
+        ("CTE teacher",             "Fayetteville AR",  50, "school"),
+        ("audio visual technician", "Fayetteville AR",  50, "community"),
+        ("program coordinator",     "Fayetteville AR",  50, "community"),
+        ("fabrication lab",         "Fayetteville AR",  50, "community"),
     ]
 
     all_jobs  = []
     seen_urls = set()
 
-    for label, url, default_cat in SEARCHES:
+    for query, location, dist_km, default_cat in SEARCHES:
         try:
-            r = requests.get(url, headers=HEADERS, timeout=15)
+            url    = f"https://api.adzuna.com/v1/api/jobs/us/search/1"
+            params = {
+                "app_id":           ADZUNA_APP_ID,
+                "app_key":          ADZUNA_APP_KEY,
+                "results_per_page": 20,
+                "what":             query,
+                "where":            location,
+                "distance":         dist_km,
+                "sort_by":          "date",
+            }
+            r    = requests.get(url, params=params, headers=HEADERS, timeout=15)
             if r.status_code != 200:
-                log.warning(f"Indeed [{label}]: HTTP {r.status_code}")
+                log.warning(f"Adzuna [{query}]: HTTP {r.status_code}")
                 time.sleep(1)
                 continue
-            soup = BeautifulSoup(r.text, "xml")
-            count = 0
-            for item in soup.find_all("item"):
-                title    = (item.find("title").text or "").strip()
-                link_tag = item.find("link")
-                job_url  = (link_tag.next_sibling or "").strip() if link_tag else ""
-                if not job_url:
-                    guid = item.find("guid")
-                    job_url = guid.text.strip() if guid else ""
-                if not job_url or job_url in seen_urls:
+            data     = r.json()
+            results  = data.get("results", [])
+            count    = 0
+            for job in results:
+                title    = (job.get("title") or "").strip()
+                job_url  = job.get("redirect_url") or job.get("adref") or ""
+                company  = job.get("company", {}).get("display_name", "")
+                location_text = job.get("location", {}).get("display_name", "")
+                if not title or not job_url or job_url in seen_urls:
                     continue
                 seen_urls.add(job_url)
-                desc      = (item.find("description").text or "").strip()
-                desc_text = BeautifulSoup(desc, "html.parser").get_text(" ")
-
                 if default_cat == "it":
-                    combined = (title + " " + desc_text).lower()
+                    combined = title.lower()
                     if any(kw in combined for kw in HARD_EXCLUDE_KEYWORDS):
                         continue
-                    cat, reason = categorize_it_source(title, desc_text)
+                    cat, reason = categorize_it_source(title)
                     if not cat:
-                        cat, reason = "it", "IT (Indeed)"
+                        cat, reason = "it", f"IT · {query}"
                 else:
-                    cat, reason = categorize(title, desc_text, default_category=default_cat)
+                    cat, reason = categorize(title, default_category=default_cat)
                     if not cat:
                         continue
-
+                display_name = f"Adzuna · {company}" if company else f"Adzuna ({query})"
                 all_jobs.append(make_job(
-                    f"Indeed ({label})",
-                    title, job_url, "Indeed",
-                    category=cat, match_reason=reason
+                    display_name, title, job_url, "Adzuna",
+                    category=cat, location=location_text, match_reason=reason
                 ))
                 count += 1
-
-            log.info(f"Indeed [{label}]: {count} jobs")
+            log.info(f"Adzuna [{query}]: {count} jobs")
             time.sleep(1)
         except Exception as e:
-            log.error(f"Indeed [{label}]: {e}")
+            log.error(f"Adzuna [{query}]: {e}")
 
-    log.info(f"Indeed total: {len(all_jobs)} jobs")
+    log.info(f"Adzuna total: {len(all_jobs)} jobs")
     return all_jobs
 
 
@@ -1178,7 +1287,8 @@ def scrape_all():
     all_jobs.extend(scrape_aca()); time.sleep(2)
     all_jobs.extend(scrape_coolworks()); time.sleep(2)
     all_jobs.extend(scrape_camphiring()); time.sleep(2)
-    all_jobs.extend(scrape_indeed_rss()); time.sleep(2)
+    all_jobs.extend(scrape_walmart()); time.sleep(2)
+    all_jobs.extend(scrape_adzuna()); time.sleep(2)
 
     seen, unique = set(), []
     for j in all_jobs:
