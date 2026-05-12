@@ -30,6 +30,14 @@ HEADERS = {
     )
 }
 
+def _kw_match(keyword, text):
+    """Word-boundary keyword match — avoids 'permit technician' matching 'it technician'.
+    Strips surrounding spaces from keyword before matching so 'chief ' and ' sr '
+    still work correctly with boundary checks."""
+    kw = keyword.strip()
+    return bool(re.search(r'(?<![a-z])' + re.escape(kw) + r'(?![a-z])', text))
+
+
 # ──────────────────────────────────────────────────────────────────────────────
 # KEYWORD FILTERS
 # ──────────────────────────────────────────────────────────────────────────────
@@ -78,6 +86,26 @@ INCLUDE_KEYWORDS = [
     "training coordinator", "workforce development",
     "youth program", "youth services", "youth coordinator",
     "innovation coach", "tech coach", "maker education",
+    # Museum / informal education roles (Amazeum, Crystal Bridges, etc.)
+    "programs educator", "program educator", "museum educator",
+    "informal educator", "informal education", "exhibit educator",
+    "learning specialist", "professional learning", "learning facilitator",
+    "education specialist", "education coordinator", "education program",
+    "public program", "public engagement", "community engagement",
+    "youth educator", "youth engagement", "youth instructor",
+    "science educator", "science communicator", "science program",
+    "exhibit facilitator", "floor facilitator", "gallery educator",
+    "stem educator", "steam educator",
+    # Curriculum / instructional design (broader catch)
+    "curriculum development", "curriculum facilitation",
+    "program development", "program facilitation",
+    "program design", "experience design", "learning design",
+    "lesson plan", "educational program", "educational experience",
+    # Facilitator / instructor roles in non-school settings
+    "program facilitator", "programs facilitator", "lead facilitator", "workshop leader",
+    "skills trainer", "skills instructor", "hands-on learning",
+    "experiential learning", "project-based learning",
+    "experience designer", "learning experience", "experience design",
 ]
 
 # IT jobs — matches go in the IT tab regardless of source
@@ -221,10 +249,6 @@ ALL_SOURCES = [
     {"name": "Adzuna (IT — NW Arkansas)",       "url": "https://www.adzuna.com/jobs/search?q=IT+technician&w=Fayetteville+AR&r=30",  "category": "it"},
     {"name": "Adzuna (Skillset — NW Arkansas)", "url": "https://www.adzuna.com/jobs/search?q=makerspace&w=Fayetteville+AR&r=50",     "category": "community"},
     {"name": "J.B. Hunt",               "url": "https://jbhunt.wd1.myworkdayjobs.com/JBH_Jobs",                                              "category": "it"},
-    # Summer Camp
-    {"name": "ACA Camp Jobs",  "url": "https://jobs.aca.camp/",               "category": "summer"},
-    {"name": "CoolWorks",      "url": "https://www.coolworks.com/summer-jobs", "category": "summer"},
-    {"name": "CampHiring",     "url": "https://www.camphiring.com/",           "category": "summer"},
 ]
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -238,34 +262,37 @@ def categorize(title, extra="", default_category="school"):
     """
     Returns (category, match_reason) or (None, reason) if excluded/no match.
     Primary skillset keywords take precedence over IT keywords.
+    Uses word-boundary matching to avoid substring false positives.
     """
     combined = (title + " " + extra).lower()
     for kw in HARD_EXCLUDE_KEYWORDS:
-        if kw in combined:
+        if _kw_match(kw, combined):
             return None, f"excluded:{kw.strip()}"
     for kw in INCLUDE_KEYWORDS:
-        if kw in combined:
+        if _kw_match(kw, combined):
             return default_category, kw
     for kw in IT_KEYWORDS:
-        if kw in combined:
+        if _kw_match(kw, combined):
+            # Also apply IT_JOB_EXCLUDE so senior/exec roles don't slip through
+            for ex in IT_JOB_EXCLUDE:
+                if _kw_match(ex, combined):
+                    return None, f"excluded:{ex.strip()}"
             return "it", kw
     return None, "no_match"
 
 def categorize_it_source(title, extra=""):
     """For dedicated IT sources — IT keywords filter, result tagged 'it'.
-    Applies IT_JOB_EXCLUDE to drop senior/specialized/unrelated roles."""
+    Applies IT_JOB_EXCLUDE to drop senior/specialized/unrelated roles.
+    Uses word-boundary matching to avoid substring false positives."""
     combined = (title + " " + extra).lower()
-    # Hard excludes first
     for kw in HARD_EXCLUDE_KEYWORDS:
-        if kw in combined:
+        if _kw_match(kw, combined):
             return None, f"excluded:{kw.strip()}"
-    # IT-specific excludes (senior roles, wrong specializations)
     for kw in IT_JOB_EXCLUDE:
-        if kw in combined:
+        if _kw_match(kw, combined):
             return None, f"excluded:{kw.strip()}"
-    # Must positively match an IT keyword
     for kw in IT_KEYWORDS:
-        if kw in combined:
+        if _kw_match(kw, combined):
             return "it", kw
     return None, "no_match"
 
@@ -929,154 +956,6 @@ def scrape_amazeum():
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# SUMMER CAMP SCRAPERS
-# ──────────────────────────────────────────────────────────────────────────────
-
-SUMMER_KEYWORDS = [
-    # Camp-specific
-    "camp counselor", "camp coordinator", "camp director", "camp instructor",
-    "camp educator", "camp specialist", "camp program", "summer camp",
-    "day camp", "overnight camp", "stem camp", "technology camp",
-    "camp staff", "camp leader", "camp facilitator", "camp technician",
-    "camp supervisor", "camp manager", "camp assistant",
-    # Summer/seasonal
-    "summer instructor", "summer staff", "summer program", "summer position",
-    "summer educator", "summer teacher", "summer coordinator", "summer job",
-    "summer employment", "summer hire", "summer opening",
-    "seasonal instructor", "seasonal staff", "seasonal educator",
-    "seasonal coordinator", "seasonal position", "seasonal employee",
-    # Activity / recreation
-    "activity leader", "activity specialist", "activity coordinator",
-    "activity director", "recreation coordinator", "recreation specialist",
-    "recreation leader", "recreation director", "recreation staff",
-    "outdoor education", "outdoor educator", "nature educator",
-    "outdoor recreation", "adventure educator", "experiential educator",
-    # Youth / program (broad — these sites are summer-focused so cast wider)
-    "youth program", "youth coordinator", "youth leader", "youth director",
-    "youth specialist", "youth educator", "youth instructor",
-    "program staff", "program leader", "program assistant",
-    "counselor",  # on these sites "counselor" almost always = camp counselor
-]
-
-def _camp_categorize(title):
-    t = title.lower()
-    for kw in HARD_EXCLUDE_KEYWORDS:
-        if kw in t:
-            return None, f"excluded:{kw}"
-    for kw in SUMMER_KEYWORDS:
-        if kw in t:
-            return "summer", kw
-    # Also catch primary skillset matches
-    cat, reason = categorize(title, default_category="summer")
-    if cat:
-        return "summer", reason
-    return None, "no_match"
-
-
-def scrape_aca():
-    name = "ACA Camp Jobs"
-    url  = "https://jobs.aca.camp/"
-    jobs = []
-    soup = pw_get_soup(url, wait=5)
-    if not soup:
-        return jobs
-    added = set()
-    for a in soup.find_all("a", href=True):
-        href  = a["href"]
-        title = a.get_text(strip=True)
-        if not title or len(title) < 5 or href in added:
-            continue
-        if not any(x in href.lower() for x in ["job", "position", "listing", "camp", "opening"]):
-            continue
-        added.add(href)
-        parent = a.find_parent(["li", "div", "tr", "article"])
-        loc    = ""
-        if parent:
-            loc_m = re.search(r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas)\b",
-                              parent.get_text(), re.I)
-            loc = loc_m.group(0) if loc_m else ""
-        full_url    = href if href.startswith("http") else "https://jobs.aca.camp" + href
-        cat, reason = _camp_categorize(title)
-        if cat:
-            jobs.append(make_job(name, title, full_url, "ACA",
-                                 category="summer", location=loc, match_reason=reason))
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-def scrape_coolworks():
-    """CoolWorks — Playwright needed, site is JS-heavy.
-    Searches AR, OK, MO for summer/seasonal camp-type roles."""
-    name  = "CoolWorks"
-    jobs  = []
-    added = set()
-    states = ["Arkansas", "Oklahoma", "Missouri"]
-    for state in states:
-        url  = f"https://www.coolworks.com/find-a-job?state={state}"
-        soup = pw_get_soup(url, wait=4)
-        if not soup:
-            continue
-        for a in soup.find_all("a", href=True):
-            href  = a["href"]
-            title = a.get_text(strip=True)
-            if not title or len(title) < 5 or href in added:
-                continue
-            # CoolWorks job links contain /jobs/ or employer slugs
-            if not any(x in href for x in ["/jobs/", "/job/", "/position/", "coolworks.com/"]):
-                continue
-            # Skip nav/generic links
-            if any(x in title.lower() for x in ["sign in", "sign up", "login", "register",
-                                                  "home", "about", "contact", "help", "search"]):
-                continue
-            added.add(href)
-            full_url    = href if href.startswith("http") else "https://www.coolworks.com" + href
-            cat, reason = _camp_categorize(title)
-            if cat:
-                jobs.append(make_job(name, title, full_url, "CoolWorks",
-                                     category="summer", location=state, match_reason=reason))
-        time.sleep(2)
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
-
-def scrape_camphiring():
-    name = "CampHiring"
-    url  = "https://www.camphiring.com/"
-    jobs = []
-    try:
-        r    = requests.get(url, headers=HEADERS, timeout=15)
-        soup = BeautifulSoup(r.text, "html.parser")
-        added = set()
-        for a in soup.find_all("a", href=True):
-            href  = a["href"]
-            title = a.get_text(strip=True)
-            if not title or len(title) < 5 or href in added:
-                continue
-            if any(x in href.lower() for x in ["mailto", "tel:", "facebook", "twitter",
-                                           "instagram", "linkedin", "#", "/about",
-                                           "/contact", "/faq", "/privacy", "/terms"]):
-                continue
-            if not any(x in href.lower() for x in ["job", "position", "listing", "camp",
-                                                   "opening", "role", "career", "work",
-                                                   "hire", "staff", "employ"]):
-                continue
-            added.add(href)
-            parent = a.find_parent(["li", "div", "tr", "article"])
-            loc    = ""
-            if parent:
-                loc_m = re.search(r"\b(AR|OK|MO|KS|Arkansas|Oklahoma|Missouri|Kansas)\b",
-                                  parent.get_text(), re.I)
-                loc = loc_m.group(0) if loc_m else ""
-            full_url    = href if href.startswith("http") else "https://www.camphiring.com" + href
-            cat, reason = _camp_categorize(title)
-            if cat:
-                jobs.append(make_job(name, title, full_url, "CampHiring",
-                                     category="summer", location=loc, match_reason=reason))
-    except Exception as e:
-        log.error(f"{name}: {e}")
-    log.info(f"{name}: {len(jobs)} jobs")
-    return jobs
-
 
 # ──────────────────────────────────────────────────────────────────────────────
 # IT SCRAPERS
@@ -1200,6 +1079,7 @@ def scrape_adzuna():
 
     # Skillset searches — education/community roles
     SKILL_SEARCHES = [
+        # Primary skillset
         ("makerspace coordinator",   "makerspace coordinator",   "teaching-jobs",   "community"),
         ("STEM coordinator",         "STEM coordinator",         "teaching-jobs",   "community"),
         ("instructional technology", "instructional technology", "teaching-jobs",   "community"),
@@ -1370,10 +1250,7 @@ def scrape_all():
     log.info("── IT sources ──")
     all_jobs.extend(scrape_usajobs_va()); time.sleep(2)
 
-    log.info("── Summer camp ──")
-    all_jobs.extend(scrape_aca()); time.sleep(2)
-    all_jobs.extend(scrape_coolworks()); time.sleep(2)
-    all_jobs.extend(scrape_camphiring()); time.sleep(2)
+    log.info("── IT + Adzuna ──")
     all_jobs.extend(scrape_walmart()); time.sleep(2)
     all_jobs.extend(scrape_adzuna()); time.sleep(2)
 
