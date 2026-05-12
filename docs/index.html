@@ -18,6 +18,7 @@
     --teal:     #2dd4bf;
     --purple:   #a78bfa;
     --pill-bg:  #1a2740;
+    --lime:     #a3e635;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; font-size: 15px; }
@@ -36,6 +37,7 @@
   .tab-btn.active.teal    { background: var(--teal);    border-color: var(--teal);    color: #052e1c; }
   .tab-btn.active.purple  { background: #7c3aed;        border-color: #7c3aed;        color: #fff; }
   .tab-btn.active.amber   { background: #f59e0b;        border-color: #f59e0b;        color: #fff; }
+  .tab-btn.active.lime    { background: var(--lime);     border-color: var(--lime);    color: #000; }
 
   .filter-scroll { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
   .filter-scroll::-webkit-scrollbar { display: none; }
@@ -56,6 +58,7 @@
   .job-card:hover              { border-color: var(--accent); transform: translateY(-1px); }
   .job-card.community:hover    { border-color: var(--teal); }
   .job-card.it:hover           { border-color: var(--purple); }
+  .job-card.summer:hover       { border-color: var(--lime); }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
   .job-title { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px; color: var(--text); line-height: 1.3; flex: 1; }
   .new-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: var(--green); color: #052e1c; padding: 2px 7px; border-radius: 999px; flex-shrink: 0; margin-top: 2px; }
@@ -64,6 +67,7 @@
   .badge-district            { background: rgba(79,156,249,.12);  color: var(--accent);  border: 1px solid rgba(79,156,249,.25); }
   .badge-district.community  { background: rgba(45,212,191,.10);  color: var(--teal);    border: 1px solid rgba(45,212,191,.20); }
   .badge-district.it         { background: rgba(167,139,250,.10); color: var(--purple);  border: 1px solid rgba(167,139,250,.20); }
+  .badge-district.summer     { background: rgba(163,230,53,.10);  color: var(--lime);    border: 1px solid rgba(163,230,53,.20); }
   .badge-match    { background: rgba(34,211,160,.10);  color: var(--green);  border: 1px solid rgba(34,211,160,.20); }
   .badge-platform { background: var(--pill-bg); color: var(--muted); border: 1px solid var(--border); }
   .card-detail { font-size: 12px; color: var(--muted); margin-top: 6px; }
@@ -73,6 +77,7 @@
   .section-header .count          { color: var(--accent); }
   .section-header.community .count{ color: var(--teal); }
   .section-header.it .count       { color: var(--purple); }
+  .section-header.summer .count   { color: var(--lime); }
 
   /* Sources panel */
   .sources-panel { padding: 12px 16px 32px; }
@@ -83,11 +88,13 @@
   .source-row:hover           { border-color: var(--accent); }
   .source-row.community:hover { border-color: var(--teal); }
   .source-row.it:hover        { border-color: var(--purple); }
+  .source-row.summer:hover    { border-color: var(--lime); }
   .source-name { font-size: 13px; font-weight: 500; color: var(--text); }
   .source-count { font-size: 11px; color: var(--muted); }
   .source-count .n            { color: var(--accent); font-weight: 600; }
   .source-count .n.teal       { color: var(--teal); }
   .source-count .n.purple     { color: var(--purple); }
+  .source-count .n.lime       { color: var(--lime); }
 
   .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
   .empty-icon { font-size: 40px; margin-bottom: 12px; }
@@ -117,6 +124,7 @@
     <button class="tab-btn"               id="tab-school"    onclick="setTab('school')">🏫 Schools</button>
     <button class="tab-btn teal"          id="tab-community" onclick="setTab('community')">🏛️ Community</button>
     <button class="tab-btn purple"        id="tab-it"        onclick="setTab('it')">💻 IT</button>
+    <button class="tab-btn lime"          id="tab-summer"    onclick="setTab('summer')">⛺ Summer</button>
     <button class="tab-btn amber"         id="tab-sources"   onclick="setTab('sources')">📋 Sources</button>
   </div>
   <div class="filter-scroll" id="filter-bar">
@@ -202,6 +210,7 @@ function filtered() {
     if (activeTab === "school"    && cat !== "school")    return false;
     if (activeTab === "community" && cat !== "community") return false;
     if (activeTab === "it"        && cat !== "it")        return false;
+    if (activeTab === "summer"    && cat !== "summer")    return false;
     if (activeSource !== "all"    && j.district !== activeSource) return false;
     if (searchQuery && ![j.title, j.district, j.location||"", j.match_reason||""].some(s => s.toLowerCase().includes(searchQuery))) return false;
     return true;
@@ -214,15 +223,16 @@ function renderAll() {
 
   const jobs    = filtered();
   const newOnes = jobs.filter(j => j.first_seen === today);
-  const schoolC = allJobs.filter(j => (j.category||"school") === "school").length;
-  const commC   = allJobs.filter(j => j.category === "community").length;
-  const itC     = allJobs.filter(j => j.category === "it").length;
+  const schoolC  = allJobs.filter(j => (j.category||"school") === "school").length;
+  const commC    = allJobs.filter(j => j.category === "community").length;
+  const itC      = allJobs.filter(j => j.category === "it").length;
+  const summerC  = allJobs.filter(j => j.category === "summer").length;
 
   document.getElementById("total-pill").innerHTML = `<span>${allJobs.length}</span> matches`;
   document.getElementById("stats-bar").innerHTML  =
     `<span><strong>${jobs.length}</strong> showing</span>
      <span><strong>${newOnes.length}</strong> new today</span>
-     <span>🏫 ${schoolC} &nbsp;🏛️ ${commC} &nbsp;💻 ${itC}</span>`;
+     <span>🏫 ${schoolC} &nbsp;🏛️ ${commC} &nbsp;💻 ${itC} &nbsp;⛺ ${summerC}</span>`;
 
   if (!jobs.length) {
     mc.innerHTML = `<div class="job-list"><div class="empty"><div class="empty-icon">🔍</div>
@@ -234,16 +244,17 @@ function renderAll() {
   const sorted = [...jobs].sort((a,b) => {
     const aN = a.first_seen === today ? 0 : 1, bN = b.first_seen === today ? 0 : 1;
     if (aN !== bN) return aN - bN;
-    const catOrder = {school:0, community:1, it:2};
+    const catOrder = {school:0, community:1, it:2, summer:3};
     const ao = catOrder[a.category||"school"] ?? 9, bo = catOrder[b.category||"school"] ?? 9;
     return ao - bo || a.district.localeCompare(b.district);
   });
 
   let html = '<div class="job-list">';
   if (activeTab === "all") {
-    const school = sorted.filter(j => (j.category||"school") === "school");
-    const comm   = sorted.filter(j => j.category === "community");
-    const it     = sorted.filter(j => j.category === "it");
+    const school  = sorted.filter(j => (j.category||"school") === "school");
+    const comm    = sorted.filter(j => j.category === "community");
+    const it      = sorted.filter(j => j.category === "it");
+    const summer  = sorted.filter(j => j.category === "summer");
     if (school.length) {
       html += `<div class="section-header"><span>🏫 School Districts</span><span class="count">${school.length}</span></div>`;
       html += school.map(cardHTML).join("");
@@ -255,6 +266,10 @@ function renderAll() {
     if (it.length) {
       html += `<div class="section-header it"><span>💻 IT Jobs</span><span class="count">${it.length}</span></div>`;
       html += it.map(cardHTML).join("");
+    }
+    if (summer.length) {
+      html += `<div class="section-header summer"><span>⛺ Summer Camp</span><span class="count">${summer.length}</span></div>`;
+      html += summer.map(cardHTML).join("");
     }
   } else {
     html += sorted.map(cardHTML).join("");
@@ -271,10 +286,11 @@ function renderSources(mc) {
   const schools = allSources.filter(s => s.category === "school");
   const comm    = allSources.filter(s => s.category === "community");
   const it      = allSources.filter(s => s.category === "it");
+  const summer  = allSources.filter(s => s.category === "summer");
 
   function sourceRow(s) {
     const count = jobsBySource[s.name] || 0;
-    const cls   = s.category === "community" ? "teal" : s.category === "it" ? "purple" : "";
+    const cls   = s.category === "community" ? "teal" : s.category === "it" ? "purple" : s.category === "summer" ? "lime" : "";
     const ct    = count > 0
       ? `<span class="source-count"><span class="n ${cls}">${count}</span> match${count!==1?"es":""}</span>`
       : `<span class="source-count">0 matches</span>`;
@@ -290,6 +306,8 @@ function renderSources(mc) {
     <div class="sources-grid">${comm.map(sourceRow).join("")}</div>
     <div class="sources-group-label">💻 IT Sources (${it.length})</div>
     <div class="sources-grid">${it.map(sourceRow).join("")}</div>
+    <div class="sources-group-label">⛺ Summer Camp (${summer.length})</div>
+    <div class="sources-grid">${summer.map(sourceRow).join("")}</div>
   </div>`;
 }
 
