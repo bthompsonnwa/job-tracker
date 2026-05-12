@@ -84,19 +84,30 @@ INCLUDE_KEYWORDS = [
 IT_KEYWORDS = [
     "help desk", "help-desk", "service desk", "service-desk",
     "desktop support", "it support", "it technician", "it specialist",
-    "it assistant", "it coordinator", "it manager", "it director",
-    "systems administrator", "sysadmin", "network technician",
-    "network administrator", "network engineer", "network support",
+    "it assistant", "it coordinator",
     "computer technician", "hardware technician", "field technician",
     "technical support", "tech support", "tier 1", "tier 2", "tier i", "tier ii",
     "systems support", "application support", "software support",
-    "cybersecurity", "cyber security", "information security", "security analyst",
-    "data analyst", "database administrator", "dba",
-    "cloud support", "cloud administrator", "cloud engineer",
     "sharepoint", "microsoft 365 admin", "office 365 admin",
     "active directory", "azure admin", "endpoint management",
-    "information technology", "information systems",
-    "it infrastructure", "it operations",
+    "information technology", "it infrastructure", "it operations",
+]
+
+# These title fragments disqualify a job from the IT tab —
+# too senior, too specialized, or totally wrong category
+IT_JOB_EXCLUDE = [
+    "senior ", " sr ", "sr.", " sr,",
+    "director", "vice president", " vp ", "chief ",
+    "cto", "cio", "ciso", "principal ",
+    "data engineer", "software engineer", "software developer",
+    "systems administrator", "network administrator", "network engineer",
+    "call center", "call-center", "contact center",
+    " analyst",       # data analyst, business analyst, security analyst…
+    "software developer", "full stack", "front end", "back end", "backend", "frontend",
+    "devops", "machine learning", "artificial intelligence", " ai engineer",
+    "truck driver", "cdl", "delivery driver",
+    "executive assistant", "administrative assistant",
+    "sales representative", "account executive", "account manager",
 ]
 
 HARD_EXCLUDE_KEYWORDS = [
@@ -241,18 +252,20 @@ def categorize(title, extra="", default_category="school"):
     return None, "no_match"
 
 def categorize_it_source(title, extra=""):
-    """For dedicated IT sources — only IT keywords filter, result always tagged 'it'."""
+    """For dedicated IT sources — IT keywords filter, result tagged 'it'.
+    Applies IT_JOB_EXCLUDE to drop senior/specialized/unrelated roles."""
     combined = (title + " " + extra).lower()
+    # Hard excludes first
     for kw in HARD_EXCLUDE_KEYWORDS:
         if kw in combined:
             return None, f"excluded:{kw.strip()}"
+    # IT-specific excludes (senior roles, wrong specializations)
+    for kw in IT_JOB_EXCLUDE:
+        if kw in combined:
+            return None, f"excluded:{kw.strip()}"
+    # Must positively match an IT keyword
     for kw in IT_KEYWORDS:
         if kw in combined:
-            return "it", kw
-    # Also catch generic tech titles on IT sources
-    for kw in ["analyst", "engineer", "developer", "programmer", "administrator",
-                "architect", "technologist", "specialist", "coordinator", "manager"]:
-        if kw in combined and any(t in combined for t in ["technology", "digital", "computer", "data", "software", "hardware", "system", "network", "cyber", "cloud", "information"]):
             return "it", kw
     return None, "no_match"
 
@@ -1153,88 +1166,162 @@ def scrape_walmart():
 
 def scrape_adzuna():
     """Adzuna job aggregator — covers Indeed, LinkedIn, company sites.
-    Requires ADZUNA_APP_ID and ADZUNA_APP_KEY secrets in GitHub.
-    Register free at developer.adzuna.com (250 calls/month free tier).
+    Requires ADZUNA_APP_ID and ADZUNA_APP_KEY GitHub secrets.
+    Register free at developer.adzuna.com (250 calls/month).
     """
     if not ADZUNA_APP_ID or not ADZUNA_APP_KEY:
         log.warning("Adzuna: ADZUNA_APP_ID or ADZUNA_APP_KEY not set — skipping")
         return []
 
-    SEARCHES = [
-        # IT searches
-        ("IT technician",           "Fayetteville AR",  30, "it"),
-        ("help desk",               "Fayetteville AR",  30, "it"),
-        ("desktop support",         "Fayetteville AR",  30, "it"),
-        ("systems administrator",   "Fayetteville AR",  30, "it"),
-        ("cybersecurity",           "Fayetteville AR",  30, "it"),
-        ("network administrator",   "Fayetteville AR",  30, "it"),
-        ("IT support",              "Bentonville AR",   30, "it"),
-        # Primary skillset
-        ("makerspace coordinator",  "Fayetteville AR",  50, "community"),
-        ("STEM coordinator",        "Fayetteville AR",  50, "community"),
-        ("instructional technology","Fayetteville AR",  50, "community"),
-        ("media specialist",        "Fayetteville AR",  50, "community"),
-        ("CTE teacher",             "Fayetteville AR",  50, "school"),
-        ("audio visual technician", "Fayetteville AR",  50, "community"),
-        ("program coordinator",     "Fayetteville AR",  50, "community"),
-        ("fabrication lab",         "Fayetteville AR",  50, "community"),
+    # Domains that routinely return irrelevant results through Adzuna
+    BLOCKED_DOMAINS = [
+        "wayup.com",        # internship aggregator — often off-topic
+        "cdllife.com",      # truck driving only
+        "landing.cdllife.com",
+        "ziprecruiter.com", # too broad, already covered by direct sources
+        "snagajob.com",     # hourly/fast food skews results
+        "jobilize.com",     # low-quality aggregator
+        "jobsinarc.com",
+        "lensa.com",        # inflates results with duplicates
     ]
 
-    all_jobs  = []
-    seen_urls = set()
+    # IT searches — tightened to entry/mid-level support roles only
+    # Removed: systems administrator, network administrator (too senior per user)
+    IT_SEARCHES = [
+        ("help desk technician",    "help desk technician",    "it-jobs"),
+        ("IT support technician",   "IT support technician",   "it-jobs"),
+        ("desktop support",         "desktop support",         "it-jobs"),
+        ("IT technician",           "IT technician",           "it-jobs"),
+        ("computer technician",     "computer technician",     "it-jobs"),
+        ("technical support",       "technical support",       "it-jobs"),
+        ("endpoint technician",     "endpoint technician",     "it-jobs"),
+        ("IT specialist",           "IT specialist",           "it-jobs"),
+    ]
 
-    for query, location, dist_km, default_cat in SEARCHES:
+    # Skillset searches — education/community roles
+    SKILL_SEARCHES = [
+        ("makerspace coordinator",   "makerspace coordinator",   "teaching-jobs",   "community"),
+        ("STEM coordinator",         "STEM coordinator",         "teaching-jobs",   "community"),
+        ("instructional technology", "instructional technology", "teaching-jobs",   "community"),
+        ("media specialist",         "media specialist",         "teaching-jobs",   "community"),
+        ("CTE teacher",              "CTE teacher",              "teaching-jobs",   "school"),
+        ("audio visual technician",  "audio visual technician",  "it-jobs",         "community"),
+        ("program coordinator",      "program coordinator education", "teaching-jobs", "community"),
+        ("fabrication lab",          "fabrication lab",          "teaching-jobs",   "community"),
+    ]
+
+    all_jobs = []
+    # Dedupe by title+company (Adzuna redirect URLs change per request)
+    seen_keys = set()
+
+    def is_blocked(url):
+        return any(d in url for d in BLOCKED_DOMAINS)
+
+    def dedup_key(title, company):
+        return (title.lower().strip(), (company or "").lower().strip())
+
+    # ── IT searches ──────────────────────────────────────────────────────────
+    for label, query, adzuna_cat in IT_SEARCHES:
         try:
-            url    = f"https://api.adzuna.com/v1/api/jobs/us/search/1"
             params = {
                 "app_id":           ADZUNA_APP_ID,
                 "app_key":          ADZUNA_APP_KEY,
-                "results_per_page": 20,
-                "what":             query,
-                "where":            location,
-                "distance":         dist_km,
+                "results_per_page": 15,
+                "what_phrase":      query,          # exact phrase = tighter results
+                "where":            "Fayetteville AR",
+                "distance":         40,
                 "sort_by":          "date",
+                "category":         adzuna_cat,
+                # Server-side exclusions
+                "what_exclude":     "senior director manager cdl truck driver",
             }
-            r    = requests.get(url, params=params, headers=HEADERS, timeout=15)
+            r = requests.get("https://api.adzuna.com/v1/api/jobs/us/search/1",
+                             params=params, headers=HEADERS, timeout=15)
             if r.status_code != 200:
-                log.warning(f"Adzuna [{query}]: HTTP {r.status_code}")
+                log.warning(f"Adzuna IT [{label}]: HTTP {r.status_code}")
                 time.sleep(1)
                 continue
-            data     = r.json()
-            results  = data.get("results", [])
-            count    = 0
+            results = r.json().get("results", [])
+            count = 0
             for job in results:
                 title    = (job.get("title") or "").strip()
-                job_url  = job.get("redirect_url") or job.get("adref") or ""
-                company  = job.get("company", {}).get("display_name", "")
-                location_text = job.get("location", {}).get("display_name", "")
-                if not title or not job_url or job_url in seen_urls:
+                job_url  = job.get("redirect_url") or ""
+                company  = (job.get("company") or {}).get("display_name", "")
+                loc_text = (job.get("location") or {}).get("display_name", "")
+                if not title or not job_url:
                     continue
-                seen_urls.add(job_url)
-                if default_cat == "it":
-                    combined = title.lower()
-                    if any(kw in combined for kw in HARD_EXCLUDE_KEYWORDS):
-                        continue
-                    cat, reason = categorize_it_source(title)
-                    if not cat:
-                        cat, reason = "it", f"IT · {query}"
-                else:
-                    cat, reason = categorize(title, default_category=default_cat)
-                    if not cat:
-                        continue
-                display_name = f"Adzuna · {company}" if company else f"Adzuna ({query})"
-                all_jobs.append(make_job(
-                    display_name, title, job_url, "Adzuna",
-                    category=cat, location=location_text, match_reason=reason
-                ))
+                if is_blocked(job_url):
+                    log.debug(f"Adzuna: blocked domain — {job_url[:60]}")
+                    continue
+                dk = dedup_key(title, company)
+                if dk in seen_keys:
+                    continue
+                seen_keys.add(dk)
+                # Apply IT categorizer (includes IT_JOB_EXCLUDE check)
+                cat, reason = categorize_it_source(title)
+                if not cat:
+                    log.debug(f"Adzuna IT filtered: {title}")
+                    continue
+                src = f"Adzuna · {company}" if company else "Adzuna (IT)"
+                all_jobs.append(make_job(src, title, job_url, "Adzuna",
+                                         category="it", location=loc_text,
+                                         match_reason=reason))
                 count += 1
-            log.info(f"Adzuna [{query}]: {count} jobs")
+            log.info(f"Adzuna IT [{label}]: {count} jobs")
             time.sleep(1)
         except Exception as e:
-            log.error(f"Adzuna [{query}]: {e}")
+            log.error(f"Adzuna IT [{label}]: {e}")
+
+    # ── Skillset searches ─────────────────────────────────────────────────────
+    for label, query, adzuna_cat, default_cat in SKILL_SEARCHES:
+        try:
+            params = {
+                "app_id":           ADZUNA_APP_ID,
+                "app_key":          ADZUNA_APP_KEY,
+                "results_per_page": 10,
+                "what_phrase":      query,
+                "where":            "Fayetteville AR",
+                "distance":         50,
+                "sort_by":          "date",
+                "category":         adzuna_cat,
+            }
+            r = requests.get("https://api.adzuna.com/v1/api/jobs/us/search/1",
+                             params=params, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                log.warning(f"Adzuna Skill [{label}]: HTTP {r.status_code}")
+                time.sleep(1)
+                continue
+            results = r.json().get("results", [])
+            count = 0
+            for job in results:
+                title    = (job.get("title") or "").strip()
+                job_url  = job.get("redirect_url") or ""
+                company  = (job.get("company") or {}).get("display_name", "")
+                loc_text = (job.get("location") or {}).get("display_name", "")
+                if not title or not job_url:
+                    continue
+                if is_blocked(job_url):
+                    continue
+                dk = dedup_key(title, company)
+                if dk in seen_keys:
+                    continue
+                seen_keys.add(dk)
+                cat, reason = categorize(title, default_category=default_cat)
+                if not cat:
+                    continue
+                src = f"Adzuna · {company}" if company else "Adzuna (Skillset)"
+                all_jobs.append(make_job(src, title, job_url, "Adzuna",
+                                         category=cat, location=loc_text,
+                                         match_reason=reason))
+                count += 1
+            log.info(f"Adzuna Skill [{label}]: {count} jobs")
+            time.sleep(1)
+        except Exception as e:
+            log.error(f"Adzuna Skill [{label}]: {e}")
 
     log.info(f"Adzuna total: {len(all_jobs)} jobs")
     return all_jobs
+
 
 
 # ──────────────────────────────────────────────────────────────────────────────
