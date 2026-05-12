@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-11T19:22",
+  "last_updated": "2026-05-12T04:43",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -62,6 +62,66 @@
       "first_seen": "2026-05-07"
     },
     {
+      "id": "db72ee9deb52",
+      "title": "Broadcast Technologies Specialist",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Broadcast-Technologies-Specialist_R0085465",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "broadcast tech",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-05-12"
+    },
+    {
+      "id": "699b8a0fa914",
+      "title": "Chief Business Officer - University Information Technology (UITS)",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Chief-Business-Officer---University-Information-Technology--UITS-_R0084961",
+      "platform": "Workday",
+      "category": "it",
+      "match_reason": "information technology",
+      "posted_date": "Posted 6 Days Ago",
+      "first_seen": "2026-05-12"
+    },
+    {
+      "id": "af412f4c0eeb",
+      "title": "Enterprise Network Engineer",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Enterprise-Network-Engineer_R0085096",
+      "platform": "Workday",
+      "category": "it",
+      "match_reason": "network engineer",
+      "posted_date": "Posted 7 Days Ago",
+      "first_seen": "2026-05-12"
+    },
+    {
+      "id": "336f831be738",
+      "title": "Network Administrator",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Network-Administrator_R0085097",
+      "platform": "Workday",
+      "category": "it",
+      "match_reason": "network administrator",
+      "posted_date": "Posted 7 Days Ago",
+      "first_seen": "2026-05-12"
+    },
+    {
+      "id": "d77bc52d4a22",
+      "title": "Audiovisual & XR Studios Manager",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Audiovisual---XR-Studios-Manager_R0085186",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "audiovisual",
+      "posted_date": "Posted 7 Days Ago",
+      "first_seen": "2026-05-12"
+    },
+    {
       "id": "30359334a452",
       "title": "Instructional Designer",
       "district": "NWACC",
@@ -74,40 +134,88 @@
       "first_seen": "2026-05-07"
     },
     {
-      "id": "8c23cea63cd4",
+      "id": "1ba097337549",
+      "title": "Part-Time Faculty, Graphic Design",
+      "district": "NWACC",
+      "location": "NWACC, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Part-Time-Faculty--Graphic-Design_JR-1040",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "graphic design",
+      "posted_date": "Posted 30+ Days Ago",
+      "first_seen": "2026-05-12"
+    },
+    {
+      "id": "01cd58e8fad4",
+      "title": "Multimedia Producer",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Multimedia-Producer_JR2247",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "multimedia",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-05-12"
+    },
+    {
+      "id": "7f847660b633",
+      "title": "Program Coordinator, Curricular Affairs",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Curricular-Affairs_JR2286",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted 30+ Days Ago",
+      "first_seen": "2026-05-12"
+    },
+    {
+      "id": "b56d4c1a011f",
+      "title": "Communications Specialist, Photo and Video",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Communications-Specialist--Photo-and-Video_JR2265",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "communications specialist",
+      "posted_date": "Posted 30+ Days Ago",
+      "first_seen": "2026-05-12"
+    },
+    {
+      "id": "1994f1fa02b9",
       "title": "Information Systems Security Specialist",
       "district": "Arkansas State Univ.",
       "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/requisition.jsp",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
       "platform": "Taleo",
       "category": "it",
       "match_reason": "information systems",
       "posted_date": "",
-      "first_seen": "2026-05-07"
+      "first_seen": "2026-05-12"
     },
     {
-      "id": "922a2591e419",
+      "id": "ceda56794dc8",
       "title": "Project Program Specialist",
       "district": "Arkansas State Univ.",
       "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/requisition.jsp",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
       "platform": "Taleo",
       "category": "community",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-05-07"
+      "first_seen": "2026-05-12"
     },
     {
-      "id": "ac0072510515",
+      "id": "4cc555b15194",
       "title": "Communications Specialist",
       "district": "Arkansas State Univ.",
       "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/requisition.jsp",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
       "platform": "Taleo",
       "category": "community",
       "match_reason": "communications specialist",
       "posted_date": "",
-      "first_seen": "2026-05-07"
+      "first_seen": "2026-05-12"
     },
     {
       "id": "534a942bb31d",
@@ -357,6 +465,16 @@
       "category": "community"
     },
     {
+      "name": "Crystal Bridges / AWE",
+      "url": "https://awe.wd1.myworkdayjobs.com/Art_and_Wellness",
+      "category": "community"
+    },
+    {
+      "name": "Scott Family Amazeum",
+      "url": "https://talent.careersnwa.com/companies/scott-family-amazeum",
+      "category": "community"
+    },
+    {
       "name": "VA Arkansas (USAJobs)",
       "url": "https://www.usajobs.gov/Search/Results/?j=2299&j=2210&j=1550&j=1598&l=arkansas&d=VA&p=1",
       "category": "it"
@@ -375,6 +493,21 @@
       "name": "J.B. Hunt",
       "url": "https://jbhunt.wd1.myworkdayjobs.com/JBH_Jobs",
       "category": "it"
+    },
+    {
+      "name": "ACA Camp Jobs",
+      "url": "https://jobs.aca.camp/",
+      "category": "summer"
+    },
+    {
+      "name": "CoolWorks",
+      "url": "https://www.coolworks.com/summer-jobs",
+      "category": "summer"
+    },
+    {
+      "name": "CampHiring",
+      "url": "https://www.camphiring.com/",
+      "category": "summer"
     }
   ]
 }
