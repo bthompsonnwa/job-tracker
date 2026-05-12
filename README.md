@@ -1,6 +1,6 @@
 # Job Tracker
 
-Automatically scrapes 16 NWA school district job boards daily, filters for
+Automatically scrapes job boards daily, filters for
 your skillset, and sends an email digest of new matches.
 
 **Dashboard:** `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
