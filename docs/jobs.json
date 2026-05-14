@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-13T19:29",
+  "last_updated": "2026-05-14T19:27",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -38,6 +38,30 @@
       "first_seen": "2026-05-07"
     },
     {
+      "id": "d202abe0482d",
+      "title": "Accounting Program Coordinator",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Accounting-Program-Coordinator_R0085572",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-05-14"
+    },
+    {
+      "id": "d77bc52d4a22",
+      "title": "Audiovisual & XR Studios Manager",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Audiovisual---XR-Studios-Manager_R0085186",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "audiovisual",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-05-12"
+    },
+    {
       "id": "64102c4d00d8",
       "title": "Graphic Design and Marketing Intern",
       "district": "University of Arkansas (UAF)",
@@ -46,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-05-13"
     },
     {
@@ -58,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "broadcast technologies",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -70,19 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "community engagement",
-      "posted_date": "Posted 2 Days Ago",
-      "first_seen": "2026-05-12"
-    },
-    {
-      "id": "d77bc52d4a22",
-      "title": "Audiovisual & XR Studios Manager",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Audiovisual---XR-Studios-Manager_R0085186",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "audiovisual",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -94,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional designer",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-07"
     },
     {
@@ -118,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -130,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 22 Days Ago",
+      "posted_date": "Posted 23 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -142,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -154,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 29 Days Ago",
+      "posted_date": "Posted 30 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -216,42 +228,6 @@
       "match_reason": "technology specialist",
       "posted_date": "",
       "first_seen": "2026-05-07"
-    },
-    {
-      "id": "70f802097f9f",
-      "title": "Social Media Content Creator & Manager",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/18997",
-      "platform": "PeopleAdmin",
-      "category": "school",
-      "match_reason": "content creator",
-      "posted_date": "",
-      "first_seen": "2026-05-07"
-    },
-    {
-      "id": "c2a721c070f6",
-      "title": "Middle School/High School Library Media Specialist",
-      "district": "Adzuna \u00b7 West Fork School District",
-      "location": "West Fork, Washington County",
-      "url": "https://www.adzuna.com/details/5726508757?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "library media",
-      "posted_date": "",
-      "first_seen": "2026-05-12"
-    },
-    {
-      "id": "4a4a366e344d",
-      "title": "CTE Teacher, Asst Football, Asst Boys Track (26-27 School Year)",
-      "district": "Adzuna \u00b7 Fort Smith Public Schools",
-      "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5724071842?se=oMjW-QFP8RGkW9CN6U8TKg&utm_medium=api&utm_source=344300f1&v=19CED4007C8C537687501B707CC4B4FF705C6A0B",
-      "platform": "Adzuna",
-      "category": "school",
-      "match_reason": "cte teacher",
-      "posted_date": "",
-      "first_seen": "2026-05-13"
     },
     {
       "id": "b078c2fd47ce",
