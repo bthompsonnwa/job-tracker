@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-23T16:20",
+  "last_updated": "2026-05-24T16:44",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-05-14"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "broadcast technologies",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "community engagement",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "information technology",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional designer",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -290,52 +290,40 @@
       "first_seen": "2026-05-15"
     },
     {
-      "id": "c2a721c070f6",
-      "title": "Middle School/High School Library Media Specialist",
-      "district": "Adzuna \u00b7 West Fork School District",
-      "location": "West Fork, Washington County",
-      "url": "https://www.adzuna.com/details/5726508757?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "library media",
-      "posted_date": "",
-      "first_seen": "2026-05-18"
-    },
-    {
-      "id": "3a9fea9aa60c",
+      "id": "a2744ed80b49",
       "title": "CTE Teacher, Asst Football & Head Bowling (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=kucFS8NW8RGvjPD20Sc1wQ&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=4BWI3o9X8RGvjPD20Sc1wQ&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-05-23"
+      "first_seen": "2026-05-24"
     },
     {
-      "id": "c0a62488f74c",
+      "id": "5fe83390ec30",
       "title": "CTE Teacher & Wrestling Coach (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5735912333?se=kucFS8NW8RGvjPD20Sc1wQ&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
+      "url": "https://www.adzuna.com/land/ad/5735912333?se=4BWI3o9X8RGvjPD20Sc1wQ&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-05-23"
+      "first_seen": "2026-05-24"
     },
     {
-      "id": "1c7b3342b63a",
+      "id": "edee0d75a406",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=kucFS8NW8RGvjPD20Sc1wQ&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=4BWI3o9X8RGvjPD20Sc1wQ&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-05-23"
+      "first_seen": "2026-05-24"
     }
   ],
   "sources": [
