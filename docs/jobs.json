@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-28T21:21",
+  "last_updated": "2026-05-29T21:15",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -74,6 +74,18 @@
       "first_seen": "2026-05-07"
     },
     {
+      "id": "49d35e81480e",
+      "title": "Instructional Designer III",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Instructional-Designer-III_R0086195",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "instructional designer",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-05-29"
+    },
+    {
       "id": "d202abe0482d",
       "title": "Accounting Program Coordinator",
       "district": "University of Arkansas (UAF)",
@@ -82,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-05-14"
     },
     {
@@ -94,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional designer",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -110,18 +122,6 @@
       "first_seen": "2026-05-22"
     },
     {
-      "id": "0c360e5a43f0",
-      "title": "Research and Information Services Librarian",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Research-and-Information-Services-Librarian_JR2387",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "librarian",
-      "posted_date": "Posted Today",
-      "first_seen": "2026-05-28"
-    },
-    {
       "id": "01cd58e8fad4",
       "title": "Multimedia Producer",
       "district": "Crystal Bridges / AWE",
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -206,18 +206,6 @@
       "first_seen": "2026-05-12"
     },
     {
-      "id": "ceda56794dc8",
-      "title": "Project Program Specialist",
-      "district": "Arkansas State Univ.",
-      "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
-      "platform": "Taleo",
-      "category": "community",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-05-19"
-    },
-    {
       "id": "1d9a5c6cb0a5",
       "title": "Education Program Coordinator",
       "district": "Arkansas State Univ.",
@@ -254,64 +242,28 @@
       "first_seen": "2026-05-20"
     },
     {
-      "id": "954d54804be7",
-      "title": "Social Media Content Creator & Manager",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19122",
-      "platform": "PeopleAdmin",
-      "category": "school",
-      "match_reason": "content creator",
-      "posted_date": "",
-      "first_seen": "2026-05-15"
-    },
-    {
-      "id": "5bf17b56c658",
-      "title": "IT INFRASTRUCTURE COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-IT-INFRASTRUCTURE-COORDINATOR-AR-72201/1394438600/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-05-28"
-    },
-    {
-      "id": "7dc631b87ece",
+      "id": "a06c856934ee",
       "title": "CTE Teacher, Asst Football & Head Bowling (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=ZJkWNtta8RGtYNFAtJjkyA&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=cAVJkKNb8RGUJNJexxfy6Q&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-05-28"
+      "first_seen": "2026-05-29"
     },
     {
-      "id": "e8ddb611969a",
-      "title": "CTE Teacher & Wrestling Coach (26-27 School Year)",
-      "district": "Adzuna \u00b7 Fort Smith Public Schools",
-      "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5735912333?se=ZJkWNtta8RGtYNFAtJjkyA&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
-      "platform": "Adzuna",
-      "category": "school",
-      "match_reason": "cte teacher",
-      "posted_date": "",
-      "first_seen": "2026-05-28"
-    },
-    {
-      "id": "cc5921219e69",
+      "id": "5c365eb853d0",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=ZJkWNtta8RGtYNFAtJjkyA&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=cAVJkKNb8RGUJNJexxfy6Q&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-05-28"
+      "first_seen": "2026-05-29"
     }
   ],
   "sources": [
