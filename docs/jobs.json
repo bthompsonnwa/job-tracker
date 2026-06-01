@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-31T16:51",
+  "last_updated": "2026-06-01T22:40",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -24,18 +24,6 @@
       "match_reason": "cclc",
       "posted_date": "",
       "first_seen": "2026-05-04"
-    },
-    {
-      "id": "46c7fb46cbf2",
-      "title": "21st CCLC Intern",
-      "district": "Springdale SD",
-      "location": "J.O. Kelly Middle School",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014104",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-05-22"
     },
     {
       "id": "1f983fa95446",
@@ -82,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional designer",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-29"
     },
     {
@@ -94,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-05-14"
     },
     {
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional designer",
-      "posted_date": "Posted 20 Days Ago",
+      "posted_date": "Posted 21 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -130,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 20 Days Ago",
+      "posted_date": "Posted 21 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -242,64 +230,52 @@
       "first_seen": "2026-05-20"
     },
     {
-      "id": "5bf17b56c658",
-      "title": "IT INFRASTRUCTURE COORDINATOR",
+      "id": "2bda2beca36b",
+      "title": "NWTI EDUCATION PROGRAM SUPERVISOR/EXPERT",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-IT-INFRASTRUCTURE-COORDINATOR-AR-72201/1394438600/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-05-30"
-    },
-    {
-      "id": "77dc914dca32",
-      "title": "COMMERCE PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-COMMERCE-PROGRAM-COORDINATOR-AR-72202/1394311700/",
+      "url": "https://arcareers.arkansas.gov/job/Springdale-NWTI-EDUCATION-PROGRAM-SUPERVISOREXPERT-AR-72764/1395640200/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program coordinator",
+      "match_reason": "education program",
       "posted_date": "",
-      "first_seen": "2026-05-30"
+      "first_seen": "2026-06-01"
     },
     {
-      "id": "dee8ae896400",
+      "id": "b29f5cb04f08",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-HEALTH-PROGRAM-SPECIALIST-AR-72205/1395487800/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-06-01"
+    },
+    {
+      "id": "a4ed0456be5d",
       "title": "CTE Teacher, Asst Football & Head Bowling (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=SK7P4hBd8RGUJNJexxfy6Q&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=MqOE1gpe8RGLwJSGqSIW5A&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-05-31"
+      "first_seen": "2026-06-01"
     },
     {
-      "id": "4258f4ac9607",
-      "title": "CTE Teacher & Wrestling Coach (26-27 School Year)",
-      "district": "Adzuna \u00b7 Fort Smith Public Schools",
-      "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5735912333?se=SK7P4hBd8RGUJNJexxfy6Q&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
-      "platform": "Adzuna",
-      "category": "school",
-      "match_reason": "cte teacher",
-      "posted_date": "",
-      "first_seen": "2026-05-31"
-    },
-    {
-      "id": "f6ff6e702902",
+      "id": "5fcea57a4309",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=SK7P4hBd8RGUJNJexxfy6Q&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=MqOE1gpe8RGLwJSGqSIW5A&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-05-31"
+      "first_seen": "2026-06-01"
     }
   ],
   "sources": [
