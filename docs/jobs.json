@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-05T16:03",
+  "last_updated": "2026-06-06T14:50",
   "jobs": [
     {
       "id": "48a1c38eccdc",
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "instructional designer",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-05-29"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-05-14"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 25 Days Ago",
+      "posted_date": "Posted 26 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -266,18 +266,6 @@
       "first_seen": "2026-05-27"
     },
     {
-      "id": "ec1bbb5d3dc4",
-      "title": "Athletics Student Graphic Designer (Federal Work Study)",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19155",
-      "platform": "PeopleAdmin",
-      "category": "school",
-      "match_reason": "graphic designer",
-      "posted_date": "",
-      "first_seen": "2026-05-20"
-    },
-    {
       "id": "c86454607a04",
       "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
@@ -302,40 +290,28 @@
       "first_seen": "2026-06-01"
     },
     {
-      "id": "8acb2a45cfb6",
+      "id": "803e8f900fda",
       "title": "CTE Teacher, Asst Football & Head Bowling (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=tkmfFPhg8RGgVIyd3bh4fg&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=Lk5qA7dh8RGHk5mrcEw0_Q&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-05"
+      "first_seen": "2026-06-06"
     },
     {
-      "id": "0f3b3c8ad058",
+      "id": "93ac43d552ed",
       "title": "CTE Teacher & Wrestling Coach (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5735912333?se=tkmfFPhg8RGgVIyd3bh4fg&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
+      "url": "https://www.adzuna.com/land/ad/5735912333?se=Lk5qA7dh8RGHk5mrcEw0_Q&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-05"
-    },
-    {
-      "id": "706d4a0e1795",
-      "title": "CTE Teacher (26-27 School Year)",
-      "district": "Adzuna \u00b7 Fort Smith Public Schools",
-      "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=tkmfFPhg8RGgVIyd3bh4fg&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
-      "platform": "Adzuna",
-      "category": "school",
-      "match_reason": "cte teacher",
-      "posted_date": "",
-      "first_seen": "2026-06-05"
+      "first_seen": "2026-06-06"
     }
   ],
   "sources": [
