@@ -1,18 +1,6 @@
 {
-  "last_updated": "2026-06-07T14:59",
+  "last_updated": "2026-06-08T16:55",
   "jobs": [
-    {
-      "id": "48a1c38eccdc",
-      "title": "21CCLC Afterschool Program Director",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014208",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-06-05"
-    },
     {
       "id": "b77195453ad0",
       "title": "21 CCLC Site Coordinator (2026-27 SY)",
@@ -62,18 +50,6 @@
       "first_seen": "2026-05-23"
     },
     {
-      "id": "49d35e81480e",
-      "title": "Instructional Designer III",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Instructional-Designer-III_R0086195",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "instructional designer",
-      "posted_date": "Posted 9 Days Ago",
-      "first_seen": "2026-05-29"
-    },
-    {
       "id": "1ba097337549",
       "title": "Part-Time Faculty, Graphic Design",
       "district": "NWACC",
@@ -94,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -106,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -118,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -130,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 27 Days Ago",
+      "posted_date": "Posted 28 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -254,40 +230,28 @@
       "first_seen": "2026-06-02"
     },
     {
-      "id": "2bda2beca36b",
-      "title": "NWTI EDUCATION PROGRAM SUPERVISOR/EXPERT",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Springdale-NWTI-EDUCATION-PROGRAM-SUPERVISOREXPERT-AR-72764/1395640200/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "education program",
-      "posted_date": "",
-      "first_seen": "2026-06-01"
-    },
-    {
-      "id": "d1da62bebec1",
-      "title": "Anticipated Library Media Specialist",
-      "district": "Adzuna \u00b7 Responsive Education Solutions",
-      "location": "Rogers, Benton County",
-      "url": "https://www.adzuna.com/details/5755454439?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "library media",
-      "posted_date": "",
-      "first_seen": "2026-06-07"
-    },
-    {
-      "id": "052fe26d7d0a",
+      "id": "857577ead2c2",
       "title": "CTE Teacher, Asst Football & Head Bowling (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=YilhgoFi8RGTyc16BXlIog&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=fHBS3Vpj8RGDG-cajORpQw&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-07"
+      "first_seen": "2026-06-08"
+    },
+    {
+      "id": "a0d92f842e1b",
+      "title": "CTE Teacher & Wrestling Coach (26-27 School Year)",
+      "district": "Adzuna \u00b7 Fort Smith Public Schools",
+      "location": "Fort Smith, Sebastian County",
+      "url": "https://www.adzuna.com/land/ad/5735912333?se=fHBS3Vpj8RGDG-cajORpQw&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
+      "platform": "Adzuna",
+      "category": "school",
+      "match_reason": "cte teacher",
+      "posted_date": "",
+      "first_seen": "2026-06-08"
     }
   ],
   "sources": [
