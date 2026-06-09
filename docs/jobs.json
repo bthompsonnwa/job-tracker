@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-08T16:55",
+  "last_updated": "2026-06-09T16:11",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 30+ Days Ago",
+      "posted_date": "Posted Today",
       "first_seen": "2026-05-22"
     },
     {
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -218,40 +218,52 @@
       "first_seen": "2026-05-27"
     },
     {
-      "id": "c86454607a04",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72701/1395694300/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
+      "id": "f3be21d718f3",
+      "title": "IT Specialist",
+      "district": "VA Arkansas (USAJobs)",
+      "location": "Arkansas",
+      "url": "https://www.usajobs.gov/job/872116700",
+      "platform": "USAJobs",
+      "category": "it",
+      "match_reason": "VA IT",
       "posted_date": "",
-      "first_seen": "2026-06-02"
+      "first_seen": "2026-06-09"
     },
     {
-      "id": "857577ead2c2",
-      "title": "CTE Teacher, Asst Football & Head Bowling (26-27 School Year)",
-      "district": "Adzuna \u00b7 Fort Smith Public Schools",
-      "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=fHBS3Vpj8RGDG-cajORpQw&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "id": "d1da62bebec1",
+      "title": "Anticipated Library Media Specialist",
+      "district": "Adzuna \u00b7 Responsive Education Solutions",
+      "location": "Rogers, Benton County",
+      "url": "https://www.adzuna.com/details/5755454439?utm_medium=api&utm_source=344300f1",
       "platform": "Adzuna",
-      "category": "school",
-      "match_reason": "cte teacher",
+      "category": "community",
+      "match_reason": "library media",
       "posted_date": "",
-      "first_seen": "2026-06-08"
+      "first_seen": "2026-06-09"
     },
     {
-      "id": "a0d92f842e1b",
+      "id": "90f972910e00",
       "title": "CTE Teacher & Wrestling Coach (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5735912333?se=fHBS3Vpj8RGDG-cajORpQw&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
+      "url": "https://www.adzuna.com/land/ad/5735912333?se=ArzA2R1k8RGvV9rkZ7vezw&utm_medium=api&utm_source=344300f1&v=DF52E2A0B95F9BC24FB40DD92B48A534B5114105",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-08"
+      "first_seen": "2026-06-09"
+    },
+    {
+      "id": "eac38a38febb",
+      "title": "CTE Teacher (26-27 School Year)",
+      "district": "Adzuna \u00b7 Fort Smith Public Schools",
+      "location": "Fort Smith, Sebastian County",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=ArzA2R1k8RGvV9rkZ7vezw&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "platform": "Adzuna",
+      "category": "school",
+      "match_reason": "cte teacher",
+      "posted_date": "",
+      "first_seen": "2026-06-09"
     }
   ],
   "sources": [
