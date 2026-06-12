@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11T17:01",
+  "last_updated": "2026-06-12T16:28",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it operations",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-06-11"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it support",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-06-10"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -266,6 +266,18 @@
       "first_seen": "2026-06-02"
     },
     {
+      "id": "c86454607a04",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72701/1395694300/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-06-12"
+    },
+    {
       "id": "f3be21d718f3",
       "title": "IT Specialist",
       "district": "VA Arkansas (USAJobs)",
@@ -290,28 +302,28 @@
       "first_seen": "2026-06-09"
     },
     {
-      "id": "88ad5537dd11",
+      "id": "ab87dd80e03d",
       "title": "CTE Teacher & Asst Football (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=8oXJMLdl8RG1o44GR0fXIg&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=gGXYsntm8RGpoZCeFqrFvQ&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-11"
+      "first_seen": "2026-06-12"
     },
     {
-      "id": "0a677da0ce4e",
+      "id": "96cf9e5b93d9",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=8oXJMLdl8RG1o44GR0fXIg&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=gGXYsntm8RGpoZCeFqrFvQ&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-11"
+      "first_seen": "2026-06-12"
     }
   ],
   "sources": [
