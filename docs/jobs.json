@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T16:28",
+  "last_updated": "2026-06-13T15:07",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -62,18 +62,6 @@
       "first_seen": "2026-06-10"
     },
     {
-      "id": "c207d8d9f785",
-      "title": "Instructor - 21st Century After-School Program",
-      "district": "West Fork SD",
-      "location": "West Fork, AR",
-      "url": "https://flowpoint.wftigers.org/careers/opportunities/entry/2679/",
-      "platform": "FlowPoint",
-      "category": "school",
-      "match_reason": "21st century",
-      "posted_date": "",
-      "first_seen": "2026-06-10"
-    },
-    {
       "id": "0249bd149b5c",
       "title": "INFORMATION TECHNOLOGY:  Application Support Specialist",
       "district": "Rogers (City)",
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it operations",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-06-11"
     },
     {
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it support",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-06-10"
     },
     {
@@ -130,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -142,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -154,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -266,16 +254,52 @@
       "first_seen": "2026-06-02"
     },
     {
-      "id": "c86454607a04",
-      "title": "HEALTH PROGRAM SPECIALIST",
+      "id": "ec1bbb5d3dc4",
+      "title": "Athletics Student Graphic Designer (Federal Work Study)",
+      "district": "UCA",
+      "location": "Conway, AR",
+      "url": "https://jobs.uca.edu/postings/19155",
+      "platform": "PeopleAdmin",
+      "category": "school",
+      "match_reason": "graphic designer",
+      "posted_date": "",
+      "first_seen": "2026-06-13"
+    },
+    {
+      "id": "a3efd7cb9161",
+      "title": "MILITARY PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72701/1395694300/",
+      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1399457100/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-06-12"
+      "first_seen": "2026-06-13"
+    },
+    {
+      "id": "6a08f4d8a667",
+      "title": "MILITARY PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1399458900/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-06-13"
+    },
+    {
+      "id": "b8af5f295441",
+      "title": "HEALTH PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Warren-HEALTH-PROGRAM-COORDINATOR-AR-71671/1386105900/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-06-13"
     },
     {
       "id": "f3be21d718f3",
@@ -290,40 +314,28 @@
       "first_seen": "2026-06-09"
     },
     {
-      "id": "d1da62bebec1",
-      "title": "Anticipated Library Media Specialist",
-      "district": "Adzuna \u00b7 Responsive Education Solutions",
-      "location": "Rogers, Benton County",
-      "url": "https://www.adzuna.com/details/5755454439?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "library media",
-      "posted_date": "",
-      "first_seen": "2026-06-09"
-    },
-    {
-      "id": "ab87dd80e03d",
+      "id": "a32334d9e6ad",
       "title": "CTE Teacher & Asst Football (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=gGXYsntm8RGpoZCeFqrFvQ&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=2LTuizln8RG0btGxqHH3qw&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-12"
+      "first_seen": "2026-06-13"
     },
     {
-      "id": "96cf9e5b93d9",
+      "id": "efa9e9c8aef4",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=gGXYsntm8RGpoZCeFqrFvQ&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=2LTuizln8RG0btGxqHH3qw&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-12"
+      "first_seen": "2026-06-13"
     }
   ],
   "sources": [
