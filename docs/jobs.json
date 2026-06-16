@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T18:02",
+  "last_updated": "2026-06-16T18:10",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -48,18 +48,6 @@
       "match_reason": "cclc",
       "posted_date": "",
       "first_seen": "2026-06-05"
-    },
-    {
-      "id": "b31ee9e72737",
-      "title": "College and Career Readiness",
-      "district": "Springdale SD",
-      "location": "Don Tyson School of Innovation",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014114",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "college and career",
-      "posted_date": "",
-      "first_seen": "2026-05-23"
     },
     {
       "id": "4d71f98b203f",
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it operations",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-06-11"
     },
     {
@@ -130,8 +118,20 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it support",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-06-10"
+    },
+    {
+      "id": "43c64817f666",
+      "title": "Graphic Designer",
+      "district": "NWACC",
+      "location": "Benton County Campus, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Campus-Arkansas/Graphic-Designer_JR-1215",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "graphic designer",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-06-16"
     },
     {
       "id": "1ba097337549",
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -290,11 +290,11 @@
       "first_seen": "2026-06-13"
     },
     {
-      "id": "a3efd7cb9161",
+      "id": "6a08f4d8a667",
       "title": "MILITARY PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1399457100/",
+      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1399458900/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program coordinator",
@@ -302,11 +302,11 @@
       "first_seen": "2026-06-13"
     },
     {
-      "id": "6a08f4d8a667",
+      "id": "a3efd7cb9161",
       "title": "MILITARY PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1399458900/",
+      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1399457100/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program coordinator",
@@ -338,40 +338,40 @@
       "first_seen": "2026-06-09"
     },
     {
-      "id": "d1da62bebec1",
-      "title": "Anticipated Library Media Specialist",
-      "district": "Adzuna \u00b7 Responsive Education Solutions",
-      "location": "Rogers, Benton County",
-      "url": "https://www.adzuna.com/details/5755454439?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "library media",
+      "id": "280792364082",
+      "title": "IT Specialist (Sys Admin)",
+      "district": "VA Arkansas (USAJobs)",
+      "location": "Arkansas",
+      "url": "https://www.usajobs.gov/job/873076000",
+      "platform": "USAJobs",
+      "category": "it",
+      "match_reason": "VA IT",
       "posted_date": "",
-      "first_seen": "2026-06-15"
+      "first_seen": "2026-06-16"
     },
     {
-      "id": "05a1063b1101",
+      "id": "af697c24143b",
       "title": "CTE Teacher & Asst Football (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=5A9qUuRo8RGmpfo0sbJdLA&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=0t-yo65p8RGHcblSVmFK6Q&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-15"
+      "first_seen": "2026-06-16"
     },
     {
-      "id": "31ec4ccf83b4",
+      "id": "6be5886b5677",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=5A9qUuRo8RGmpfo0sbJdLA&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=0t-yo65p8RGHcblSVmFK6Q&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-15"
+      "first_seen": "2026-06-16"
     }
   ],
   "sources": [
