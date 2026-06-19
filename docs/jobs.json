@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18T16:41",
+  "last_updated": "2026-06-19T16:14",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -98,18 +98,6 @@
       "first_seen": "2026-06-10"
     },
     {
-      "id": "c7c1b724430f",
-      "title": "IT Operations Support Coordinator",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/IT-Operations-Support-Coordinator_R0086819",
-      "platform": "Workday",
-      "category": "it",
-      "match_reason": "it operations",
-      "posted_date": "Posted 7 Days Ago",
-      "first_seen": "2026-06-11"
-    },
-    {
       "id": "af61a55a3a63",
       "title": "IT Support Specialist III",
       "district": "University of Arkansas (UAF)",
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it support",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-06-10"
     },
     {
@@ -130,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-06-16"
     },
     {
@@ -142,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-05-12"
     },
     {
@@ -166,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -178,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 15 Days Ago",
+      "posted_date": "Posted 16 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -266,42 +254,6 @@
       "first_seen": "2026-06-13"
     },
     {
-      "id": "6a08f4d8a667",
-      "title": "MILITARY PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1399458900/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-06-13"
-    },
-    {
-      "id": "a3efd7cb9161",
-      "title": "MILITARY PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1399457100/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-06-13"
-    },
-    {
-      "id": "b8af5f295441",
-      "title": "HEALTH PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Warren-HEALTH-PROGRAM-COORDINATOR-AR-71671/1386105900/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-06-13"
-    },
-    {
       "id": "5a8a30fabfff",
       "title": "Internal Communications Specialist I",
       "district": "ArcBest",
@@ -326,40 +278,40 @@
       "first_seen": "2026-06-16"
     },
     {
-      "id": "d1da62bebec1",
-      "title": "Anticipated Library Media Specialist",
-      "district": "Adzuna \u00b7 Responsive Education Solutions",
-      "location": "Rogers, Benton County",
-      "url": "https://www.adzuna.com/details/5755454439?utm_medium=api&utm_source=344300f1",
+      "id": "a8ec485b95ee",
+      "title": "Elementary Librarian",
+      "district": "Adzuna \u00b7 Tahlequah Public Schools",
+      "location": "Tahlequah, Cherokee County",
+      "url": "https://www.adzuna.com/details/5768994883?utm_medium=api&utm_source=344300f1",
       "platform": "Adzuna",
       "category": "community",
-      "match_reason": "library media",
+      "match_reason": "librarian",
       "posted_date": "",
-      "first_seen": "2026-06-17"
+      "first_seen": "2026-06-19"
     },
     {
-      "id": "684540f1acf1",
+      "id": "fac41a2318cc",
       "title": "CTE Teacher & Asst Football (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5737183860?se=aIWreTRr8RGhD6oSViI0Lg&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
+      "url": "https://www.adzuna.com/land/ad/5737183860?se=FjzW5_lr8RGC0bdBFXLNcQ&utm_medium=api&utm_source=344300f1&v=629470B5D97FE5B9B671D3DDD7CCE195AA41B319",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-18"
+      "first_seen": "2026-06-19"
     },
     {
-      "id": "23f78339139d",
+      "id": "6ef8fa0021c8",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=aIWreTRr8RGhD6oSViI0Lg&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=FjzW5_lr8RGC0bdBFXLNcQ&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-18"
+      "first_seen": "2026-06-19"
     }
   ],
   "sources": [
