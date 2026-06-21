@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-20T15:09",
+  "last_updated": "2026-06-21T15:16",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "desktop support",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-06-20"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it support",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-06-10"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-06-16"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 16 Days Ago",
+      "posted_date": "Posted 17 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -290,6 +290,18 @@
       "first_seen": "2026-06-16"
     },
     {
+      "id": "b7a4d2f2e3b0",
+      "title": "Library/Media Specialist",
+      "district": "Adzuna \u00b7 Pea Ridge School District",
+      "location": "Pea Ridge, Benton County",
+      "url": "https://www.adzuna.com/details/5771458066?utm_medium=api&utm_source=344300f1",
+      "platform": "Adzuna",
+      "category": "community",
+      "match_reason": "media specialist",
+      "posted_date": "",
+      "first_seen": "2026-06-21"
+    },
+    {
       "id": "a8ec485b95ee",
       "title": "Elementary Librarian",
       "district": "Adzuna \u00b7 Tahlequah Public Schools",
@@ -302,16 +314,28 @@
       "first_seen": "2026-06-19"
     },
     {
-      "id": "b1058e935b2b",
+      "id": "d1da62bebec1",
+      "title": "Anticipated Library Media Specialist",
+      "district": "Adzuna \u00b7 Responsive Education Solutions",
+      "location": "Rogers, Benton County",
+      "url": "https://www.adzuna.com/details/5755454439?utm_medium=api&utm_source=344300f1",
+      "platform": "Adzuna",
+      "category": "community",
+      "match_reason": "library media",
+      "posted_date": "",
+      "first_seen": "2026-06-21"
+    },
+    {
+      "id": "be667ac1c609",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=hG1qDLps8RGrKszqFbIEfQ&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=5G-9GIRt8RGrKszqFbIEfQ&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-20"
+      "first_seen": "2026-06-21"
     }
   ],
   "sources": [
