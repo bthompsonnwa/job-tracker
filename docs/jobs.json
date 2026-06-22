@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-21T15:16",
+  "last_updated": "2026-06-22T17:46",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "desktop support",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-06-20"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it support",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-06-10"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-06-16"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-05-12"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -266,18 +266,6 @@
       "first_seen": "2026-06-13"
     },
     {
-      "id": "5a8a30fabfff",
-      "title": "Internal Communications Specialist I",
-      "district": "ArcBest",
-      "location": "",
-      "url": "https://careers.arcb.com/careersmarketplace/JobDetail/Fort-Smith-Arkansas-United-States-Internal-Communications-Specialist-I/28918",
-      "platform": "CareersMarketplace",
-      "category": "school",
-      "match_reason": "communications specialist",
-      "posted_date": "",
-      "first_seen": "2026-06-18"
-    },
-    {
       "id": "280792364082",
       "title": "IT Specialist (Sys Admin)",
       "district": "VA Arkansas (USAJobs)",
@@ -314,28 +302,16 @@
       "first_seen": "2026-06-19"
     },
     {
-      "id": "d1da62bebec1",
-      "title": "Anticipated Library Media Specialist",
-      "district": "Adzuna \u00b7 Responsive Education Solutions",
-      "location": "Rogers, Benton County",
-      "url": "https://www.adzuna.com/details/5755454439?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "library media",
-      "posted_date": "",
-      "first_seen": "2026-06-21"
-    },
-    {
-      "id": "be667ac1c609",
+      "id": "43b35d460c64",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=5G-9GIRt8RGrKszqFbIEfQ&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=YIOFRmJu8RGeWZzv8P2X6w&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-21"
+      "first_seen": "2026-06-22"
     }
   ],
   "sources": [
