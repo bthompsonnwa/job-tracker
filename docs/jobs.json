@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T15:46",
+  "last_updated": "2026-06-26T15:30",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -98,6 +98,18 @@
       "first_seen": "2026-06-10"
     },
     {
+      "id": "dea2987e376a",
+      "title": "Multimedia Production Assistant",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Multimedia-Production-Assistant_R0087390",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "multimedia",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-06-26"
+    },
+    {
       "id": "55e4b784e94d",
       "title": "12-Month Graduate Assistant - Summer Programs & Curriculum Development",
       "district": "University of Arkansas (UAF)",
@@ -106,20 +118,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "curriculum development",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-06-23"
-    },
-    {
-      "id": "e4f9b1dff438",
-      "title": "Desktop Support Technician",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Desktop-Support-Technician_R0087167",
-      "platform": "Workday",
-      "category": "it",
-      "match_reason": "desktop support",
-      "posted_date": "Posted 6 Days Ago",
-      "first_seen": "2026-06-20"
     },
     {
       "id": "f40d6957ddc8",
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 16 Days Ago",
+      "posted_date": "Posted 17 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 21 Days Ago",
+      "posted_date": "Posted 22 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 22 Days Ago",
+      "posted_date": "Posted 23 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -218,30 +218,6 @@
       "first_seen": "2026-05-12"
     },
     {
-      "id": "b56d4c1a011f",
-      "title": "Communications Specialist, Photo and Video",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Communications-Specialist--Photo-and-Video_JR2265",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "communications specialist",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-05-12"
-    },
-    {
-      "id": "ceda56794dc8",
-      "title": "Project Program Specialist",
-      "district": "Arkansas State Univ.",
-      "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
-      "platform": "Taleo",
-      "category": "community",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-06-10"
-    },
-    {
       "id": "fbcef81b4a12",
       "title": "Honor Scholars Program Coordinator and Advisor",
       "district": "JBU (Staff)",
@@ -254,16 +230,28 @@
       "first_seen": "2026-06-02"
     },
     {
-      "id": "bb74116bfeb6",
-      "title": "EDUCATION PROGRAM SUPERVISOR/EXPERT",
+      "id": "6bca0f9a8fe4",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EDUCATION-PROGRAM-SUPERVISOREXPERT-AR-72201/1403235800/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "education program",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-06-25"
+      "first_seen": "2026-06-26"
+    },
+    {
+      "id": "ed6de0282298",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1400976900/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-06-26"
     },
     {
       "id": "52f894278267",
@@ -278,16 +266,40 @@
       "first_seen": "2026-06-25"
     },
     {
-      "id": "8295bd66d492",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "bb74116bfeb6",
+      "title": "EDUCATION PROGRAM SUPERVISOR/EXPERT",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EDUCATION-PROGRAM-SUPERVISOREXPERT-AR-72201/1403235800/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "education program",
       "posted_date": "",
       "first_seen": "2026-06-25"
+    },
+    {
+      "id": "b3d62f3abf93",
+      "title": "IT INFRASTRUCTURE SUPERVISOR/EXPERT",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-IT-INFRASTRUCTURE-SUPERVISOREXPERT-AR-72201/1385872800/",
+      "platform": "SuccessFactors",
+      "category": "it",
+      "match_reason": "it infrastructure",
+      "posted_date": "",
+      "first_seen": "2026-06-26"
+    },
+    {
+      "id": "a771c45729ae",
+      "title": "Technical Support Engineer II",
+      "district": "Adzuna \u00b7 Rocket Software",
+      "location": "Bentonville, Benton County",
+      "url": "https://www.adzuna.com/land/ad/5777162002?se=tPaX5HNx8RGKY_-n7sY3YA&utm_medium=api&utm_source=344300f1&v=AABB2DDF9000288FC040A9D1D6601B3AE0C5B21E",
+      "platform": "Adzuna",
+      "category": "it",
+      "match_reason": "technical support",
+      "posted_date": "",
+      "first_seen": "2026-06-26"
     },
     {
       "id": "b7a4d2f2e3b0",
