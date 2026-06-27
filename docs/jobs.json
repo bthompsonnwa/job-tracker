@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-26T15:30",
+  "last_updated": "2026-06-27T14:49",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -62,18 +62,6 @@
       "first_seen": "2026-06-10"
     },
     {
-      "id": "c207d8d9f785",
-      "title": "Instructor - 21st Century After-School Program",
-      "district": "West Fork SD",
-      "location": "West Fork, AR",
-      "url": "https://flowpoint.wftigers.org/careers/opportunities/entry/2679/",
-      "platform": "FlowPoint",
-      "category": "school",
-      "match_reason": "21st century",
-      "posted_date": "",
-      "first_seen": "2026-06-14"
-    },
-    {
       "id": "0249bd149b5c",
       "title": "INFORMATION TECHNOLOGY:  Application Support Specialist",
       "district": "Rogers (City)",
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-06-26"
     },
     {
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "curriculum development",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-06-23"
     },
     {
@@ -130,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -142,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -166,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 22 Days Ago",
+      "posted_date": "Posted 23 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -178,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 23 Days Ago",
+      "posted_date": "Posted 24 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -230,76 +218,16 @@
       "first_seen": "2026-06-02"
     },
     {
-      "id": "6bca0f9a8fe4",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-06-26"
-    },
-    {
-      "id": "ed6de0282298",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1400976900/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-06-26"
-    },
-    {
-      "id": "52f894278267",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403282400/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-06-25"
-    },
-    {
-      "id": "bb74116bfeb6",
-      "title": "EDUCATION PROGRAM SUPERVISOR/EXPERT",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EDUCATION-PROGRAM-SUPERVISOREXPERT-AR-72201/1403235800/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "education program",
-      "posted_date": "",
-      "first_seen": "2026-06-25"
-    },
-    {
-      "id": "b3d62f3abf93",
-      "title": "IT INFRASTRUCTURE SUPERVISOR/EXPERT",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-IT-INFRASTRUCTURE-SUPERVISOREXPERT-AR-72201/1385872800/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-06-26"
-    },
-    {
-      "id": "a771c45729ae",
+      "id": "2d6b2f31a5a0",
       "title": "Technical Support Engineer II",
       "district": "Adzuna \u00b7 Rocket Software",
       "location": "Bentonville, Benton County",
-      "url": "https://www.adzuna.com/land/ad/5777162002?se=tPaX5HNx8RGKY_-n7sY3YA&utm_medium=api&utm_source=344300f1&v=AABB2DDF9000288FC040A9D1D6601B3AE0C5B21E",
+      "url": "https://www.adzuna.com/land/ad/5777162002?se=INQoZDdy8RGe4ZwL0wNS6w&utm_medium=api&utm_source=344300f1&v=AABB2DDF9000288FC040A9D1D6601B3AE0C5B21E",
       "platform": "Adzuna",
       "category": "it",
       "match_reason": "technical support",
       "posted_date": "",
-      "first_seen": "2026-06-26"
+      "first_seen": "2026-06-27"
     },
     {
       "id": "b7a4d2f2e3b0",
@@ -312,18 +240,6 @@
       "match_reason": "media specialist",
       "posted_date": "",
       "first_seen": "2026-06-25"
-    },
-    {
-      "id": "a8ec485b95ee",
-      "title": "Elementary Librarian",
-      "district": "Adzuna \u00b7 Tahlequah Public Schools",
-      "location": "Tahlequah, Cherokee County",
-      "url": "https://www.adzuna.com/details/5768994883?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "librarian",
-      "posted_date": "",
-      "first_seen": "2026-06-19"
     }
   ],
   "sources": [
