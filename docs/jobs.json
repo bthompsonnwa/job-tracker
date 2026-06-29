@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T14:54",
+  "last_updated": "2026-06-29T16:43",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-06-26"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "curriculum development",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-06-23"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 24 Days Ago",
+      "posted_date": "Posted 25 Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 25 Days Ago",
+      "posted_date": "Posted 26 Days Ago",
       "first_seen": "2026-06-03"
     },
     {
@@ -230,16 +230,28 @@
       "first_seen": "2026-06-02"
     },
     {
-      "id": "dd8295364050",
+      "id": "6bca0f9a8fe4",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-06-29"
+    },
+    {
+      "id": "7a009d7645f3",
       "title": "Technical Support Engineer II",
       "district": "Adzuna \u00b7 Rocket Software",
       "location": "Bentonville, Benton County",
-      "url": "https://www.adzuna.com/land/ad/5777162002?se=Nl-KPAFz8RGe4ZwL0wNS6w&utm_medium=api&utm_source=344300f1&v=AABB2DDF9000288FC040A9D1D6601B3AE0C5B21E",
+      "url": "https://www.adzuna.com/details/5777162002?utm_medium=api&utm_source=344300f1",
       "platform": "Adzuna",
       "category": "it",
       "match_reason": "technical support",
       "posted_date": "",
-      "first_seen": "2026-06-28"
+      "first_seen": "2026-06-29"
     },
     {
       "id": "b7a4d2f2e3b0",
@@ -254,16 +266,16 @@
       "first_seen": "2026-06-25"
     },
     {
-      "id": "d4c815be8dd5",
+      "id": "c438f13f866f",
       "title": "CTE Teacher (26-27 School Year)",
       "district": "Adzuna \u00b7 Fort Smith Public Schools",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5732825333?se=WlPRQQFz8RGiVqWJe_bADg&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
+      "url": "https://www.adzuna.com/land/ad/5732825333?se=NtbJrNlz8RG5wqNxUkLhAA&utm_medium=api&utm_source=344300f1&v=E9E7E5F7360289BA3912C0D7E5C66E832F9D7E6F",
       "platform": "Adzuna",
       "category": "school",
       "match_reason": "cte teacher",
       "posted_date": "",
-      "first_seen": "2026-06-28"
+      "first_seen": "2026-06-29"
     }
   ],
   "sources": [
