@@ -106,6 +106,13 @@ INCLUDE_KEYWORDS = [
     "skills trainer", "skills instructor", "hands-on learning",
     "experiential learning", "project-based learning",
     "experience designer", "learning experience", "experience design",
+    # EAST Initiative (specific phrases to avoid false positives on "east")
+    "east facilitator", "east teacher", "east instructor",
+    "east coordinator", "east program", "east classroom", "east lab",
+    "environmental and spatial technology",
+    # School IT roles with school-specific language
+    "computer lab", "classroom technology", "technology assistant",
+    "district technician", "network technician",
 ]
 
 # IT jobs — matches go in the IT tab regardless of source
@@ -222,6 +229,7 @@ ALL_SOURCES = [
     {"name": "LISA Academy",            "url": "https://lisaacademy.schoolspring.com/",                                                        "category": "school"},
     {"name": "Haas Hall Academy",       "url": "https://haashall.org/welcome__trashed/employment/",                                           "category": "school"},
     {"name": "Thaden School",           "url": "https://www.thadenschool.org/about/career-opportunities",                                     "category": "school"},
+    {"name": "EAST Initiative",         "url": "https://www.eastinitiative.org/newsopportunities/jobs.aspx",                                 "category": "school"},
     # Community
     {"name": "Rogers (City)",           "url": "https://www.rogersar.gov/Jobs.aspx",                                                          "category": "community"},
     {"name": "Bentonville (City)",      "url": "https://www.bentonvillear.com/jobs.aspx",                                                      "category": "community"},
@@ -1143,9 +1151,11 @@ def scrape_adzuna():
                     log.debug(f"Adzuna IT filtered: {title}")
                     continue
                 src = f"Adzuna · {company}" if company else "Adzuna (IT)"
-                all_jobs.append(make_job(src, title, job_url, "Adzuna",
-                                         category="it", location=loc_text,
-                                         match_reason=reason))
+                job = make_job(src, title, job_url, "Adzuna",
+                               category="it", location=loc_text,
+                               match_reason=reason)
+                job["id"] = make_id(src, title)  # stable: Adzuna URLs change per call
+                all_jobs.append(job)
                 count += 1
             log.info(f"Adzuna IT [{label}]: {count} jobs")
             time.sleep(1)
@@ -1190,9 +1200,11 @@ def scrape_adzuna():
                 if not cat:
                     continue
                 src = f"Adzuna · {company}" if company else "Adzuna (Skillset)"
-                all_jobs.append(make_job(src, title, job_url, "Adzuna",
-                                         category=cat, location=loc_text,
-                                         match_reason=reason))
+                job = make_job(src, title, job_url, "Adzuna",
+                               category=cat, location=loc_text,
+                               match_reason=reason)
+                job["id"] = make_id(src, title)  # stable: Adzuna URLs change per call
+                all_jobs.append(job)
                 count += 1
             log.info(f"Adzuna Skill [{label}]: {count} jobs")
             time.sleep(1)
@@ -1208,57 +1220,119 @@ def scrape_adzuna():
 # ORCHESTRATION
 # ──────────────────────────────────────────────────────────────────────────────
 
+
+def scrape_east():
+    """EAST Initiative HQ job board (staff roles). EAST facilitator roles at
+    schools are caught by the district scrapers via the EAST keywords."""
+    name = "EAST Initiative"
+    url  = "https://www.eastinitiative.org/newsopportunities/jobs.aspx"
+    jobs = []
+    try:
+        r    = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for a in soup.find_all("a", href=True):
+            title = a.get_text(strip=True)
+            href  = a["href"]
+            if not title or len(title) < 5:
+                continue
+            if any(x in href.lower() for x in ["mailto", "tel:", "login", "register",
+                                                "calendar", "facebook", "twitter",
+                                                "instagram", "linkedin", "#"]):
+                continue
+            if not any(x in href.lower() for x in [".aspx", ".pdf", "job"]):
+                continue
+            # Skip site navigation
+            if any(x in title.lower() for x in ["log in", "register", "calendar",
+                                                  "overview", "newsroom", "contact",
+                                                  "home", "about", "donate", "brand"]):
+                continue
+            full_url = href if href.startswith("http") else "https://www.eastinitiative.org" + href
+            cat, reason = categorize(title)
+            if not cat:
+                combined = title.lower()
+                if not any(_kw_match(kw, combined) for kw in HARD_EXCLUDE_KEYWORDS):
+                    cat, reason = "school", "EAST Initiative"
+            if cat:
+                jobs.append(make_job(name, title, full_url, "EAST",
+                                     category=cat, location="Little Rock, AR",
+                                     match_reason=reason))
+        log.info(f"{name}: {len(jobs)} jobs")
+    except Exception as e:
+        log.error(f"{name}: {e}")
+    return jobs
+
+
+def _safe(fn, *args, label=None, pause=1, **kwargs):
+    """Run one scraper; a crash logs an error instead of killing the whole run."""
+    name = label or getattr(fn, "__name__", "scraper")
+    try:
+        result = fn(*args, **kwargs) or []
+    except Exception as e:
+        log.error(f"{name} CRASHED: {e}")
+        result = []
+    time.sleep(pause)
+    return result
+
+
 def scrape_all():
     all_jobs = []
 
     log.info("── School districts ──")
     for d in APPLITRACK_DISTRICTS:
-        all_jobs.extend(scrape_applitrack(d)); time.sleep(1)
+        all_jobs.extend(_safe(scrape_applitrack, d, label=d["name"]))
     for d in TEDK12_DISTRICTS:
-        all_jobs.extend(scrape_tedk12(d)); time.sleep(1)
-    all_jobs.extend(scrape_smartrecruiters()); time.sleep(1)
-    all_jobs.extend(scrape_springdale_sd()); time.sleep(1)
-    all_jobs.extend(scrape_westfork()); time.sleep(1)
-    all_jobs.extend(scrape_haashall()); time.sleep(1)
+        all_jobs.extend(_safe(scrape_tedk12, d, label=d["name"]))
+    all_jobs.extend(_safe(scrape_smartrecruiters))
+    all_jobs.extend(_safe(scrape_springdale_sd))
+    all_jobs.extend(_safe(scrape_westfork))
+    all_jobs.extend(_safe(scrape_haashall))
     for d in SCHOOLSPRING_DISTRICTS:
-        all_jobs.extend(scrape_schoolspring(d)); time.sleep(2)
+        all_jobs.extend(_safe(scrape_schoolspring, d, label=d["name"], pause=2))
+    all_jobs.extend(_safe(scrape_east))
 
     log.info("── Community sources ──")
-    all_jobs.extend(scrape_civicengage("Rogers (City)", "https://www.rogersar.gov/Jobs.aspx", "https://www.rogersar.gov")); time.sleep(1)
-    all_jobs.extend(scrape_civicengage("Bentonville (City)", "https://www.bentonvillear.com/jobs.aspx", "https://www.bentonvillear.com")); time.sleep(1)
-    all_jobs.extend(scrape_springdale_library()); time.sleep(1)
-    all_jobs.extend(scrape_saashr("Jones Center", "https://secure7.saashr.com/ta/6214802.careers?CareersSearch=&ein_id=119006097&lang=en-US")); time.sleep(1)
+    all_jobs.extend(_safe(scrape_civicengage, "Rogers (City)", "https://www.rogersar.gov/Jobs.aspx", "https://www.rogersar.gov", label="Rogers (City)"))
+    all_jobs.extend(_safe(scrape_civicengage, "Bentonville (City)", "https://www.bentonvillear.com/jobs.aspx", "https://www.bentonvillear.com", label="Bentonville (City)"))
+    all_jobs.extend(_safe(scrape_springdale_library))
+    all_jobs.extend(_safe(scrape_saashr, "Jones Center", "https://secure7.saashr.com/ta/6214802.careers?CareersSearch=&ein_id=119006097&lang=en-US", label="Jones Center"))
     for s in WORKDAY_SOURCES:
-        all_jobs.extend(scrape_workday(s)); time.sleep(1)
-    all_jobs.extend(scrape_taleo_rss(
+        all_jobs.extend(_safe(scrape_workday, s, label=s["name"]))
+    all_jobs.extend(_safe(scrape_taleo_rss,
         "Arkansas State Univ.",
         "https://phe.tbe.taleo.net/phe02/ats/servlet/Rss?org=ARKASTAT2&cws=40&WebPage=SRCHR_V2&WebVersion=0&_rss_version=2",
-        "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40"
-    )); time.sleep(1)
-    all_jobs.extend(scrape_jbu("https://www.jbu.edu/human-resources/staff-job-listings/", "JBU (Staff)")); time.sleep(1)
-    all_jobs.extend(scrape_jbu("https://www.jbu.edu/human-resources/faculty-job-listings/", "JBU (Faculty)")); time.sleep(1)
-    all_jobs.extend(scrape_hendrix()); time.sleep(1)
-    all_jobs.extend(scrape_carl_albert()); time.sleep(1)
-    all_jobs.extend(scrape_bella_vista()); time.sleep(2)
-    all_jobs.extend(scrape_uca()); time.sleep(2)
-    all_jobs.extend(scrape_atu()); time.sleep(2)
-    all_jobs.extend(scrape_ar_state_jobs()); time.sleep(2)
-    all_jobs.extend(scrape_arcbest()); time.sleep(2)
-    all_jobs.extend(scrape_adp()); time.sleep(2)
-    all_jobs.extend(scrape_amazeum()); time.sleep(2)
+        "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+        label="Arkansas State Univ."))
+    all_jobs.extend(_safe(scrape_jbu, "https://www.jbu.edu/human-resources/staff-job-listings/", "JBU (Staff)", label="JBU (Staff)"))
+    all_jobs.extend(_safe(scrape_jbu, "https://www.jbu.edu/human-resources/faculty-job-listings/", "JBU (Faculty)", label="JBU (Faculty)"))
+    all_jobs.extend(_safe(scrape_hendrix))
+    all_jobs.extend(_safe(scrape_carl_albert))
+    all_jobs.extend(_safe(scrape_bella_vista, pause=2))
+    all_jobs.extend(_safe(scrape_uca, pause=2))
+    all_jobs.extend(_safe(scrape_atu, pause=2))
+    all_jobs.extend(_safe(scrape_ar_state_jobs, pause=2))
+    all_jobs.extend(_safe(scrape_arcbest, pause=2))
+    all_jobs.extend(_safe(scrape_adp, pause=2))
+    all_jobs.extend(_safe(scrape_amazeum, pause=2))
 
-    log.info("── IT sources ──")
-    all_jobs.extend(scrape_usajobs_va()); time.sleep(2)
+    log.info("── IT + aggregators ──")
+    all_jobs.extend(_safe(scrape_usajobs_va, pause=2))
+    all_jobs.extend(_safe(scrape_walmart, pause=2))
+    all_jobs.extend(_safe(scrape_adzuna, pause=2))
 
-    log.info("── IT + Adzuna ──")
-    all_jobs.extend(scrape_walmart()); time.sleep(2)
-    all_jobs.extend(scrape_adzuna()); time.sleep(2)
-
+    # Deduplicate by ID
     seen, unique = set(), []
     for j in all_jobs:
         if j["id"] not in seen:
             seen.add(j["id"])
             unique.append(j)
+
+    # Per-source summary for easy log scanning
+    by_source = {}
+    for j in unique:
+        by_source[j["district"]] = by_source.get(j["district"], 0) + 1
+    log.info("── Per-source summary ──")
+    for src in sorted(by_source):
+        log.info(f"  {src}: {by_source[src]}")
     log.info(f"Total relevant jobs: {len(unique)}")
     return unique
 
