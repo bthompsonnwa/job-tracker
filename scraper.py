@@ -229,7 +229,6 @@ ALL_SOURCES = [
     {"name": "LISA Academy",            "url": "https://lisaacademy.schoolspring.com/",                                                        "category": "school"},
     {"name": "Haas Hall Academy",       "url": "https://haashall.org/welcome__trashed/employment/",                                           "category": "school"},
     {"name": "Thaden School",           "url": "https://www.thadenschool.org/about/career-opportunities",                                     "category": "school"},
-    {"name": "EAST Initiative",         "url": "https://www.eastinitiative.org/newsopportunities/jobs.aspx",                                 "category": "school"},
     # Community
     {"name": "Rogers (City)",           "url": "https://www.rogersar.gov/Jobs.aspx",                                                          "category": "community"},
     {"name": "Bentonville (City)",      "url": "https://www.bentonvillear.com/jobs.aspx",                                                      "category": "community"},
@@ -1221,46 +1220,6 @@ def scrape_adzuna():
 # ──────────────────────────────────────────────────────────────────────────────
 
 
-def scrape_east():
-    """EAST Initiative HQ job board (staff roles). EAST facilitator roles at
-    schools are caught by the district scrapers via the EAST keywords."""
-    name = "EAST Initiative"
-    url  = "https://www.eastinitiative.org/newsopportunities/jobs.aspx"
-    jobs = []
-    try:
-        r    = requests.get(url, headers=HEADERS, timeout=15)
-        soup = BeautifulSoup(r.text, "html.parser")
-        for a in soup.find_all("a", href=True):
-            title = a.get_text(strip=True)
-            href  = a["href"]
-            if not title or len(title) < 5:
-                continue
-            if any(x in href.lower() for x in ["mailto", "tel:", "login", "register",
-                                                "calendar", "facebook", "twitter",
-                                                "instagram", "linkedin", "#"]):
-                continue
-            if not any(x in href.lower() for x in [".aspx", ".pdf", "job"]):
-                continue
-            # Skip site navigation
-            if any(x in title.lower() for x in ["log in", "register", "calendar",
-                                                  "overview", "newsroom", "contact",
-                                                  "home", "about", "donate", "brand"]):
-                continue
-            full_url = href if href.startswith("http") else "https://www.eastinitiative.org" + href
-            cat, reason = categorize(title)
-            if not cat:
-                combined = title.lower()
-                if not any(_kw_match(kw, combined) for kw in HARD_EXCLUDE_KEYWORDS):
-                    cat, reason = "school", "EAST Initiative"
-            if cat:
-                jobs.append(make_job(name, title, full_url, "EAST",
-                                     category=cat, location="Little Rock, AR",
-                                     match_reason=reason))
-        log.info(f"{name}: {len(jobs)} jobs")
-    except Exception as e:
-        log.error(f"{name}: {e}")
-    return jobs
-
 
 def _safe(fn, *args, label=None, pause=1, **kwargs):
     """Run one scraper; a crash logs an error instead of killing the whole run."""
@@ -1288,7 +1247,6 @@ def scrape_all():
     all_jobs.extend(_safe(scrape_haashall))
     for d in SCHOOLSPRING_DISTRICTS:
         all_jobs.extend(_safe(scrape_schoolspring, d, label=d["name"], pause=2))
-    all_jobs.extend(_safe(scrape_east))
 
     log.info("── Community sources ──")
     all_jobs.extend(_safe(scrape_civicengage, "Rogers (City)", "https://www.rogersar.gov/Jobs.aspx", "https://www.rogersar.gov", label="Rogers (City)"))
@@ -1319,9 +1277,13 @@ def scrape_all():
     all_jobs.extend(_safe(scrape_walmart, pause=2))
     all_jobs.extend(_safe(scrape_adzuna, pause=2))
 
-    # Deduplicate by ID
+    # Deduplicate by ID; drop Little Rock jobs (not relocating there)
     seen, unique = set(), []
     for j in all_jobs:
+        if "little rock" in (j.get("location", "") or "").lower():
+            continue
+        if "little rock" in (j.get("title", "") or "").lower():
+            continue
         if j["id"] not in seen:
             seen.add(j["id"])
             unique.append(j)
