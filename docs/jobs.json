@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-04T21:35",
+  "last_updated": "2026-07-05T14:51",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "learning design",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-07-03"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-06-26"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "curriculum development",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-06-23"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 25 Days Ago",
+      "posted_date": "Posted 26 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 30 Days Ago",
+      "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-06-05"
     },
     {
@@ -230,11 +230,11 @@
       "first_seen": "2026-07-03"
     },
     {
-      "id": "1481ae28ed44",
+      "id": "346db28a05a2",
       "title": "Assistant Program Director",
-      "district": "Adzuna \u00b7 ChanceLight Programs",
+      "district": "Adzuna \u00b7 ChanceLight Behavioral Health, Therapy, & Education",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/details/5787609761?utm_medium=api&utm_source=344300f1",
+      "url": "https://www.adzuna.com/land/ad/5787694100?se=UFH88oB48RG-cvvra3L-5Q&utm_medium=api&utm_source=344300f1&v=159C4C2522543792F39796C66BEA80DDCA77F679",
       "platform": "Adzuna",
       "category": "community",
       "match_reason": "program director",
@@ -242,11 +242,11 @@
       "first_seen": "2026-07-04"
     },
     {
-      "id": "346db28a05a2",
+      "id": "1481ae28ed44",
       "title": "Assistant Program Director",
-      "district": "Adzuna \u00b7 ChanceLight Behavioral Health, Therapy, & Education",
+      "district": "Adzuna \u00b7 ChanceLight Programs",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5786795365?se=ktv3SPB38RG-2tHAxNAnZQ&utm_medium=api&utm_source=344300f1&v=E05D88E353CF16704499ABB34749FA1F910C9B2F",
+      "url": "https://www.adzuna.com/details/5787609761?utm_medium=api&utm_source=344300f1",
       "platform": "Adzuna",
       "category": "community",
       "match_reason": "program director",
