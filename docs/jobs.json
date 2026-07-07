@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06T16:28",
+  "last_updated": "2026-07-07T15:49",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "learning design",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-07-03"
     },
     {
@@ -118,8 +118,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-06-26"
+    },
+    {
+      "id": "00db84892660",
+      "title": "Part-Time Library Assistant",
+      "district": "NWACC",
+      "location": "Benton County Campus, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Campus-Arkansas/Part-Time-Library-Assistant_JR-1228-1",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "library assistant",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-07-07"
     },
     {
       "id": "f40d6957ddc8",
@@ -130,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -142,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 27 Days Ago",
+      "posted_date": "Posted 28 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -154,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -218,6 +230,18 @@
       "first_seen": "2026-07-06"
     },
     {
+      "id": "f952d022ff6b",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Morrilton-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72210/1369300800/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-07-07"
+    },
+    {
       "id": "6fcde036fa85",
       "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
@@ -228,6 +252,18 @@
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-07-06"
+    },
+    {
+      "id": "bc068a1c3417",
+      "title": "EDUCATION PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EDUCATION-PROGRAM-COORDINATOR-AR-72201/1405491000/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-07-07"
     },
     {
       "id": "7e6ba21a403a",
@@ -242,11 +278,23 @@
       "first_seen": "2026-07-06"
     },
     {
+      "id": "f247a9fd0927",
+      "title": "IT Specialist (Policy and Planning)",
+      "district": "VA Arkansas (USAJobs)",
+      "location": "Arkansas",
+      "url": "https://www.usajobs.gov/job/875423600",
+      "platform": "USAJobs",
+      "category": "it",
+      "match_reason": "VA IT",
+      "posted_date": "",
+      "first_seen": "2026-07-07"
+    },
+    {
       "id": "346db28a05a2",
       "title": "Assistant Program Director",
       "district": "Adzuna \u00b7 ChanceLight Behavioral Health, Therapy, & Education",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5787694100?se=wFGRtld58RG2Y4KvMPRbaQ&utm_medium=api&utm_source=344300f1&v=159C4C2522543792F39796C66BEA80DDCA77F679",
+      "url": "https://www.adzuna.com/land/ad/5787694100?se=-I83XRt68RGeHY1Elccfvg&utm_medium=api&utm_source=344300f1&v=159C4C2522543792F39796C66BEA80DDCA77F679",
       "platform": "Adzuna",
       "category": "community",
       "match_reason": "program director",
