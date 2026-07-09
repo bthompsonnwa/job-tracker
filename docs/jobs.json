@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08T15:29",
+  "last_updated": "2026-07-09T16:06",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "computer lab",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-07-08"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "learning design",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-07-03"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-06-26"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 29 Days Ago",
+      "posted_date": "Posted 30 Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -190,7 +190,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -202,7 +202,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -240,6 +240,18 @@
       "match_reason": "museum educator",
       "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-05-12"
+    },
+    {
+      "id": "ceda56794dc8",
+      "title": "Project Program Specialist",
+      "district": "Arkansas State Univ.",
+      "location": "",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "platform": "Taleo",
+      "category": "community",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-07-09"
     },
     {
       "id": "fbcef81b4a12",
@@ -290,18 +302,6 @@
       "first_seen": "2026-07-07"
     },
     {
-      "id": "6fcde036fa85",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-HEALTH-PROGRAM-SPECIALIST-AR-72205/1404572800/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-07-06"
-    },
-    {
       "id": "7e6ba21a403a",
       "title": "Supervisory IT PROGRAM MANAGER",
       "district": "VA Arkansas (USAJobs)",
@@ -343,18 +343,6 @@
       "district": "Adzuna \u00b7 ChanceLight Programs",
       "location": "Fort Smith, Sebastian County",
       "url": "https://www.adzuna.com/details/5787609761?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "program director",
-      "posted_date": "",
-      "first_seen": "2026-07-04"
-    },
-    {
-      "id": "346db28a05a2",
-      "title": "Assistant Program Director",
-      "district": "Adzuna \u00b7 ChanceLight Behavioral Health, Therapy, & Education",
-      "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/land/ad/5786795365?se=xIUMw-F68RGNrKp9Qg7ZPA&utm_medium=api&utm_source=344300f1&v=E05D88E353CF16704499ABB34749FA1F910C9B2F",
       "platform": "Adzuna",
       "category": "community",
       "match_reason": "program director",
