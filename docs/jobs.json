@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09T16:06",
+  "last_updated": "2026-07-10T15:38",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "computer lab",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "learning design",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-07-03"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-06-26"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 15 Days Ago",
+      "posted_date": "Posted 16 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 30 Days Ago",
+      "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-05-22"
     },
     {
@@ -190,7 +190,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -202,7 +202,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 15 Days Ago",
+      "posted_date": "Posted 16 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -242,18 +242,6 @@
       "first_seen": "2026-05-12"
     },
     {
-      "id": "ceda56794dc8",
-      "title": "Project Program Specialist",
-      "district": "Arkansas State Univ.",
-      "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
-      "platform": "Taleo",
-      "category": "community",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-07-09"
-    },
-    {
       "id": "fbcef81b4a12",
       "title": "Honor Scholars Program Coordinator and Advisor",
       "district": "JBU (Staff)",
@@ -266,28 +254,16 @@
       "first_seen": "2026-06-02"
     },
     {
-      "id": "ec1bbb5d3dc4",
-      "title": "Athletics Student Graphic Designer (Federal Work Study)",
+      "id": "e221e35bd150",
+      "title": "Communications Specialist",
       "district": "UCA",
       "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19155",
+      "url": "https://jobs.uca.edu/postings/19393",
       "platform": "PeopleAdmin",
       "category": "school",
-      "match_reason": "graphic designer",
+      "match_reason": "communications specialist",
       "posted_date": "",
-      "first_seen": "2026-07-06"
-    },
-    {
-      "id": "6bca0f9a8fe4",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-07-08"
+      "first_seen": "2026-07-10"
     },
     {
       "id": "f952d022ff6b",
@@ -300,6 +276,18 @@
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-07-07"
+    },
+    {
+      "id": "22ad911cb9a7",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388099700/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-07-10"
     },
     {
       "id": "7e6ba21a403a",
