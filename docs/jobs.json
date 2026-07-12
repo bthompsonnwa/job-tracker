@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-11T14:27",
+  "last_updated": "2026-07-12T14:31",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -74,18 +74,6 @@
       "first_seen": "2026-06-10"
     },
     {
-      "id": "c207d8d9f785",
-      "title": "Instructor - 21st Century After-School Program",
-      "district": "West Fork SD",
-      "location": "West Fork, AR",
-      "url": "https://flowpoint.wftigers.org/careers/opportunities/entry/2679/",
-      "platform": "FlowPoint",
-      "category": "school",
-      "match_reason": "21st century",
-      "posted_date": "",
-      "first_seen": "2026-06-28"
-    },
-    {
       "id": "0249bd149b5c",
       "title": "INFORMATION TECHNOLOGY:  Application Support Specialist",
       "district": "Rogers (City)",
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "computer lab",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -130,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "learning design",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-07-03"
     },
     {
@@ -142,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -154,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -178,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -190,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -266,16 +254,16 @@
       "first_seen": "2026-07-11"
     },
     {
-      "id": "22ad911cb9a7",
+      "id": "f952d022ff6b",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1388099700/",
+      "url": "https://arcareers.arkansas.gov/job/Morrilton-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72210/1369300800/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-07-10"
+      "first_seen": "2026-07-12"
     },
     {
       "id": "71e7edb42250",
