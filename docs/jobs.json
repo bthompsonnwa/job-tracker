@@ -1,6 +1,18 @@
 {
-  "last_updated": "2026-07-13T15:48",
+  "last_updated": "2026-07-14T15:01",
   "jobs": [
+    {
+      "id": "e2cda709a997",
+      "title": "BITT (Building IT Technician)",
+      "district": "Springdale SD",
+      "location": "Don Tyson School of Innovation",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014303",
+      "platform": "WinOcular",
+      "category": "it",
+      "match_reason": "it technician",
+      "posted_date": "",
+      "first_seen": "2026-07-14"
+    },
     {
       "id": "f3e110863409",
       "title": "Building IT Technician/Educator (BITT)",
@@ -106,20 +118,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "computer lab",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-07-08"
-    },
-    {
-      "id": "c740eb20008f",
-      "title": "Learning Design Trainer",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Learning-Design-Trainer_R0087875",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "learning design",
-      "posted_date": "Posted 11 Days Ago",
-      "first_seen": "2026-07-03"
     },
     {
       "id": "3084f950557e",
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-07-13"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -190,7 +190,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -252,18 +252,6 @@
       "match_reason": "communications specialist",
       "posted_date": "",
       "first_seen": "2026-07-10"
-    },
-    {
-      "id": "9f73d11cf507",
-      "title": "MILITARY PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/NLR-MILITARY-PROGRAM-COORDINATOR-AR-72199/1407735700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-07-11"
     },
     {
       "id": "71e7edb42250",
