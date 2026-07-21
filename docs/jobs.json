@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20T15:18",
+  "last_updated": "2026-07-21T15:11",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 26 Days Ago",
+      "posted_date": "Posted 27 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -230,18 +230,6 @@
       "first_seen": "2026-07-20"
     },
     {
-      "id": "eda20a50e2ab",
-      "title": "Communications Specialist",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19415",
-      "platform": "PeopleAdmin",
-      "category": "school",
-      "match_reason": "communications specialist",
-      "posted_date": "",
-      "first_seen": "2026-07-15"
-    },
-    {
       "id": "81de90ffb416",
       "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
@@ -252,6 +240,30 @@
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-07-20"
+    },
+    {
+      "id": "5fa567dc7cf4",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Harrison-HEALTH-PROGRAM-SPECIALIST-AR-72601/1409110500/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-07-21"
+    },
+    {
+      "id": "315cfcd1ac2d",
+      "title": "Fellow Product Manager - Robotics Safety and Compliance",
+      "district": "ArcBest",
+      "location": "",
+      "url": "https://careers.arcb.com/careersmarketplace/JobDetail/Fort-Smith-Arkansas-United-States-Fellow-Product-Manager-Robotics-Safety-and-Compliance/28508",
+      "platform": "CareersMarketplace",
+      "category": "school",
+      "match_reason": "robotics",
+      "posted_date": "",
+      "first_seen": "2026-07-21"
     },
     {
       "id": "71e7edb42250",
