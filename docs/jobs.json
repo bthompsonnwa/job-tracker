@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T15:17",
+  "last_updated": "2026-07-24T15:03",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 29 Days Ago",
+      "posted_date": "Posted 30 Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -146,6 +146,18 @@
       "first_seen": "2026-05-22"
     },
     {
+      "id": "360d5748837d",
+      "title": "Program Coordinator, Curricular Affairs",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Curricular-Affairs_JR2457",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-07-24"
+    },
+    {
       "id": "6172ae7bd4bf",
       "title": "Museum Educator, School Programs",
       "district": "Crystal Bridges / AWE",
@@ -154,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 16 Days Ago",
+      "posted_date": "Posted 17 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -240,6 +252,18 @@
       "match_reason": "community engagement",
       "posted_date": "",
       "first_seen": "2026-07-20"
+    },
+    {
+      "id": "c7868c50a17f",
+      "title": "CORRECTIONS PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Pine-Bluff-CORRECTIONS-PROGRAM-COORDINATOR-AR-71603/1411150000/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-07-24"
     },
     {
       "id": "81de90ffb416",
