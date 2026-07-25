@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T15:03",
+  "last_updated": "2026-07-25T14:44",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 30 Days Ago",
+      "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-06-25"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -254,59 +254,23 @@
       "first_seen": "2026-07-20"
     },
     {
-      "id": "c7868c50a17f",
-      "title": "CORRECTIONS PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Pine-Bluff-CORRECTIONS-PROGRAM-COORDINATOR-AR-71603/1411150000/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-07-24"
-    },
-    {
-      "id": "81de90ffb416",
+      "id": "fb2f9ccc7c76",
       "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1409108800/",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-HEALTH-PROGRAM-SPECIALIST-AR-72401/1367108400/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-07-23"
-    },
-    {
-      "id": "5fa567dc7cf4",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Harrison-HEALTH-PROGRAM-SPECIALIST-AR-72601/1409110500/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-07-23"
-    },
-    {
-      "id": "315cfcd1ac2d",
-      "title": "Fellow Product Manager - Robotics Safety and Compliance",
-      "district": "ArcBest",
-      "location": "",
-      "url": "https://careers.arcb.com/careersmarketplace/JobDetail/Fort-Smith-Arkansas-United-States-Fellow-Product-Manager-Robotics-Safety-and-Compliance/28508",
-      "platform": "CareersMarketplace",
-      "category": "school",
-      "match_reason": "robotics",
-      "posted_date": "",
-      "first_seen": "2026-07-21"
+      "first_seen": "2026-07-25"
     },
     {
       "id": "71e7edb42250",
       "title": "Assistant Education Program Director",
       "district": "Adzuna \u00b7 ChanceLight Behavioral Health, Therapy, & Education",
       "location": "Fort Smith, Sebastian County",
-      "url": "https://www.adzuna.com/details/5810031849?utm_medium=api&utm_source=344300f1",
+      "url": "https://www.adzuna.com/details/5788030990?utm_medium=api&utm_source=344300f1",
       "platform": "Adzuna",
       "category": "community",
       "match_reason": "program director",
@@ -322,18 +286,6 @@
       "platform": "Adzuna",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "",
-      "first_seen": "2026-07-16"
-    },
-    {
-      "id": "f441dfa15b85",
-      "title": "Library/Media Specialist",
-      "district": "Adzuna \u00b7 Pea Ridge School District",
-      "location": "Pea Ridge, Benton County",
-      "url": "https://www.adzuna.com/details/5771458066?utm_medium=api&utm_source=344300f1",
-      "platform": "Adzuna",
-      "category": "community",
-      "match_reason": "media specialist",
       "posted_date": "",
       "first_seen": "2026-07-16"
     }
