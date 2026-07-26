@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-25T14:44",
+  "last_updated": "2026-07-26T14:43",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -254,16 +254,16 @@
       "first_seen": "2026-07-20"
     },
     {
-      "id": "fb2f9ccc7c76",
+      "id": "81de90ffb416",
       "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-HEALTH-PROGRAM-SPECIALIST-AR-72401/1367108400/",
+      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1409108800/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-07-25"
+      "first_seen": "2026-07-26"
     },
     {
       "id": "71e7edb42250",
@@ -288,6 +288,18 @@
       "match_reason": "program director",
       "posted_date": "",
       "first_seen": "2026-07-16"
+    },
+    {
+      "id": "f441dfa15b85",
+      "title": "Library/Media Specialist",
+      "district": "Adzuna \u00b7 Pea Ridge School District",
+      "location": "Pea Ridge, Benton County",
+      "url": "https://www.adzuna.com/details/5771458066?utm_medium=api&utm_source=344300f1",
+      "platform": "Adzuna",
+      "category": "community",
+      "match_reason": "media specialist",
+      "posted_date": "",
+      "first_seen": "2026-07-26"
     }
   ],
   "sources": [
