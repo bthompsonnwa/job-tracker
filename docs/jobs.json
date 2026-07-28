@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T15:49",
+  "last_updated": "2026-07-28T15:30",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -86,6 +86,18 @@
       "first_seen": "2026-06-10"
     },
     {
+      "id": "b2ef50226c28",
+      "title": "Instructor - 21st Century After-School Program",
+      "district": "West Fork SD",
+      "location": "West Fork, AR",
+      "url": "https://flowpoint.wftigers.org/careers/opportunities/entry/3665/",
+      "platform": "FlowPoint",
+      "category": "school",
+      "match_reason": "21st century",
+      "posted_date": "",
+      "first_seen": "2026-07-28"
+    },
+    {
       "id": "08ae2c662e0a",
       "title": "INFORMATION TECHNOLOGY: Computer Support Coordinator",
       "district": "Rogers (City)",
@@ -106,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 21 Days Ago",
+      "posted_date": "Posted 22 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -146,6 +158,18 @@
       "first_seen": "2026-05-22"
     },
     {
+      "id": "272793706153",
+      "title": "Extended Reality Simulation Specialist",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Extended-Reality-Simulation-Specialist_JR2461",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "extended reality",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-07-28"
+    },
+    {
       "id": "360d5748837d",
       "title": "Program Coordinator, Curricular Affairs",
       "district": "Crystal Bridges / AWE",
@@ -154,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -166,7 +190,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 20 Days Ago",
+      "posted_date": "Posted 21 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -218,16 +242,52 @@
       "first_seen": "2026-06-02"
     },
     {
-      "id": "413674dc4da8",
-      "title": "Outreach and Community Engagement Fiscal Support Coordinator",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19442",
-      "platform": "PeopleAdmin",
+      "id": "bcf05f703d8e",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Lonoke-HEALTH-PROGRAM-SPECIALIST-AR-72086/1412954500/",
+      "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "community engagement",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-07-20"
+      "first_seen": "2026-07-28"
+    },
+    {
+      "id": "81de90ffb416",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1409108800/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-07-28"
+    },
+    {
+      "id": "5fa567dc7cf4",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Harrison-HEALTH-PROGRAM-SPECIALIST-AR-72601/1409110500/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-07-28"
+    },
+    {
+      "id": "6595d010cbf9",
+      "title": "Supervisory IT Program Manager",
+      "district": "VA Arkansas (USAJobs)",
+      "location": "Arkansas",
+      "url": "https://www.usajobs.gov/job/878102700",
+      "platform": "USAJobs",
+      "category": "it",
+      "match_reason": "VA IT",
+      "posted_date": "",
+      "first_seen": "2026-07-28"
     },
     {
       "id": "71e7edb42250",
