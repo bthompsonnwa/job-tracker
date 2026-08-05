@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04T15:31",
+  "last_updated": "2026-08-05T15:22",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "desktop support",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-08-01"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it support",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-08-01"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-07-31"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "education program",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-07-31"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-08-04"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-07-30"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -190,7 +190,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "library assistant",
-      "posted_date": "Posted 29 Days Ago",
+      "posted_date": "Posted 30 Days Ago",
       "first_seen": "2026-07-07"
     },
     {
@@ -226,7 +226,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -238,7 +238,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -250,7 +250,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-07-08"
     },
     {
@@ -326,28 +326,16 @@
       "first_seen": "2026-07-29"
     },
     {
-      "id": "e12914240e2e",
+      "id": "bcf05f703d8e",
       "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-HEALTH-PROGRAM-SPECIALIST-AR-72205/1415700900/",
+      "url": "https://arcareers.arkansas.gov/job/Lonoke-HEALTH-PROGRAM-SPECIALIST-AR-72086/1412954500/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-08-04"
-    },
-    {
-      "id": "a30c2ac52d4e",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72703/1413432700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-03"
+      "first_seen": "2026-08-05"
     },
     {
       "id": "ce6a6a053b2d",
@@ -362,16 +350,16 @@
       "first_seen": "2026-08-03"
     },
     {
-      "id": "8db516cebb2d",
-      "title": "WORKFORCE DEVELOPMENT COORDINATOR",
+      "id": "a30c2ac52d4e",
+      "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-WORKFORCE-DEVELOPMENT-COORDINATOR-AR-72202/1367981800/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72703/1413432700/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "workforce development",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-08-04"
+      "first_seen": "2026-08-03"
     },
     {
       "id": "85e14d15bb1c",
