@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-05T15:22",
+  "last_updated": "2026-08-06T15:22",
   "jobs": [
     {
       "id": "f3e110863409",
@@ -12,18 +12,6 @@
       "match_reason": "it technician",
       "posted_date": "",
       "first_seen": "2026-06-15"
-    },
-    {
-      "id": "dc32cc0b3010",
-      "title": "Building IT Technician/Educator (BITT)",
-      "district": "Springdale SD",
-      "location": "T.G. Smith Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014274",
-      "platform": "WinOcular",
-      "category": "it",
-      "match_reason": "it technician",
-      "posted_date": "",
-      "first_seen": "2026-07-08"
     },
     {
       "id": "b77195453ad0",
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "desktop support",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-08-01"
     },
     {
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "it support",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-08-01"
     },
     {
@@ -130,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-07-31"
     },
     {
@@ -142,8 +130,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "education program",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-07-31"
+    },
+    {
+      "id": "6e01995afe80",
+      "title": "Part-Time Adjunct Faculty, Graphic Design",
+      "district": "NWACC",
+      "location": "NWACC, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Part-Time-Faculty--Graphic-Design_JR-1040",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "graphic design",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-08-06"
     },
     {
       "id": "84f55985312b",
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-08-04"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-07-30"
     },
     {
@@ -178,44 +178,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
-      "id": "00db84892660",
-      "title": "Part-Time Library Assistant",
-      "district": "NWACC",
-      "location": "Benton County Campus, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Campus-Arkansas/Part-Time-Library-Assistant_JR-1228-1",
+      "id": "0566531a6b80",
+      "title": "Social Media Coordinator",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Social-Media-Coordinator_JR2481",
       "platform": "Workday",
       "category": "community",
-      "match_reason": "library assistant",
-      "posted_date": "Posted 30 Days Ago",
-      "first_seen": "2026-07-07"
-    },
-    {
-      "id": "f40d6957ddc8",
-      "title": "Medical Laboratory Technician Program Director/Full-time Faculty",
-      "district": "NWACC",
-      "location": "NWACC, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Medical-Laboratory-Technician-Program-Director-Full-time-Faculty_JR-1220",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "program director",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-06-25"
-    },
-    {
-      "id": "1ba097337549",
-      "title": "Part-Time Faculty, Graphic Design",
-      "district": "NWACC",
-      "location": "NWACC, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Part-Time-Faculty--Graphic-Design_JR-1040",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "graphic design",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-05-22"
+      "match_reason": "social media coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-08-06"
     },
     {
       "id": "272793706153",
@@ -226,7 +202,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -238,7 +214,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -250,20 +226,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "museum educator",
-      "posted_date": "Posted 29 Days Ago",
+      "posted_date": "Posted 30 Days Ago",
       "first_seen": "2026-07-08"
-    },
-    {
-      "id": "af39c2f2f286",
-      "title": "Scholars Program Coordinator",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Scholars-Program-Coordinator_JR2401",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "program coordinator",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-06-05"
     },
     {
       "id": "ceda56794dc8",
@@ -326,28 +290,16 @@
       "first_seen": "2026-07-29"
     },
     {
-      "id": "bcf05f703d8e",
-      "title": "HEALTH PROGRAM SPECIALIST",
+      "id": "6bca0f9a8fe4",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Lonoke-HEALTH-PROGRAM-SPECIALIST-AR-72086/1412954500/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-08-05"
-    },
-    {
-      "id": "ce6a6a053b2d",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Harrison-HEALTH-PROGRAM-SPECIALIST-AR-72601/1413420700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-03"
+      "first_seen": "2026-08-06"
     },
     {
       "id": "a30c2ac52d4e",
@@ -360,6 +312,18 @@
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-08-03"
+    },
+    {
+      "id": "4dee0b5edbee",
+      "title": "HEALTH PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-HEALTH-PROGRAM-COORDINATOR-AR-72401/1414873000/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-08-06"
     },
     {
       "id": "85e14d15bb1c",
