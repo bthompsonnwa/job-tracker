@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07T14:18",
+  "last_updated": "2026-08-08T13:53",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -74,18 +74,6 @@
       "first_seen": "2026-07-28"
     },
     {
-      "id": "05d6d407e94d",
-      "title": "IT Support Specialist",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/IT-Support-Specialist_R0089083",
-      "platform": "Workday",
-      "category": "it",
-      "match_reason": "it support",
-      "posted_date": "Posted 7 Days Ago",
-      "first_seen": "2026-08-01"
-    },
-    {
       "id": "aa5fa94c86c4",
       "title": "Accounting Program Coordinator",
       "district": "University of Arkansas (UAF)",
@@ -94,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-07-31"
     },
     {
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "education program",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-07-31"
     },
     {
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -130,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-08-04"
     },
     {
@@ -142,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic designer",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-07-30"
     },
     {
@@ -154,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 21 Days Ago",
+      "posted_date": "Posted 22 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -166,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "social media coordinator",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -178,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -190,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 15 Days Ago",
+      "posted_date": "Posted 16 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -266,35 +254,71 @@
       "first_seen": "2026-07-29"
     },
     {
-      "id": "4dee0b5edbee",
-      "title": "HEALTH PROGRAM COORDINATOR",
+      "id": "6bca0f9a8fe4",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-HEALTH-PROGRAM-COORDINATOR-AR-72401/1414873000/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program coordinator",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-08-06"
+      "first_seen": "2026-08-08"
     },
     {
-      "id": "85e14d15bb1c",
-      "title": "Supervisory IT Specialist (Information Security)",
+      "id": "a30c2ac52d4e",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72703/1413432700/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-08-08"
+    },
+    {
+      "id": "bcf05f703d8e",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Lonoke-HEALTH-PROGRAM-SPECIALIST-AR-72086/1412954500/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-08-08"
+    },
+    {
+      "id": "ce6a6a053b2d",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Harrison-HEALTH-PROGRAM-SPECIALIST-AR-72601/1413420700/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-08-08"
+    },
+    {
+      "id": "64d65c03c145",
+      "title": "IT Specialist (APPSW)",
       "district": "VA Arkansas (USAJobs)",
       "location": "Arkansas",
-      "url": "https://www.usajobs.gov/job/878818100",
+      "url": "https://www.usajobs.gov/job/879781500",
       "platform": "USAJobs",
       "category": "it",
       "match_reason": "VA IT",
       "posted_date": "",
-      "first_seen": "2026-08-03"
+      "first_seen": "2026-08-08"
     },
     {
       "id": "59cb0dddbd2b",
       "title": "Help Desk Technician",
       "district": "Adzuna \u00b7 TEKsystems c/o Allegis Group",
       "location": "Lowell, Benton County",
-      "url": "https://www.adzuna.com/land/ad/5832012826?se=aidy3mqS8RGh4fzjsuC9eA&utm_medium=api&utm_source=344300f1&v=A6D658F88DFBA184113335DD595ACB4952D6D42E",
+      "url": "https://www.adzuna.com/land/ad/5832012826?se=HubHgTCT8RG9ks23jnlnsA&utm_medium=api&utm_source=344300f1&v=A6D658F88DFBA184113335DD595ACB4952D6D42E",
       "platform": "Adzuna",
       "category": "it",
       "match_reason": "help desk",
