@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-15T13:37",
+  "last_updated": "2026-08-16T13:38",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "science program",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-08-15"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-08-04"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "social media coordinator",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 23 Days Ago",
+      "posted_date": "Posted 24 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -218,16 +218,28 @@
       "first_seen": "2026-07-30"
     },
     {
-      "id": "e3cb5c18bd9b",
+      "id": "a8142303f1b1",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
+      "url": "https://arcareers.arkansas.gov/job/Beebe-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72012/1416689300/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-08-12"
+      "first_seen": "2026-08-16"
+    },
+    {
+      "id": "8fe7972f9b31",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Morrilton-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72210/1416700500/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-08-16"
     },
     {
       "id": "7baf9042f1c8",
@@ -246,7 +258,7 @@
       "title": "Help Desk Technician",
       "district": "Adzuna \u00b7 TEKsystems c/o Allegis Group",
       "location": "Lowell, Benton County",
-      "url": "https://www.adzuna.com/land/ad/5832012826?se=kC2wcK6Y8RGXlua0wi23rg&utm_medium=api&utm_source=344300f1&v=A6D658F88DFBA184113335DD595ACB4952D6D42E",
+      "url": "https://www.adzuna.com/land/ad/5832012826?se=yN_5wneZ8RGk06hjS8CKRw&utm_medium=api&utm_source=344300f1&v=A6D658F88DFBA184113335DD595ACB4952D6D42E",
       "platform": "Adzuna",
       "category": "it",
       "match_reason": "help desk",
