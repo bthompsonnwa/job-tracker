@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-17T13:46",
+  "last_updated": "2026-08-18T13:50",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "science program",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-08-15"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-08-04"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "social media coordinator",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 21 Days Ago",
+      "posted_date": "Posted 22 Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 25 Days Ago",
+      "posted_date": "Posted 26 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -182,18 +182,6 @@
       "first_seen": "2026-08-01"
     },
     {
-      "id": "fbcef81b4a12",
-      "title": "Honor Scholars Program Coordinator and Advisor",
-      "district": "JBU (Staff)",
-      "location": "Siloam Springs, AR",
-      "url": "https://www.jbu.edu/human-resources/staff-job-listings/hsp-program-coordinator?hsLang=en",
-      "platform": "HubSpot",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-06-02"
-    },
-    {
       "id": "9fe84d724ff3",
       "title": "Youth Services Specialist - Evenings (P.T. Library)",
       "district": "City of Bella Vista",
@@ -218,42 +206,6 @@
       "first_seen": "2026-07-30"
     },
     {
-      "id": "a8142303f1b1",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Beebe-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72012/1416689300/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-16"
-    },
-    {
-      "id": "e3cb5c18bd9b",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-17"
-    },
-    {
-      "id": "8fe7972f9b31",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Morrilton-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72210/1416700500/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-16"
-    },
-    {
       "id": "7baf9042f1c8",
       "title": "It Specialist",
       "district": "VA Arkansas (USAJobs)",
@@ -270,7 +222,7 @@
       "title": "Help Desk Technician",
       "district": "Adzuna \u00b7 TEKsystems c/o Allegis Group",
       "location": "Lowell, Benton County",
-      "url": "https://www.adzuna.com/land/ad/5832012826?se=pl_M_kGa8RG99P0DnZNbXw&utm_medium=api&utm_source=344300f1&v=A6D658F88DFBA184113335DD595ACB4952D6D42E",
+      "url": "https://www.adzuna.com/land/ad/5832012826?se=oLI6sAub8RG33K-LVeyx-w&utm_medium=api&utm_source=344300f1&v=A6D658F88DFBA184113335DD595ACB4952D6D42E",
       "platform": "Adzuna",
       "category": "it",
       "match_reason": "help desk",
