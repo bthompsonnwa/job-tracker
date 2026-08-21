@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-20T13:54",
+  "last_updated": "2026-08-21T13:53",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -38,16 +38,16 @@
       "first_seen": "2026-05-04"
     },
     {
-      "id": "54ff261cc772",
-      "title": "Computer Science Teacher",
+      "id": "2ed2930f0d79",
+      "title": "21CCLC Afterschool Program Staff",
       "district": "Springdale SD",
-      "location": "Springdale High",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014308",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014410",
       "platform": "WinOcular",
       "category": "school",
-      "match_reason": "computer science",
+      "match_reason": "cclc",
       "posted_date": "",
-      "first_seen": "2026-07-15"
+      "first_seen": "2026-08-21"
     },
     {
       "id": "4d71f98b203f",
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-08-19"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "science program",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-08-15"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -130,8 +130,44 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-08-04"
+    },
+    {
+      "id": "ced8304296af",
+      "title": "Program Coordinator, Workforce Transformation",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Workforce-Transformation_JR2497",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-08-21"
+    },
+    {
+      "id": "677f225c0b64",
+      "title": "Program Coordinator, Policy",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Policy_JR2496",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-08-21"
+    },
+    {
+      "id": "32ad3996ddaa",
+      "title": "Program Coordinator, Development",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Development_JR2495-1",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-08-21"
     },
     {
       "id": "0566531a6b80",
@@ -142,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "social media coordinator",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -154,7 +190,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 24 Days Ago",
+      "posted_date": "Posted 25 Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -166,7 +202,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-07-24"
     },
     {
@@ -180,18 +216,6 @@
       "match_reason": "museum educator",
       "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-07-08"
-    },
-    {
-      "id": "b53efc31b459",
-      "title": "Seasonal Museum Educator, School Programs (Fall)",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Seasonal-Museum-Educator--School-Programs--Fall-_JR2335",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "museum educator",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-08-15"
     },
     {
       "id": "547aae528b8d",
@@ -228,78 +252,6 @@
       "match_reason": "youth services",
       "posted_date": "",
       "first_seen": "2026-08-03"
-    },
-    {
-      "id": "c138cece7cd0",
-      "title": "Information Technology-Student Worker (Non-Federal)",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19487",
-      "platform": "PeopleAdmin",
-      "category": "it",
-      "match_reason": "information technology",
-      "posted_date": "",
-      "first_seen": "2026-07-30"
-    },
-    {
-      "id": "bd329c86a76b",
-      "title": "AGRICULTURE PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-08-19"
-    },
-    {
-      "id": "a8142303f1b1",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Beebe-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72012/1416689300/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-19"
-    },
-    {
-      "id": "8fe7972f9b31",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Morrilton-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72210/1416700500/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-19"
-    },
-    {
-      "id": "e3cb5c18bd9b",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-19"
-    },
-    {
-      "id": "fb2f9ccc7c76",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-HEALTH-PROGRAM-SPECIALIST-AR-72401/1367108400/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-20"
     }
   ],
   "sources": [
