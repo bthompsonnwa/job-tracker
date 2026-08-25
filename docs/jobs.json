@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24T13:58",
+  "last_updated": "2026-08-25T13:58",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -50,18 +50,6 @@
       "first_seen": "2026-08-21"
     },
     {
-      "id": "4d71f98b203f",
-      "title": "District IT Technician",
-      "district": "Springdale SD",
-      "location": "District",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014221",
-      "platform": "WinOcular",
-      "category": "it",
-      "match_reason": "it technician",
-      "posted_date": "",
-      "first_seen": "2026-06-10"
-    },
-    {
       "id": "1840cc8f9066",
       "title": "Instructor - 21st Century After-School Program",
       "district": "West Fork SD",
@@ -82,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-08-19"
     },
     {
@@ -94,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "science program",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-08-15"
     },
     {
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,8 +106,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-08-06"
+    },
+    {
+      "id": "84f55985312b",
+      "title": "Surgical Technology Program Director/Full Time Faculty",
+      "district": "NWACC",
+      "location": "NWACC, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Surgical-Technology-Program-Director-Full-Time-Faculty_JR-1269-1",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program director",
+      "posted_date": "Posted 22 Days Ago",
+      "first_seen": "2026-08-25"
     },
     {
       "id": "ced8304296af",
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "social media coordinator",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -252,6 +252,18 @@
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-08-24"
+    },
+    {
+      "id": "bd329c86a76b",
+      "title": "AGRICULTURE PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-08-25"
     }
   ],
   "sources": [
