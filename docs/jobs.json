@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-25T13:58",
+  "last_updated": "2026-08-26T14:01",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -62,6 +62,18 @@
       "first_seen": "2026-08-14"
     },
     {
+      "id": "c9c37577577c",
+      "title": "Garvan Gardens Technology Specialist",
+      "district": "University of Arkansas (UAF)",
+      "location": "Garvan Woodland Gardens",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Garvan-Woodland-Gardens/Garvan-Gardens-Technology-Specialist_R0090557",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "technology specialist",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-08-26"
+    },
+    {
       "id": "9860603eefc3",
       "title": "Post Doctoral Fellow Researcher - Robotics, Advanced Manufacturing and Materials Innovation- 12 MONTH",
       "district": "University of Arkansas (UAF)",
@@ -70,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-08-19"
     },
     {
@@ -82,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "science program",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-08-15"
     },
     {
@@ -94,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -106,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -118,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 22 Days Ago",
+      "posted_date": "Posted 23 Days Ago",
       "first_seen": "2026-08-25"
     },
     {
@@ -130,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -142,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -154,20 +166,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-08-21"
-    },
-    {
-      "id": "0566531a6b80",
-      "title": "Social Media Coordinator",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Social-Media-Coordinator_JR2481",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "social media coordinator",
-      "posted_date": "Posted 19 Days Ago",
-      "first_seen": "2026-08-06"
     },
     {
       "id": "272793706153",
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 29 Days Ago",
+      "posted_date": "Posted 30 Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -242,18 +242,6 @@
       "first_seen": "2026-08-03"
     },
     {
-      "id": "34d12d6b55d1",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-75501/1421090100/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-24"
-    },
-    {
       "id": "bd329c86a76b",
       "title": "AGRICULTURE PROGRAM COORDINATOR",
       "district": "AR State Jobs",
@@ -264,6 +252,30 @@
       "match_reason": "program coordinator",
       "posted_date": "",
       "first_seen": "2026-08-25"
+    },
+    {
+      "id": "ab2a4d45fcad",
+      "title": "IT INFRASTRUCTURE SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
+      "platform": "SuccessFactors",
+      "category": "it",
+      "match_reason": "it infrastructure",
+      "posted_date": "",
+      "first_seen": "2026-08-26"
+    },
+    {
+      "id": "34d12d6b55d1",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-75501/1421090100/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-08-24"
     }
   ],
   "sources": [
