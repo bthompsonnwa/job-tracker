@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26T14:01",
+  "last_updated": "2026-08-27T22:57",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -38,18 +38,6 @@
       "first_seen": "2026-05-04"
     },
     {
-      "id": "2ed2930f0d79",
-      "title": "21CCLC Afterschool Program Staff",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014410",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-08-21"
-    },
-    {
       "id": "1840cc8f9066",
       "title": "Instructor - 21st Century After-School Program",
       "district": "West Fork SD",
@@ -62,16 +50,16 @@
       "first_seen": "2026-08-14"
     },
     {
-      "id": "c9c37577577c",
-      "title": "Garvan Gardens Technology Specialist",
+      "id": "963faa7249ed",
+      "title": "Walton Classroom Tech Support",
       "district": "University of Arkansas (UAF)",
-      "location": "Garvan Woodland Gardens",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Garvan-Woodland-Gardens/Garvan-Gardens-Technology-Specialist_R0090557",
+      "location": "Fayetteville",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Walton-Classroom-Tech-Support_R0090488-1",
       "platform": "Workday",
-      "category": "community",
-      "match_reason": "technology specialist",
-      "posted_date": "Posted Yesterday",
-      "first_seen": "2026-08-26"
+      "category": "it",
+      "match_reason": "tech support",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-08-27"
     },
     {
       "id": "9860603eefc3",
@@ -82,20 +70,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted Today",
       "first_seen": "2026-08-19"
     },
     {
-      "id": "c3ddcc61aed0",
-      "title": "Data Science Program Teaching Associate Professor - 12 MONTH",
+      "id": "c9c37577577c",
+      "title": "Garvan Gardens Technology Specialist",
       "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Data-Science-Program-Teaching-Associate-Professor---12-MONTH_R0089660",
+      "location": "Garvan Woodland Gardens",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Garvan-Woodland-Gardens/Garvan-Gardens-Technology-Specialist_R0090557",
       "platform": "Workday",
       "category": "community",
-      "match_reason": "science program",
-      "posted_date": "Posted 12 Days Ago",
-      "first_seen": "2026-08-15"
+      "match_reason": "technology specialist",
+      "posted_date": "Posted 2 Days Ago",
+      "first_seen": "2026-08-26"
     },
     {
       "id": "3084f950557e",
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 20 Days Ago",
+      "posted_date": "Posted 21 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -130,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 23 Days Ago",
+      "posted_date": "Posted 24 Days Ago",
       "first_seen": "2026-08-25"
     },
     {
@@ -142,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -154,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -166,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -178,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "extended reality",
-      "posted_date": "Posted 30 Days Ago",
+      "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-07-28"
     },
     {
@@ -194,30 +182,6 @@
       "first_seen": "2026-07-24"
     },
     {
-      "id": "b53efc31b459",
-      "title": "Seasonal Museum Educator, School Programs (Fall)",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Seasonal-Museum-Educator--School-Programs--Fall-_JR2335",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "museum educator",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-08-22"
-    },
-    {
-      "id": "547aae528b8d",
-      "title": "Project/Program Specialist",
-      "district": "Arkansas State Univ.",
-      "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
-      "platform": "Taleo",
-      "category": "community",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-20"
-    },
-    {
       "id": "ceda56794dc8",
       "title": "Project Program Specialist",
       "district": "Arkansas State Univ.",
@@ -230,8 +194,20 @@
       "first_seen": "2026-08-01"
     },
     {
-      "id": "9fe84d724ff3",
-      "title": "Youth Services Specialist - Evenings (P.T. Library)",
+      "id": "03a9cbd63c4d",
+      "title": "Physician Assistant Program Director",
+      "district": "JBU (Faculty)",
+      "location": "Siloam Springs, AR",
+      "url": "https://www.jbu.edu/human-resources/faculty-job-listings/physician-assistant-program-director?hsLang=en",
+      "platform": "HubSpot",
+      "category": "school",
+      "match_reason": "program director",
+      "posted_date": "",
+      "first_seen": "2026-08-27"
+    },
+    {
+      "id": "4a7e4c0700c0",
+      "title": "Youth Services Assistant - Evenings (P.T. Library)",
       "district": "City of Bella Vista",
       "location": "Bella Vista, AR",
       "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4374075",
@@ -239,19 +215,7 @@
       "category": "school",
       "match_reason": "youth services",
       "posted_date": "",
-      "first_seen": "2026-08-03"
-    },
-    {
-      "id": "bd329c86a76b",
-      "title": "AGRICULTURE PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-08-25"
+      "first_seen": "2026-08-27"
     },
     {
       "id": "ab2a4d45fcad",
@@ -264,6 +228,18 @@
       "match_reason": "it infrastructure",
       "posted_date": "",
       "first_seen": "2026-08-26"
+    },
+    {
+      "id": "bb74116bfeb6",
+      "title": "EDUCATION PROGRAM SUPERVISOR/EXPERT",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EDUCATION-PROGRAM-SUPERVISOREXPERT-AR-72201/1403235800/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "education program",
+      "posted_date": "",
+      "first_seen": "2026-08-27"
     },
     {
       "id": "34d12d6b55d1",
