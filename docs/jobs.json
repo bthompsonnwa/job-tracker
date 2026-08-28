@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-27T22:57",
+  "last_updated": "2026-08-28T23:01",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -50,6 +50,18 @@
       "first_seen": "2026-08-14"
     },
     {
+      "id": "c9c37577577c",
+      "title": "Garvan Gardens Technology Specialist",
+      "district": "University of Arkansas (UAF)",
+      "location": "Garvan Woodland Gardens",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Garvan-Woodland-Gardens/Garvan-Gardens-Technology-Specialist_R0090557",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "technology specialist",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-08-26"
+    },
+    {
       "id": "963faa7249ed",
       "title": "Walton Classroom Tech Support",
       "district": "University of Arkansas (UAF)",
@@ -58,7 +70,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-08-27"
     },
     {
@@ -70,20 +82,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-08-19"
-    },
-    {
-      "id": "c9c37577577c",
-      "title": "Garvan Gardens Technology Specialist",
-      "district": "University of Arkansas (UAF)",
-      "location": "Garvan Woodland Gardens",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Garvan-Woodland-Gardens/Garvan-Gardens-Technology-Specialist_R0090557",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "technology specialist",
-      "posted_date": "Posted 2 Days Ago",
-      "first_seen": "2026-08-26"
     },
     {
       "id": "3084f950557e",
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 15 Days Ago",
+      "posted_date": "Posted 16 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 21 Days Ago",
+      "posted_date": "Posted 22 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 24 Days Ago",
+      "posted_date": "Posted 25 Days Ago",
       "first_seen": "2026-08-25"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -216,42 +216,6 @@
       "match_reason": "youth services",
       "posted_date": "",
       "first_seen": "2026-08-27"
-    },
-    {
-      "id": "ab2a4d45fcad",
-      "title": "IT INFRASTRUCTURE SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-08-26"
-    },
-    {
-      "id": "bb74116bfeb6",
-      "title": "EDUCATION PROGRAM SUPERVISOR/EXPERT",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EDUCATION-PROGRAM-SUPERVISOREXPERT-AR-72201/1403235800/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "education program",
-      "posted_date": "",
-      "first_seen": "2026-08-27"
-    },
-    {
-      "id": "34d12d6b55d1",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-75501/1421090100/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-08-24"
     }
   ],
   "sources": [
