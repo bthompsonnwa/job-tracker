@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-29T17:06",
+  "last_updated": "2026-08-30T17:20",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology specialist",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-08-26"
     },
     {
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-08-27"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-08-19"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 17 Days Ago",
+      "posted_date": "Posted 18 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 23 Days Ago",
+      "posted_date": "Posted 24 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 26 Days Ago",
+      "posted_date": "Posted 27 Days Ago",
       "first_seen": "2026-08-25"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -218,28 +218,16 @@
       "first_seen": "2026-08-27"
     },
     {
-      "id": "bd329c86a76b",
-      "title": "AGRICULTURE PROGRAM COORDINATOR",
+      "id": "34d12d6b55d1",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
+      "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-75501/1421090100/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program coordinator",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-08-29"
-    },
-    {
-      "id": "ab2a4d45fcad",
-      "title": "IT INFRASTRUCTURE SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-08-29"
+      "first_seen": "2026-08-30"
     }
   ],
   "sources": [
