@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-31T19:31",
+  "last_updated": "2026-09-01T17:19",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -38,6 +38,42 @@
       "first_seen": "2026-05-04"
     },
     {
+      "id": "36458becbd5c",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014469",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-01"
+    },
+    {
+      "id": "4825c0549ed4",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014472",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-01"
+    },
+    {
+      "id": "3e5ff6223c8d",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014473",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-01"
+    },
+    {
       "id": "c9c37577577c",
       "title": "Garvan Gardens Technology Specialist",
       "district": "University of Arkansas (UAF)",
@@ -46,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology specialist",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-08-26"
     },
     {
@@ -58,7 +94,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-08-27"
     },
     {
@@ -70,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-08-19"
     },
     {
@@ -82,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -94,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 25 Days Ago",
+      "posted_date": "Posted 26 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -106,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-08-25"
     },
     {
@@ -118,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -130,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -142,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-08-21"
     },
     {
@@ -216,6 +252,18 @@
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-08-31"
+    },
+    {
+      "id": "bd329c86a76b",
+      "title": "AGRICULTURE PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-09-01"
     }
   ],
   "sources": [
