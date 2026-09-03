@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-02T17:08",
+  "last_updated": "2026-09-03T17:02",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -38,18 +38,6 @@
       "first_seen": "2026-05-04"
     },
     {
-      "id": "4825c0549ed4",
-      "title": "21CCLC Afterschool Program Staff",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014472",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-09-01"
-    },
-    {
       "id": "c9c37577577c",
       "title": "Garvan Gardens Technology Specialist",
       "district": "University of Arkansas (UAF)",
@@ -58,7 +46,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology specialist",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-08-26"
     },
     {
@@ -70,20 +58,20 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-08-27"
     },
     {
-      "id": "9860603eefc3",
-      "title": "Post Doctoral Fellow Researcher - Robotics, Advanced Manufacturing and Materials Innovation- 12 MONTH",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Post-Doctoral-Fellow-Researcher---Robotics--Advanced-Manufacturing-and-Materials-Innovation--12-MONTH_R0090037",
+      "id": "bbcf7e86307b",
+      "title": "Trades & Apprenticeship Program Coordinator",
+      "district": "NWACC",
+      "location": "Benton County Location, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Location-Arkansas/Trades---Apprenticeship-Program-Coordinator_JR-1286",
       "platform": "Workday",
       "category": "community",
-      "match_reason": "robotics",
-      "posted_date": "Posted 6 Days Ago",
-      "first_seen": "2026-08-19"
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-09-03"
     },
     {
       "id": "3084f950557e",
@@ -94,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 21 Days Ago",
+      "posted_date": "Posted 22 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 27 Days Ago",
+      "posted_date": "Posted 28 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -118,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program director",
-      "posted_date": "Posted 30 Days Ago",
+      "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-08-25"
     },
     {
@@ -206,40 +194,28 @@
       "first_seen": "2026-09-02"
     },
     {
-      "id": "34d12d6b55d1",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "e2bf31153d86",
+      "title": "RADIOLOGICAL PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Texarkana-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-75501/1421090100/",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-RADIOLOGICAL-PROGRAM-SPECIALIST-AR-72204/1426143800/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-02"
+      "first_seen": "2026-09-03"
     },
     {
-      "id": "bd329c86a76b",
-      "title": "AGRICULTURE PROGRAM COORDINATOR",
+      "id": "359cfa046ac1",
+      "title": "HEALTH PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-HEALTH-PROGRAM-COORDINATOR-AR-72205/1426310700/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-09-01"
-    },
-    {
-      "id": "ab2a4d45fcad",
-      "title": "IT INFRASTRUCTURE SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-09-02"
+      "first_seen": "2026-09-03"
     }
   ],
   "sources": [
