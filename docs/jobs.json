@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-03T17:02",
+  "last_updated": "2026-09-04T16:51",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -38,6 +38,42 @@
       "first_seen": "2026-05-04"
     },
     {
+      "id": "8a4a3a1ab225",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014485",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-04"
+    },
+    {
+      "id": "b7def89df284",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014486",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-04"
+    },
+    {
+      "id": "4d79712c48f2",
+      "title": "Hourly Communications and Creative Services Intern - Social Media and Content Creator",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Hourly-Communications-and-Creative-Services-Intern---Social-Media-and-Content-Creator_R0091080",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "content creator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-09-04"
+    },
+    {
       "id": "c9c37577577c",
       "title": "Garvan Gardens Technology Specialist",
       "district": "University of Arkansas (UAF)",
@@ -46,20 +82,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology specialist",
-      "posted_date": "Posted 6 Days Ago",
-      "first_seen": "2026-08-26"
-    },
-    {
-      "id": "963faa7249ed",
-      "title": "Walton Classroom Tech Support",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Walton-Classroom-Tech-Support_R0090488-1",
-      "platform": "Workday",
-      "category": "it",
-      "match_reason": "tech support",
       "posted_date": "Posted 7 Days Ago",
-      "first_seen": "2026-08-27"
+      "first_seen": "2026-08-26"
     },
     {
       "id": "bbcf7e86307b",
@@ -70,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-09-03"
     },
     {
@@ -82,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 22 Days Ago",
+      "posted_date": "Posted 23 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -94,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-08-06"
     },
     {
@@ -132,18 +156,6 @@
       "match_reason": "program coordinator",
       "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-07-24"
-    },
-    {
-      "id": "b53efc31b459",
-      "title": "Seasonal Museum Educator, School Programs (Fall)",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Seasonal-Museum-Educator--School-Programs--Fall-_JR2335",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "museum educator",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-09-02"
     },
     {
       "id": "83e6eeabb107",
@@ -192,30 +204,6 @@
       "match_reason": "education program",
       "posted_date": "",
       "first_seen": "2026-09-02"
-    },
-    {
-      "id": "e2bf31153d86",
-      "title": "RADIOLOGICAL PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-RADIOLOGICAL-PROGRAM-SPECIALIST-AR-72204/1426143800/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-09-03"
-    },
-    {
-      "id": "359cfa046ac1",
-      "title": "HEALTH PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-HEALTH-PROGRAM-COORDINATOR-AR-72205/1426310700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-09-03"
     }
   ],
   "sources": [
