@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-08T17:14",
+  "last_updated": "2026-09-09T17:08",
   "jobs": [
     {
       "id": "1173434f2a2a",
@@ -50,16 +50,16 @@
       "first_seen": "2026-09-04"
     },
     {
-      "id": "b7def89df284",
-      "title": "21CCLC Afterschool Program Staff",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014486",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-09-04"
+      "id": "3a28c505aa29",
+      "title": "Hourly Fulbright MARCOMM Intern - Graphic Design",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Hourly-Fulbright-MARCOMM-Intern---Graphic-Design_R0091233",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "graphic design",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-09-09"
     },
     {
       "id": "4d79712c48f2",
@@ -70,20 +70,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "content creator",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-09-04"
-    },
-    {
-      "id": "c9c37577577c",
-      "title": "Garvan Gardens Technology Specialist",
-      "district": "University of Arkansas (UAF)",
-      "location": "Garvan Woodland Gardens",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Garvan-Woodland-Gardens/Garvan-Gardens-Technology-Specialist_R0090557",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "technology specialist",
-      "posted_date": "Posted 11 Days Ago",
-      "first_seen": "2026-08-26"
     },
     {
       "id": "bbcf7e86307b",
@@ -94,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 27 Days Ago",
+      "posted_date": "Posted 28 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
