@@ -1,18 +1,6 @@
 {
-  "last_updated": "2026-09-09T17:08",
+  "last_updated": "2026-09-10T17:00",
   "jobs": [
-    {
-      "id": "1173434f2a2a",
-      "title": "Building IT Technician Educator/1 FTE",
-      "district": "Springdale SD",
-      "location": "Harp Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014435",
-      "platform": "WinOcular",
-      "category": "it",
-      "match_reason": "it technician",
-      "posted_date": "",
-      "first_seen": "2026-08-19"
-    },
     {
       "id": "b77195453ad0",
       "title": "21 CCLC Site Coordinator (2026-27 SY)",
@@ -38,18 +26,6 @@
       "first_seen": "2026-05-04"
     },
     {
-      "id": "8a4a3a1ab225",
-      "title": "21CCLC Afterschool Program Staff",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014485",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-09-04"
-    },
-    {
       "id": "3a28c505aa29",
       "title": "Hourly Fulbright MARCOMM Intern - Graphic Design",
       "district": "University of Arkansas (UAF)",
@@ -58,7 +34,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-09-09"
     },
     {
@@ -70,7 +46,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "content creator",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-09-04"
     },
     {
@@ -82,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -94,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -194,28 +170,16 @@
       "first_seen": "2026-09-02"
     },
     {
-      "id": "bd329c86a76b",
-      "title": "AGRICULTURE PROGRAM COORDINATOR",
+      "id": "361dca611f7e",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72701/1426805700/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program coordinator",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-08"
-    },
-    {
-      "id": "ab2a4d45fcad",
-      "title": "IT INFRASTRUCTURE SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-09-08"
+      "first_seen": "2026-09-10"
     }
   ],
   "sources": [
