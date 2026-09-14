@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-13T16:58",
+  "last_updated": "2026-09-14T18:31",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -34,20 +34,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-09-09"
-    },
-    {
-      "id": "4d79712c48f2",
-      "title": "Hourly Communications and Creative Services Intern - Social Media and Content Creator",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Hourly-Communications-and-Creative-Services-Intern---Social-Media-and-Content-Creator_R0091080",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "content creator",
-      "posted_date": "Posted 9 Days Ago",
-      "first_seen": "2026-09-04"
     },
     {
       "id": "bbcf7e86307b",
@@ -58,7 +46,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -158,28 +146,28 @@
       "first_seen": "2026-09-02"
     },
     {
-      "id": "34983ba64f48",
-      "title": "CORRECTIONS PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Paragould-CORRECTIONS-PROGRAM-SPECIALIST-AR-72450/1428778200/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-09-13"
-    },
-    {
-      "id": "e3cb5c18bd9b",
+      "id": "6bca0f9a8fe4",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-12"
+      "first_seen": "2026-09-14"
+    },
+    {
+      "id": "361dca611f7e",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72701/1426805700/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-09-14"
     }
   ],
   "sources": [
