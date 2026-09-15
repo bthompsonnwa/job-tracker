@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-14T18:31",
+  "last_updated": "2026-09-15T17:38",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -26,18 +26,6 @@
       "first_seen": "2026-05-04"
     },
     {
-      "id": "3a28c505aa29",
-      "title": "Hourly Fulbright MARCOMM Intern - Graphic Design",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Hourly-Fulbright-MARCOMM-Intern---Graphic-Design_R0091233",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "graphic design",
-      "posted_date": "Posted 6 Days Ago",
-      "first_seen": "2026-09-09"
-    },
-    {
       "id": "bbcf7e86307b",
       "title": "Trades & Apprenticeship Program Coordinator",
       "district": "NWACC",
@@ -46,7 +34,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -84,6 +72,18 @@
       "match_reason": "program director",
       "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-08-25"
+    },
+    {
+      "id": "0f49c05dc875",
+      "title": "Multimedia Manager",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Multimedia-Manager_JR2534",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "multimedia",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-09-15"
     },
     {
       "id": "272793706153",
@@ -146,6 +146,18 @@
       "first_seen": "2026-09-02"
     },
     {
+      "id": "7cd4ac1d2f0c",
+      "title": "EARLY CHILDHOOD PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Statewide-EARLY-CHILDHOOD-PROGRAM-COORDINATOR-AR-72201/1409102000/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-09-15"
+    },
+    {
       "id": "6bca0f9a8fe4",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
@@ -158,16 +170,40 @@
       "first_seen": "2026-09-14"
     },
     {
-      "id": "361dca611f7e",
+      "id": "e3cb5c18bd9b",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72701/1426805700/",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-14"
+      "first_seen": "2026-09-15"
+    },
+    {
+      "id": "ab2a4d45fcad",
+      "title": "IT INFRASTRUCTURE SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
+      "platform": "SuccessFactors",
+      "category": "it",
+      "match_reason": "it infrastructure",
+      "posted_date": "",
+      "first_seen": "2026-09-15"
+    },
+    {
+      "id": "bd329c86a76b",
+      "title": "AGRICULTURE PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-09-15"
     }
   ],
   "sources": [
