@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-15T17:38",
+  "last_updated": "2026-09-16T17:37",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -26,6 +26,18 @@
       "first_seen": "2026-05-04"
     },
     {
+      "id": "80f67708af8b",
+      "title": "21st CCLC Staff",
+      "district": "Springdale SD",
+      "location": "Parson Hills Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014513",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-16"
+    },
+    {
       "id": "bbcf7e86307b",
       "title": "Trades & Apprenticeship Program Coordinator",
       "district": "NWACC",
@@ -34,7 +46,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -62,18 +74,6 @@
       "first_seen": "2026-08-06"
     },
     {
-      "id": "84f55985312b",
-      "title": "Surgical Technology Program Director/Full Time Faculty",
-      "district": "NWACC",
-      "location": "NWACC, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Surgical-Technology-Program-Director-Full-Time-Faculty_JR-1269-1",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "program director",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-08-25"
-    },
-    {
       "id": "0f49c05dc875",
       "title": "Multimedia Manager",
       "district": "Crystal Bridges / AWE",
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-09-15"
     },
     {
@@ -146,59 +146,23 @@
       "first_seen": "2026-09-02"
     },
     {
+      "id": "a30c2ac52d4e",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72703/1413432700/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-09-16"
+    },
+    {
       "id": "7cd4ac1d2f0c",
       "title": "EARLY CHILDHOOD PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
       "url": "https://arcareers.arkansas.gov/job/Statewide-EARLY-CHILDHOOD-PROGRAM-COORDINATOR-AR-72201/1409102000/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-09-15"
-    },
-    {
-      "id": "6bca0f9a8fe4",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1403284900/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-09-14"
-    },
-    {
-      "id": "e3cb5c18bd9b",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-09-15"
-    },
-    {
-      "id": "ab2a4d45fcad",
-      "title": "IT INFRASTRUCTURE SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-09-15"
-    },
-    {
-      "id": "bd329c86a76b",
-      "title": "AGRICULTURE PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Greenbrier-AGRICULTURE-PROGRAM-COORDINATOR-AR-72058/1420534700/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program coordinator",
