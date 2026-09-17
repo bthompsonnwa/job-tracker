@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-16T17:37",
+  "last_updated": "2026-09-17T17:37",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -26,6 +26,42 @@
       "first_seen": "2026-05-04"
     },
     {
+      "id": "6b25da323c50",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014515",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-17"
+    },
+    {
+      "id": "b9c7aa1f360c",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014516",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-17"
+    },
+    {
+      "id": "259373621f9e",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014517",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-09-17"
+    },
+    {
       "id": "80f67708af8b",
       "title": "21st CCLC Staff",
       "district": "Springdale SD",
@@ -38,16 +74,16 @@
       "first_seen": "2026-09-16"
     },
     {
-      "id": "bbcf7e86307b",
-      "title": "Trades & Apprenticeship Program Coordinator",
-      "district": "NWACC",
-      "location": "Benton County Location, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Location-Arkansas/Trades---Apprenticeship-Program-Coordinator_JR-1286",
+      "id": "fd0592850746",
+      "title": "Assistant Professor of Social and Digital Media in Journalism",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Assistant-Professor-of-Social-and-Digital-Media-in-Journalism_R0091587-1",
       "platform": "Workday",
       "category": "community",
-      "match_reason": "program coordinator",
-      "posted_date": "Posted 13 Days Ago",
-      "first_seen": "2026-09-03"
+      "match_reason": "digital media",
+      "posted_date": "Posted Yesterday",
+      "first_seen": "2026-09-17"
     },
     {
       "id": "3084f950557e",
@@ -58,8 +94,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 30+ Days Ago",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-07-13"
+    },
+    {
+      "id": "bbcf7e86307b",
+      "title": "Trades & Apprenticeship Program Coordinator",
+      "district": "NWACC",
+      "location": "Benton County Location, Arkansas",
+      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Location-Arkansas/Trades---Apprenticeship-Program-Coordinator_JR-1286",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted 14 Days Ago",
+      "first_seen": "2026-09-03"
     },
     {
       "id": "6e01995afe80",
@@ -82,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-09-15"
     },
     {
@@ -146,28 +194,40 @@
       "first_seen": "2026-09-02"
     },
     {
-      "id": "a30c2ac52d4e",
-      "title": "HEALTH PROGRAM SPECIALIST",
+      "id": "ab2a4d45fcad",
+      "title": "IT INFRASTRUCTURE SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72703/1413432700/",
+      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
+      "platform": "SuccessFactors",
+      "category": "it",
+      "match_reason": "it infrastructure",
+      "posted_date": "",
+      "first_seen": "2026-09-17"
+    },
+    {
+      "id": "e3cb5c18bd9b",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-16"
+      "first_seen": "2026-09-17"
     },
     {
-      "id": "7cd4ac1d2f0c",
-      "title": "EARLY CHILDHOOD PROGRAM COORDINATOR",
+      "id": "361dca611f7e",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Statewide-EARLY-CHILDHOOD-PROGRAM-COORDINATOR-AR-72201/1409102000/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72701/1426805700/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program coordinator",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-15"
+      "first_seen": "2026-09-17"
     }
   ],
   "sources": [
