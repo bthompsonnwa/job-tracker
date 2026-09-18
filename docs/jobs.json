@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-17T17:37",
+  "last_updated": "2026-09-18T17:03",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "digital media",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-09-17"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-09-15"
     },
     {
@@ -194,40 +194,28 @@
       "first_seen": "2026-09-02"
     },
     {
-      "id": "ab2a4d45fcad",
-      "title": "IT INFRASTRUCTURE SPECIALIST",
+      "id": "c0ce18f12155",
+      "title": "HEALTH PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
+      "url": "https://arcareers.arkansas.gov/job/Conway-HEALTH-PROGRAM-COORDINATOR-AR-72032/1430823700/",
       "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
+      "category": "school",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-09-17"
+      "first_seen": "2026-09-18"
     },
     {
-      "id": "e3cb5c18bd9b",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "c1c3521bf49f",
+      "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
+      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1430518600/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-17"
-    },
-    {
-      "id": "361dca611f7e",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72701/1426805700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-09-17"
+      "first_seen": "2026-09-18"
     }
   ],
   "sources": [
