@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-21T18:38",
+  "last_updated": "2026-09-22T17:38",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -74,6 +74,30 @@
       "first_seen": "2026-09-16"
     },
     {
+      "id": "4004ee469cc7",
+      "title": "Technical Services Librarian",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Technical-Services-Librarian_R0091669",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "librarian",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-09-22"
+    },
+    {
+      "id": "0682230dc2ef",
+      "title": "Desktop Support Technician",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Desktop-Support-Technician_R0091693",
+      "platform": "Workday",
+      "category": "it",
+      "match_reason": "desktop support",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-09-22"
+    },
+    {
       "id": "fd0592850746",
       "title": "Assistant Professor of Social and Digital Media in Journalism",
       "district": "University of Arkansas (UAF)",
@@ -82,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "digital media",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-09-17"
     },
     {
@@ -94,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology support",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-09-21"
     },
     {
@@ -106,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -118,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -142,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-09-15"
     },
     {
@@ -206,30 +230,6 @@
       "first_seen": "2026-09-02"
     },
     {
-      "id": "bb519331fc76",
-      "title": "HEALTH PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-HEALTH-PROGRAM-COORDINATOR-AR-72404/1431650900/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-09-21"
-    },
-    {
-      "id": "c0ce18f12155",
-      "title": "HEALTH PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-HEALTH-PROGRAM-COORDINATOR-AR-72032/1430823700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-09-21"
-    },
-    {
       "id": "ab2a4d45fcad",
       "title": "IT INFRASTRUCTURE SPECIALIST",
       "district": "AR State Jobs",
@@ -264,6 +264,18 @@
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-09-21"
+    },
+    {
+      "id": "e3cb5c18bd9b",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72427/1416699000/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-09-22"
     }
   ],
   "sources": [
