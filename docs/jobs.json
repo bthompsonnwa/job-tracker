@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-26T17:02",
+  "last_updated": "2026-09-27T17:40",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "librarian",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-09-23"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "desktop support",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology support",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-09-21"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 23 Days Ago",
+      "posted_date": "Posted 24 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -166,7 +166,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-09-15"
     },
     {
@@ -206,52 +206,28 @@
       "first_seen": "2026-09-02"
     },
     {
-      "id": "ab2a4d45fcad",
-      "title": "IT INFRASTRUCTURE SPECIALIST",
+      "id": "82a3b23e353b",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433022200/",
       "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
+      "category": "school",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-26"
+      "first_seen": "2026-09-27"
     },
     {
-      "id": "bb519331fc76",
-      "title": "HEALTH PROGRAM COORDINATOR",
+      "id": "7cd4ac1d2f0c",
+      "title": "EARLY CHILDHOOD PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-HEALTH-PROGRAM-COORDINATOR-AR-72404/1431650900/",
+      "url": "https://arcareers.arkansas.gov/job/Statewide-EARLY-CHILDHOOD-PROGRAM-COORDINATOR-AR-72201/1409102000/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-09-26"
-    },
-    {
-      "id": "a30c2ac52d4e",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72703/1413432700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-09-24"
-    },
-    {
-      "id": "c1c3521bf49f",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1430518600/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-09-26"
+      "first_seen": "2026-09-27"
     }
   ],
   "sources": [
