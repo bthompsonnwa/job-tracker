@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-29T18:34",
+  "last_updated": "2026-09-30T18:23",
   "jobs": [
     {
       "id": "705c5f12a484",
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "librarian",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -106,8 +106,20 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-09-23"
+    },
+    {
+      "id": "fd0592850746",
+      "title": "Assistant Professor of Social and Digital Media in Journalism",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Assistant-Professor-of-Social-and-Digital-Media-in-Journalism_R0091587-1",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "digital media",
+      "posted_date": "Posted 14 Days Ago",
+      "first_seen": "2026-09-30"
     },
     {
       "id": "6000e7e95cf0",
@@ -118,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology support",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted 9 Days Ago",
       "first_seen": "2026-09-21"
     },
     {
@@ -130,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -142,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 26 Days Ago",
+      "posted_date": "Posted 27 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -166,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-09-15"
     },
     {
@@ -218,18 +230,6 @@
       "first_seen": "2026-09-29"
     },
     {
-      "id": "ab2a4d45fcad",
-      "title": "IT INFRASTRUCTURE SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Conway-IT-INFRASTRUCTURE-SPECIALIST-AR-72034/1423228800/",
-      "platform": "SuccessFactors",
-      "category": "it",
-      "match_reason": "it infrastructure",
-      "posted_date": "",
-      "first_seen": "2026-09-28"
-    },
-    {
       "id": "bb519331fc76",
       "title": "HEALTH PROGRAM COORDINATOR",
       "district": "AR State Jobs",
@@ -238,18 +238,6 @@
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-09-28"
-    },
-    {
-      "id": "c1c3521bf49f",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1430518600/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-09-28"
     },
