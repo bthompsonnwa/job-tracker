@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-30T18:23",
+  "last_updated": "2026-10-01T18:49",
   "jobs": [
     {
       "id": "705c5f12a484",
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "librarian",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-09-23"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "digital media",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-09-30"
     },
     {
@@ -130,7 +130,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology support",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-09-21"
     },
     {
@@ -142,7 +142,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -154,7 +154,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 27 Days Ago",
+      "posted_date": "Posted 28 Days Ago",
       "first_seen": "2026-09-03"
     },
     {
@@ -178,7 +178,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 15 Days Ago",
+      "posted_date": "Posted 16 Days Ago",
       "first_seen": "2026-09-15"
     },
     {
@@ -194,6 +194,18 @@
       "first_seen": "2026-07-28"
     },
     {
+      "id": "d4d499c49f9a",
+      "title": "Project Program Director",
+      "district": "Arkansas State Univ.",
+      "location": "",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "platform": "Taleo",
+      "category": "community",
+      "match_reason": "program director",
+      "posted_date": "",
+      "first_seen": "2026-10-01"
+    },
+    {
       "id": "03a9cbd63c4d",
       "title": "Physician Assistant Program Director",
       "district": "JBU (Faculty)",
@@ -204,18 +216,6 @@
       "match_reason": "program director",
       "posted_date": "",
       "first_seen": "2026-08-27"
-    },
-    {
-      "id": "22734be38f9c",
-      "title": "Associate Director of Cooperative Education Program",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19700",
-      "platform": "PeopleAdmin",
-      "category": "school",
-      "match_reason": "education program",
-      "posted_date": "",
-      "first_seen": "2026-09-02"
     },
     {
       "id": "cd03b83765b7",
@@ -230,16 +230,16 @@
       "first_seen": "2026-09-29"
     },
     {
-      "id": "bb519331fc76",
-      "title": "HEALTH PROGRAM COORDINATOR",
+      "id": "82a3b23e353b",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-HEALTH-PROGRAM-COORDINATOR-AR-72404/1431650900/",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433022200/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program coordinator",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-09-28"
+      "first_seen": "2026-10-01"
     },
     {
       "id": "529271a88a6a",
