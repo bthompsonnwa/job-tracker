@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-04T17:26",
+  "last_updated": "2026-10-06T18:54",
   "jobs": [
     {
       "id": "705c5f12a484",
@@ -62,30 +62,6 @@
       "first_seen": "2026-09-17"
     },
     {
-      "id": "259373621f9e",
-      "title": "21CCLC Afterschool Program Staff",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014517",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-09-17"
-    },
-    {
-      "id": "80f67708af8b",
-      "title": "21st CCLC Staff",
-      "district": "Springdale SD",
-      "location": "Parson Hills Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014513",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-09-16"
-    },
-    {
       "id": "4004ee469cc7",
       "title": "Technical Services Librarian",
       "district": "University of Arkansas (UAF)",
@@ -94,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "librarian",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -106,7 +82,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-09-23"
     },
     {
@@ -118,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "digital media",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-09-30"
     },
     {
@@ -130,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "technology support",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-09-21"
     },
     {
@@ -142,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 20 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -178,20 +154,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 19 Days Ago",
+      "posted_date": "Posted 21 Days Ago",
       "first_seen": "2026-09-15"
     },
     {
-      "id": "272793706153",
-      "title": "Extended Reality Simulation Specialist",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Extended-Reality-Simulation-Specialist_JR2461",
-      "platform": "Workday",
+      "id": "b58fd7d1ca5b",
+      "title": "HEI Program Coordinator",
+      "district": "Arkansas State Univ.",
+      "location": "",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "platform": "Taleo",
       "category": "community",
-      "match_reason": "extended reality",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-07-28"
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-10-06"
     },
     {
       "id": "d4d499c49f9a",
@@ -218,16 +194,16 @@
       "first_seen": "2026-08-27"
     },
     {
-      "id": "523036539a3a",
-      "title": "HEALTH PROGRAM SPECIALIST",
+      "id": "cd03b83765b7",
+      "title": "HEALTH PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Hope-HEALTH-PROGRAM-SPECIALIST-AR-71801/1436391600/",
+      "url": "https://arcareers.arkansas.gov/job/Warren-HEALTH-PROGRAM-COORDINATOR-AR-71671/1434579200/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-10-04"
+      "first_seen": "2026-10-06"
     },
     {
       "id": "529271a88a6a",
