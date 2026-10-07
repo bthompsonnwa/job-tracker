@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-06T18:54",
+  "last_updated": "2026-10-07T19:19",
   "jobs": [
     {
       "id": "705c5f12a484",
@@ -50,18 +50,6 @@
       "first_seen": "2026-09-17"
     },
     {
-      "id": "b9c7aa1f360c",
-      "title": "21CCLC Afterschool Program Staff",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014516",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-09-17"
-    },
-    {
       "id": "4004ee469cc7",
       "title": "Technical Services Librarian",
       "district": "University of Arkansas (UAF)",
@@ -70,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "librarian",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-09-22"
     },
     {
@@ -82,32 +70,8 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "tech support",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-09-23"
-    },
-    {
-      "id": "fd0592850746",
-      "title": "Assistant Professor of Social and Digital Media in Journalism",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Assistant-Professor-of-Social-and-Digital-Media-in-Journalism_R0091587-1",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "digital media",
-      "posted_date": "Posted 20 Days Ago",
-      "first_seen": "2026-09-30"
-    },
-    {
-      "id": "6000e7e95cf0",
-      "title": "Information Technology Support Specialist",
-      "district": "NWACC",
-      "location": "Benton County Location, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Location-Arkansas/Information-Technology-Support-Specialist_JR-1308",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "technology support",
-      "posted_date": "Posted 15 Days Ago",
-      "first_seen": "2026-09-21"
     },
     {
       "id": "3084f950557e",
@@ -118,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 20 Days Ago",
+      "posted_date": "Posted 21 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -154,8 +118,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 21 Days Ago",
+      "posted_date": "Posted 22 Days Ago",
       "first_seen": "2026-09-15"
+    },
+    {
+      "id": "ceda56794dc8",
+      "title": "Project Program Specialist",
+      "district": "Arkansas State Univ.",
+      "location": "",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "platform": "Taleo",
+      "category": "community",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-10-07"
     },
     {
       "id": "b58fd7d1ca5b",
@@ -192,6 +168,18 @@
       "match_reason": "program director",
       "posted_date": "",
       "first_seen": "2026-08-27"
+    },
+    {
+      "id": "82a3b23e353b",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433022200/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-10-07"
     },
     {
       "id": "cd03b83765b7",
