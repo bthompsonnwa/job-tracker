@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-10T17:46",
+  "last_updated": "2026-10-11T18:00",
   "jobs": [
     {
       "id": "705c5f12a484",
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 24 Days Ago",
+      "posted_date": "Posted 25 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -94,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "multimedia",
-      "posted_date": "Posted 25 Days Ago",
+      "posted_date": "Posted 26 Days Ago",
       "first_seen": "2026-09-15"
     },
     {
@@ -144,6 +144,18 @@
       "match_reason": "program director",
       "posted_date": "",
       "first_seen": "2026-08-27"
+    },
+    {
+      "id": "cd03b83765b7",
+      "title": "HEALTH PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Warren-HEALTH-PROGRAM-COORDINATOR-AR-71671/1434579200/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-10-11"
     },
     {
       "id": "523036539a3a",
