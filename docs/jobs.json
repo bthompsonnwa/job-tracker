@@ -1,18 +1,6 @@
 {
-  "last_updated": "2026-10-11T18:00",
+  "last_updated": "2026-10-12T21:42",
   "jobs": [
-    {
-      "id": "705c5f12a484",
-      "title": "Building IT Technician Educator/1 FTE",
-      "district": "Springdale SD",
-      "location": "Harp Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014544",
-      "platform": "WinOcular",
-      "category": "it",
-      "match_reason": "it technician",
-      "posted_date": "",
-      "first_seen": "2026-09-28"
-    },
     {
       "id": "b77195453ad0",
       "title": "21 CCLC Site Coordinator (2026-27 SY)",
@@ -38,16 +26,28 @@
       "first_seen": "2026-05-04"
     },
     {
-      "id": "6b25da323c50",
+      "id": "f4717b79ecb5",
       "title": "21CCLC Afterschool Program Staff",
       "district": "Springdale SD",
       "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014515",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014566",
       "platform": "WinOcular",
       "category": "school",
       "match_reason": "cclc",
       "posted_date": "",
-      "first_seen": "2026-09-17"
+      "first_seen": "2026-10-12"
+    },
+    {
+      "id": "1993fb233bb0",
+      "title": "21CCLC Afterschool Program Staff",
+      "district": "Springdale SD",
+      "location": "Westwood Elementary",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014567",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "cclc",
+      "posted_date": "",
+      "first_seen": "2026-10-12"
     },
     {
       "id": "3084f950557e",
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 25 Days Ago",
+      "posted_date": "Posted 26 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -84,18 +84,6 @@
       "match_reason": "graphic design",
       "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-08-06"
-    },
-    {
-      "id": "0f49c05dc875",
-      "title": "Multimedia Manager",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Multimedia-Manager_JR2534",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "multimedia",
-      "posted_date": "Posted 26 Days Ago",
-      "first_seen": "2026-09-15"
     },
     {
       "id": "ceda56794dc8",
@@ -144,18 +132,6 @@
       "match_reason": "program director",
       "posted_date": "",
       "first_seen": "2026-08-27"
-    },
-    {
-      "id": "cd03b83765b7",
-      "title": "HEALTH PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Warren-HEALTH-PROGRAM-COORDINATOR-AR-71671/1434579200/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-10-11"
     },
     {
       "id": "523036539a3a",
