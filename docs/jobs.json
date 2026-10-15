@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-14T17:56",
+  "last_updated": "2026-10-15T17:44",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-10-14"
     },
     {
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "help desk",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-10-14"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 28 Days Ago",
+      "posted_date": "Posted 29 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -120,18 +120,6 @@
       "match_reason": "program coordinator",
       "posted_date": "",
       "first_seen": "2026-10-06"
-    },
-    {
-      "id": "ceda56794dc8",
-      "title": "Project Program Specialist",
-      "district": "Arkansas State Univ.",
-      "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
-      "platform": "Taleo",
-      "category": "community",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-10-07"
     },
     {
       "id": "d4d499c49f9a",
