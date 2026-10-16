@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-15T17:44",
+  "last_updated": "2026-10-16T17:18",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "help desk",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 29 Days Ago",
+      "posted_date": "Posted 30 Days Ago",
       "first_seen": "2026-07-13"
     },
     {
@@ -110,18 +110,6 @@
       "first_seen": "2026-08-06"
     },
     {
-      "id": "b58fd7d1ca5b",
-      "title": "HEI Program Coordinator",
-      "district": "Arkansas State Univ.",
-      "location": "",
-      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
-      "platform": "Taleo",
-      "category": "community",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-10-06"
-    },
-    {
       "id": "d4d499c49f9a",
       "title": "Project Program Director",
       "district": "Arkansas State Univ.",
@@ -144,18 +132,6 @@
       "match_reason": "program director",
       "posted_date": "",
       "first_seen": "2026-08-27"
-    },
-    {
-      "id": "523036539a3a",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Hope-HEALTH-PROGRAM-SPECIALIST-AR-71801/1436391600/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-10-10"
     },
     {
       "id": "529271a88a6a",
