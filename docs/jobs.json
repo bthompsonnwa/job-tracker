@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-16T17:18",
+  "last_updated": "2026-10-17T16:18",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "help desk",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "career coach",
-      "posted_date": "Posted 30 Days Ago",
+      "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-07-13"
     },
     {
