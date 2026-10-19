@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-18T16:28",
+  "last_updated": "2026-10-19T19:13",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "it",
       "match_reason": "help desk",
-      "posted_date": "Posted 4 Days Ago",
+      "posted_date": "Posted 5 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -110,6 +110,18 @@
       "first_seen": "2026-08-06"
     },
     {
+      "id": "e9d16dfc5cbe",
+      "title": "Program Coordinator, Medical Education",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Medical-Education_JR2582",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-10-19"
+    },
+    {
       "id": "d4d499c49f9a",
       "title": "Project Program Director",
       "district": "Arkansas State Univ.",
@@ -120,18 +132,6 @@
       "match_reason": "program director",
       "posted_date": "",
       "first_seen": "2026-10-01"
-    },
-    {
-      "id": "03a9cbd63c4d",
-      "title": "Physician Assistant Program Director",
-      "district": "JBU (Faculty)",
-      "location": "Siloam Springs, AR",
-      "url": "https://www.jbu.edu/human-resources/faculty-job-listings/physician-assistant-program-director?hsLang=en",
-      "platform": "HubSpot",
-      "category": "school",
-      "match_reason": "program director",
-      "posted_date": "",
-      "first_seen": "2026-08-27"
     },
     {
       "id": "529271a88a6a",
