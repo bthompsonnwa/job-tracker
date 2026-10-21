@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-20T17:55",
+  "last_updated": "2026-10-21T18:01",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -46,7 +46,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-10-20"
     },
     {
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -122,16 +122,28 @@
       "first_seen": "2026-10-01"
     },
     {
-      "id": "82a3b23e353b",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "c5486e55da47",
+      "title": "Digital Content Creator & Social Media Coordinator",
+      "district": "UCA",
+      "location": "Conway, AR",
+      "url": "https://jobs.uca.edu/postings/19824",
+      "platform": "PeopleAdmin",
+      "category": "school",
+      "match_reason": "content creator",
+      "posted_date": "",
+      "first_seen": "2026-10-21"
+    },
+    {
+      "id": "a191df1f5cea",
+      "title": "ENERGY & ENVIRONMENT PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433022200/",
+      "url": "https://arcareers.arkansas.gov/job/North-Little-Rock-ENERGY-&-ENVIRONMENT-PROGRAM-COORDINATOR-AR-72118/1355165000/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-10-20"
+      "first_seen": "2026-10-21"
     },
     {
       "id": "529271a88a6a",
