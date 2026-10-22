@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-21T18:01",
+  "last_updated": "2026-10-22T17:57",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -46,7 +46,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-10-20"
     },
     {
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -72,18 +72,6 @@
       "match_reason": "career coach",
       "posted_date": "Posted 30+ Days Ago",
       "first_seen": "2026-07-13"
-    },
-    {
-      "id": "bbcf7e86307b",
-      "title": "Trades & Apprenticeship Program Coordinator",
-      "district": "NWACC",
-      "location": "Benton County Location, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/Benton-County-Location-Arkansas/Trades---Apprenticeship-Program-Coordinator_JR-1286",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "program coordinator",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-09-03"
     },
     {
       "id": "6e01995afe80",
@@ -106,7 +94,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -134,18 +122,6 @@
       "first_seen": "2026-10-21"
     },
     {
-      "id": "a191df1f5cea",
-      "title": "ENERGY & ENVIRONMENT PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/North-Little-Rock-ENERGY-&-ENVIRONMENT-PROGRAM-COORDINATOR-AR-72118/1355165000/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-10-21"
-    },
-    {
       "id": "529271a88a6a",
       "title": "IT Specialist",
       "district": "VA Arkansas (USAJobs)",
@@ -156,6 +132,18 @@
       "match_reason": "VA IT",
       "posted_date": "",
       "first_seen": "2026-09-29"
+    },
+    {
+      "id": "3e5808bf85bc",
+      "title": "Supervisory IT Specialist",
+      "district": "VA Arkansas (USAJobs)",
+      "location": "Arkansas",
+      "url": "https://www.usajobs.gov/job/889754200",
+      "platform": "USAJobs",
+      "category": "it",
+      "match_reason": "VA IT",
+      "posted_date": "",
+      "first_seen": "2026-10-22"
     }
   ],
   "sources": [
