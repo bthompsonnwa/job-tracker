@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-25T17:03",
+  "last_updated": "2026-10-26T19:09",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -38,6 +38,30 @@
       "first_seen": "2026-10-12"
     },
     {
+      "id": "1e10e842bf7e",
+      "title": "LIBRARY: Library Assistant II (Part-Time) - Teens",
+      "district": "Rogers (City)",
+      "location": "Rogers (City)",
+      "url": "https://www.rogersar.gov/Jobs.aspx?UniqueId=98&From=All&CommunityJobs=False&JobID=LIBRARY-Library-Assistant-II-PartTime-Te-239",
+      "platform": "CivicPlus",
+      "category": "school",
+      "match_reason": "library assistant",
+      "posted_date": "10/26/2026",
+      "first_seen": "2026-10-26"
+    },
+    {
+      "id": "87681cbda301",
+      "title": "Full\u00a0Descriptionfor LIBRARY: Library Assistant II (Part-Time) - Teens",
+      "district": "Rogers (City)",
+      "location": "Rogers (City)",
+      "url": "https://www.rogersar.gov/Jobs.aspx?UniqueId=98&From=All&CommunityJobs=False&JobID=LIBRARY-Library-Assistant-II-PartTime-Te-239",
+      "platform": "CivicPlus",
+      "category": "school",
+      "match_reason": "library assistant",
+      "posted_date": "10/26/2026",
+      "first_seen": "2026-10-26"
+    },
+    {
       "id": "d760b4a7a09a",
       "title": "Assistant Professor of Graphic Design",
       "district": "University of Arkansas (UAF)",
@@ -46,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-10-20"
     },
     {
@@ -58,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 11 Days Ago",
+      "posted_date": "Posted 12 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -94,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -120,6 +144,18 @@
       "match_reason": "content creator",
       "posted_date": "",
       "first_seen": "2026-10-21"
+    },
+    {
+      "id": "82a3b23e353b",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433022200/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-10-26"
     },
     {
       "id": "529271a88a6a",
