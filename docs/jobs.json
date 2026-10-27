@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-26T19:09",
+  "last_updated": "2026-10-27T18:40",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-10-20"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "robotics",
-      "posted_date": "Posted 12 Days Ago",
+      "posted_date": "Posted 13 Days Ago",
       "first_seen": "2026-10-14"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 7 Days Ago",
+      "posted_date": "Posted 8 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -144,6 +144,18 @@
       "match_reason": "content creator",
       "posted_date": "",
       "first_seen": "2026-10-21"
+    },
+    {
+      "id": "28279fe69a4e",
+      "title": "CORRECTIONS PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Rogers-CORRECTIONS-PROGRAM-SPECIALIST-AR-72756/1443695400/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-10-27"
     },
     {
       "id": "82a3b23e353b",
