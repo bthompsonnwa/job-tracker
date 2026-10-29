@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-28T18:46",
+  "last_updated": "2026-10-29T18:57",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 8 Days Ago",
+      "posted_date": "Posted Today",
       "first_seen": "2026-10-20"
     },
     {
@@ -106,7 +106,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 9 Days Ago",
+      "posted_date": "Posted 10 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -134,28 +134,16 @@
       "first_seen": "2026-10-21"
     },
     {
-      "id": "28279fe69a4e",
-      "title": "CORRECTIONS PROGRAM SPECIALIST",
+      "id": "2893f2b7dca1",
+      "title": "COMMERCE PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Rogers-CORRECTIONS-PROGRAM-SPECIALIST-AR-72756/1443695400/",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-COMMERCE-PROGRAM-COORDINATOR-AR-72202/1444887700/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-10-27"
-    },
-    {
-      "id": "82a3b23e353b",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433022200/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-10-26"
+      "first_seen": "2026-10-29"
     },
     {
       "id": "529271a88a6a",
@@ -168,18 +156,6 @@
       "match_reason": "VA IT",
       "posted_date": "",
       "first_seen": "2026-09-29"
-    },
-    {
-      "id": "3e5808bf85bc",
-      "title": "Supervisory IT Specialist",
-      "district": "VA Arkansas (USAJobs)",
-      "location": "Arkansas",
-      "url": "https://www.usajobs.gov/job/889754200",
-      "platform": "USAJobs",
-      "category": "it",
-      "match_reason": "VA IT",
-      "posted_date": "",
-      "first_seen": "2026-10-22"
     }
   ],
   "sources": [
