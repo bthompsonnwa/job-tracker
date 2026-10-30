@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-29T18:57",
+  "last_updated": "2026-10-30T18:33",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -62,6 +62,18 @@
       "first_seen": "2026-10-26"
     },
     {
+      "id": "a460089cdbfd",
+      "title": "Program Coordinator",
+      "district": "University of Arkansas (UAF)",
+      "location": "University of Arkansas, Fayetteville",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/University-of-Arkansas-Fayetteville/Program-Coordinator_R0093273",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-10-30"
+    },
+    {
       "id": "d760b4a7a09a",
       "title": "Assistant Professor of Graphic Design",
       "district": "University of Arkansas (UAF)",
@@ -70,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-10-20"
     },
     {
@@ -106,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 10 Days Ago",
+      "posted_date": "Posted 11 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -132,18 +144,6 @@
       "match_reason": "content creator",
       "posted_date": "",
       "first_seen": "2026-10-21"
-    },
-    {
-      "id": "2893f2b7dca1",
-      "title": "COMMERCE PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-COMMERCE-PROGRAM-COORDINATOR-AR-72202/1444887700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-10-29"
     },
     {
       "id": "529271a88a6a",
