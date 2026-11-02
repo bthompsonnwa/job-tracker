@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-01T18:23",
+  "last_updated": "2026-11-02T22:18",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-10-30"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-10-20"
     },
     {
@@ -118,7 +118,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 13 Days Ago",
+      "posted_date": "Posted 14 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -132,6 +132,30 @@
       "match_reason": "content creator",
       "posted_date": "",
       "first_seen": "2026-10-21"
+    },
+    {
+      "id": "c1c3521bf49f",
+      "title": "HEALTH PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1430518600/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-11-02"
+    },
+    {
+      "id": "0489ca6bdacf",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1441257400/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-11-02"
     },
     {
       "id": "529271a88a6a",
