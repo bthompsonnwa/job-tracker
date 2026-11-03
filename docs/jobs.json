@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-02T22:18",
+  "last_updated": "2026-11-03T20:03",
   "jobs": [
     {
       "id": "b77195453ad0",
@@ -62,6 +62,30 @@
       "first_seen": "2026-10-26"
     },
     {
+      "id": "a01ce5238648",
+      "title": "Project/Program Coordinator - Master of Science in Operations Management",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Project-Program-Coordinator---Master-of-Science-in-Operations-Management_R0093188",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-11-03"
+    },
+    {
+      "id": "97356610b535",
+      "title": "Assistant Professor of Graphic Design",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Assistant-Professor-of-Graphic-Design_R0092767",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "graphic design",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-11-03"
+    },
+    {
       "id": "a460089cdbfd",
       "title": "Program Coordinator",
       "district": "University of Arkansas (UAF)",
@@ -70,20 +94,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 3 Days Ago",
-      "first_seen": "2026-10-30"
-    },
-    {
-      "id": "d760b4a7a09a",
-      "title": "Assistant Professor of Graphic Design",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville/Assistant-Professor-of-Graphic-Design_R0092767",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "graphic design",
       "posted_date": "Posted 4 Days Ago",
-      "first_seen": "2026-10-20"
+      "first_seen": "2026-10-30"
     },
     {
       "id": "3084f950557e",
@@ -118,8 +130,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 14 Days Ago",
+      "posted_date": "Posted 15 Days Ago",
       "first_seen": "2026-10-19"
+    },
+    {
+      "id": "d4d499c49f9a",
+      "title": "Project Program Director",
+      "district": "Arkansas State Univ.",
+      "location": "",
+      "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+      "platform": "Taleo",
+      "category": "community",
+      "match_reason": "program director",
+      "posted_date": "",
+      "first_seen": "2026-11-03"
     },
     {
       "id": "c5486e55da47",
@@ -134,28 +158,28 @@
       "first_seen": "2026-10-21"
     },
     {
-      "id": "c1c3521bf49f",
-      "title": "HEALTH PROGRAM SPECIALIST",
+      "id": "8a6448833fce",
+      "title": "HEALTH PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1430518600/",
+      "url": "https://arcareers.arkansas.gov/job/Warren-HEALTH-PROGRAM-COORDINATOR-AR-71671/1444101400/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-11-02"
+      "first_seen": "2026-11-03"
     },
     {
-      "id": "0489ca6bdacf",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "3ed8b86fcbfd",
+      "title": "CORRECTIONS PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1441257400/",
+      "url": "https://arcareers.arkansas.gov/job/Wrightsville-CORRECTIONS-PROGRAM-COORDINATOR-AR-72183/1445180500/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-11-02"
+      "first_seen": "2026-11-03"
     },
     {
       "id": "529271a88a6a",
