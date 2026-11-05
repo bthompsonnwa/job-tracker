@@ -1,18 +1,6 @@
 {
-  "last_updated": "2026-11-04T20:24",
+  "last_updated": "2026-11-05T20:34",
   "jobs": [
-    {
-      "id": "b77195453ad0",
-      "title": "21 CCLC Site Coordinator (2026-27 SY)",
-      "district": "Springdale SD",
-      "location": "George Junior High",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=013866",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-05-04"
-    },
     {
       "id": "ce2847b0e16d",
       "title": "21st CCLC Staff",
@@ -26,18 +14,6 @@
       "first_seen": "2026-05-04"
     },
     {
-      "id": "f4717b79ecb5",
-      "title": "21CCLC Afterschool Program Staff",
-      "district": "Springdale SD",
-      "location": "Westwood Elementary",
-      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014566",
-      "platform": "WinOcular",
-      "category": "school",
-      "match_reason": "cclc",
-      "posted_date": "",
-      "first_seen": "2026-10-12"
-    },
-    {
       "id": "a01ce5238648",
       "title": "Project/Program Coordinator - Master of Science in Operations Management",
       "district": "University of Arkansas (UAF)",
@@ -46,7 +22,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-11-03"
     },
     {
@@ -58,20 +34,8 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-11-03"
-    },
-    {
-      "id": "a460089cdbfd",
-      "title": "Program Coordinator",
-      "district": "University of Arkansas (UAF)",
-      "location": "University of Arkansas, Fayetteville",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/University-of-Arkansas-Fayetteville/Program-Coordinator_R0093273",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "program coordinator",
-      "posted_date": "Posted 5 Days Ago",
-      "first_seen": "2026-10-30"
     },
     {
       "id": "3084f950557e",
@@ -106,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 16 Days Ago",
+      "posted_date": "Posted 17 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -134,64 +98,28 @@
       "first_seen": "2026-10-21"
     },
     {
-      "id": "82a3b23e353b",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Jonesboro-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433022200/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-04"
-    },
-    {
-      "id": "d48ae0ce5a6f",
+      "id": "c1c3521bf49f",
       "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-HEALTH-PROGRAM-SPECIALIST-AR-72205/1447713500/",
+      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1430518600/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-11-04"
+      "first_seen": "2026-11-05"
     },
     {
-      "id": "20ffdf5cfb84",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "3ed8b86fcbfd",
+      "title": "CORRECTIONS PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433018300/",
+      "url": "https://arcareers.arkansas.gov/job/Wrightsville-CORRECTIONS-PROGRAM-COORDINATOR-AR-72183/1445180500/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-11-04"
-    },
-    {
-      "id": "375ed5e3789c",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1433008100/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-04"
-    },
-    {
-      "id": "75a1cee27af4",
-      "title": "CORRECTIONS PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Tucker-Norris-Unit-CORRECTIONS-PROGRAM-SPECIALIST-AR-72168/1447676600/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-04"
+      "first_seen": "2026-11-05"
     },
     {
       "id": "529271a88a6a",
