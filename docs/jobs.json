@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-06T19:57",
+  "last_updated": "2026-11-07T18:02",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -22,7 +22,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-11-03"
     },
     {
@@ -34,7 +34,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "graphic design",
-      "posted_date": "Posted 3 Days Ago",
+      "posted_date": "Posted 4 Days Ago",
       "first_seen": "2026-11-03"
     },
     {
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 18 Days Ago",
+      "posted_date": "Posted 19 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -98,18 +98,6 @@
       "first_seen": "2026-10-21"
     },
     {
-      "id": "17c402b4e2d0",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Beebe-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448570200/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-06"
-    },
-    {
       "id": "1945033c337c",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
@@ -122,76 +110,16 @@
       "first_seen": "2026-11-06"
     },
     {
-      "id": "d48ae0ce5a6f",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-HEALTH-PROGRAM-SPECIALIST-AR-72205/1447713500/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "id": "894def6a8b65",
-      "title": "HEALTH PROGRAM COORDINATOR",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-HEALTH-PROGRAM-COORDINATOR-AR-72205/1448553100/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program coordinator",
-      "posted_date": "",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "id": "f52d9f8d3527",
+      "id": "17c402b4e2d0",
       "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448567200/",
+      "url": "https://arcareers.arkansas.gov/job/Beebe-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448570200/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
       "first_seen": "2026-11-06"
-    },
-    {
-      "id": "652e6ba13fb1",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448566600/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "id": "75a1cee27af4",
-      "title": "CORRECTIONS PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Tucker-Norris-Unit-CORRECTIONS-PROGRAM-SPECIALIST-AR-72168/1447676600/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-06"
-    },
-    {
-      "id": "c1c3521bf49f",
-      "title": "HEALTH PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1430518600/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-05"
     },
     {
       "id": "529271a88a6a",
