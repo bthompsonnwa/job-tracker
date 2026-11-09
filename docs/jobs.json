@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-08T18:20",
+  "last_updated": "2026-11-09T22:59",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -22,19 +22,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 5 Days Ago",
-      "first_seen": "2026-11-03"
-    },
-    {
-      "id": "97356610b535",
-      "title": "Assistant Professor of Graphic Design",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Assistant-Professor-of-Graphic-Design_R0092767",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "graphic design",
-      "posted_date": "Posted 5 Days Ago",
+      "posted_date": "Posted 6 Days Ago",
       "first_seen": "2026-11-03"
     },
     {
@@ -70,8 +58,20 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 20 Days Ago",
+      "posted_date": "Posted 21 Days Ago",
       "first_seen": "2026-10-19"
+    },
+    {
+      "id": "3878ee9906e5",
+      "title": "Digital Content Creator & Social Media Coordinator",
+      "district": "UCA",
+      "location": "Conway, AR",
+      "url": "https://jobs.uca.edu/postings/19921",
+      "platform": "PeopleAdmin",
+      "category": "school",
+      "match_reason": "content creator",
+      "posted_date": "",
+      "first_seen": "2026-11-09"
     },
     {
       "id": "04a0a2816eb1",
@@ -86,28 +86,16 @@
       "first_seen": "2026-11-04"
     },
     {
-      "id": "c5486e55da47",
-      "title": "Digital Content Creator & Social Media Coordinator",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19824",
-      "platform": "PeopleAdmin",
-      "category": "school",
-      "match_reason": "content creator",
-      "posted_date": "",
-      "first_seen": "2026-10-21"
-    },
-    {
-      "id": "c1c3521bf49f",
-      "title": "HEALTH PROGRAM SPECIALIST",
+      "id": "1945033c337c",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Murfreesboro-HEALTH-PROGRAM-SPECIALIST-AR-71958/1430518600/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448568300/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-11-08"
+      "first_seen": "2026-11-09"
     },
     {
       "id": "529271a88a6a",
