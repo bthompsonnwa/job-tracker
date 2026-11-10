@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-09T22:59",
+  "last_updated": "2026-11-10T20:25",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -14,6 +14,18 @@
       "first_seen": "2026-05-04"
     },
     {
+      "id": "ad66718f21f5",
+      "title": "Computer Lab Technician - Hourly",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Computer-Lab-Technician---Hourly_R0093640-3",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "computer lab",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-11-10"
+    },
+    {
       "id": "a01ce5238648",
       "title": "Project/Program Coordinator - Master of Science in Operations Management",
       "district": "University of Arkansas (UAF)",
@@ -22,7 +34,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 6 Days Ago",
+      "posted_date": "Posted 7 Days Ago",
       "first_seen": "2026-11-03"
     },
     {
@@ -58,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 21 Days Ago",
+      "posted_date": "Posted 22 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -84,18 +96,6 @@
       "match_reason": "library technician",
       "posted_date": "",
       "first_seen": "2026-11-04"
-    },
-    {
-      "id": "1945033c337c",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448568300/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-09"
     },
     {
       "id": "529271a88a6a",
