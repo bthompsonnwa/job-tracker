@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T20:09",
+  "last_updated": "2026-11-12T20:46",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -22,7 +22,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "computer lab",
-      "posted_date": "Posted Yesterday",
+      "posted_date": "Posted 2 Days Ago",
       "first_seen": "2026-11-10"
     },
     {
@@ -50,6 +50,30 @@
       "first_seen": "2026-08-06"
     },
     {
+      "id": "0566531a6b80",
+      "title": "Social Media Coordinator",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Social-Media-Coordinator_JR2481",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "social media coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-11-12"
+    },
+    {
+      "id": "ced8304296af",
+      "title": "Program Coordinator, Workforce Transformation",
+      "district": "Crystal Bridges / AWE",
+      "location": "Bentonville, AR",
+      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Workforce-Transformation_JR2497",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "program coordinator",
+      "posted_date": "Posted Today",
+      "first_seen": "2026-11-12"
+    },
+    {
       "id": "e9d16dfc5cbe",
       "title": "Program Coordinator, Medical Education",
       "district": "Crystal Bridges / AWE",
@@ -58,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 23 Days Ago",
+      "posted_date": "Posted 24 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -86,16 +110,16 @@
       "first_seen": "2026-11-04"
     },
     {
-      "id": "1425bec8f786",
-      "title": "HEALTH PROGRAM SPECIALIST",
+      "id": "1945033c337c",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Hot-Springs-HEALTH-PROGRAM-SPECIALIST-AR-71913/1448678900/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448568300/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-11-11"
+      "first_seen": "2026-11-12"
     },
     {
       "id": "529271a88a6a",
