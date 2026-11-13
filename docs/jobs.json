@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T20:46",
+  "last_updated": "2026-11-13T20:28",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -22,7 +22,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "computer lab",
-      "posted_date": "Posted 2 Days Ago",
+      "posted_date": "Posted 3 Days Ago",
       "first_seen": "2026-11-10"
     },
     {
@@ -58,7 +58,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "social media coordinator",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-11-12"
     },
     {
@@ -70,7 +70,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted Today",
+      "posted_date": "Posted Yesterday",
       "first_seen": "2026-11-12"
     },
     {
@@ -82,7 +82,7 @@
       "platform": "Workday",
       "category": "community",
       "match_reason": "program coordinator",
-      "posted_date": "Posted 24 Days Ago",
+      "posted_date": "Posted 25 Days Ago",
       "first_seen": "2026-10-19"
     },
     {
@@ -110,16 +110,16 @@
       "first_seen": "2026-11-04"
     },
     {
-      "id": "1945033c337c",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "8a6448833fce",
+      "title": "HEALTH PROGRAM COORDINATOR",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448568300/",
+      "url": "https://arcareers.arkansas.gov/job/Warren-HEALTH-PROGRAM-COORDINATOR-AR-71671/1444101400/",
       "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "program specialist",
+      "match_reason": "program coordinator",
       "posted_date": "",
-      "first_seen": "2026-11-12"
+      "first_seen": "2026-11-13"
     },
     {
       "id": "529271a88a6a",
