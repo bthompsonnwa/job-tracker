@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-15T19:21",
+  "last_updated": "2026-11-16T22:51",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -14,78 +14,6 @@
       "first_seen": "2026-05-04"
     },
     {
-      "id": "ad66718f21f5",
-      "title": "Computer Lab Technician - Hourly",
-      "district": "University of Arkansas (UAF)",
-      "location": "Fayetteville, AR",
-      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Computer-Lab-Technician---Hourly_R0093640-3",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "computer lab",
-      "posted_date": "Posted 5 Days Ago",
-      "first_seen": "2026-11-10"
-    },
-    {
-      "id": "3084f950557e",
-      "title": "IET and Wage Career Coach/Instructor",
-      "district": "NWACC",
-      "location": "NWACC, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/IET-and-Wage-Career-Coach-Instructor_JR-1232",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "career coach",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-07-13"
-    },
-    {
-      "id": "6e01995afe80",
-      "title": "Part-Time Adjunct Faculty, Graphic Design",
-      "district": "NWACC",
-      "location": "NWACC, Arkansas",
-      "url": "https://nwacc.wd1.myworkdayjobs.com/en-US/NWACC_External_Career_Site/job/NWACC-Arkansas/Part-Time-Faculty--Graphic-Design_JR-1040",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "graphic design",
-      "posted_date": "Posted 30+ Days Ago",
-      "first_seen": "2026-08-06"
-    },
-    {
-      "id": "0566531a6b80",
-      "title": "Social Media Coordinator",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Social-Media-Coordinator_JR2481",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "social media coordinator",
-      "posted_date": "Posted 3 Days Ago",
-      "first_seen": "2026-11-12"
-    },
-    {
-      "id": "ced8304296af",
-      "title": "Program Coordinator, Workforce Transformation",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Workforce-Transformation_JR2497",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "program coordinator",
-      "posted_date": "Posted 3 Days Ago",
-      "first_seen": "2026-11-12"
-    },
-    {
-      "id": "e9d16dfc5cbe",
-      "title": "Program Coordinator, Medical Education",
-      "district": "Crystal Bridges / AWE",
-      "location": "Bentonville, AR",
-      "url": "https://awe.wd1.myworkdayjobs.com/en-US/Art_and_Wellness/job/Bentonville-AR/Program-Coordinator--Medical-Education_JR2582",
-      "platform": "Workday",
-      "category": "community",
-      "match_reason": "program coordinator",
-      "posted_date": "Posted 27 Days Ago",
-      "first_seen": "2026-10-19"
-    },
-    {
       "id": "3878ee9906e5",
       "title": "Digital Content Creator & Social Media Coordinator",
       "district": "UCA",
@@ -98,16 +26,28 @@
       "first_seen": "2026-11-09"
     },
     {
-      "id": "04a0a2816eb1",
-      "title": "Library Technician for Public Services",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19880",
-      "platform": "PeopleAdmin",
+      "id": "1945033c337c",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448568300/",
+      "platform": "SuccessFactors",
       "category": "school",
-      "match_reason": "library technician",
+      "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-11-04"
+      "first_seen": "2026-11-16"
+    },
+    {
+      "id": "17c402b4e2d0",
+      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Beebe-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448570200/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program specialist",
+      "posted_date": "",
+      "first_seen": "2026-11-16"
     },
     {
       "id": "529271a88a6a",
