@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-18T21:17",
+  "last_updated": "2026-11-19T21:19",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -14,6 +14,18 @@
       "first_seen": "2026-05-04"
     },
     {
+      "id": "a5ed1547e498",
+      "title": "Long Term Sub: Science/ College & Career Readiness (Feb-May 2027)",
+      "district": "Springdale SD",
+      "location": "Don Tyson School of Innovation",
+      "url": "https://apply.sdale.org/winocular/workspace/wSpace.exe?Action=wsViewPosting&postingID=014625",
+      "platform": "WinOcular",
+      "category": "school",
+      "match_reason": "college & career",
+      "posted_date": "",
+      "first_seen": "2026-11-19"
+    },
+    {
       "id": "3878ee9906e5",
       "title": "Digital Content Creator & Social Media Coordinator",
       "district": "UCA",
@@ -24,18 +36,6 @@
       "match_reason": "content creator",
       "posted_date": "",
       "first_seen": "2026-11-09"
-    },
-    {
-      "id": "02fa0a950397",
-      "title": "LIBRARIAN",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Pine-Bluff-LIBRARIAN-AR-71601/1451767400/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "librarian",
-      "posted_date": "",
-      "first_seen": "2026-11-18"
     },
     {
       "id": "529271a88a6a",
