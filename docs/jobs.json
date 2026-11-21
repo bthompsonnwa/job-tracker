@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-20T21:02",
+  "last_updated": "2026-11-21T20:03",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -38,35 +38,23 @@
       "first_seen": "2026-11-09"
     },
     {
+      "id": "254ec7cb816f",
+      "title": "CORRECTIONS PROGRAM COORDINATOR",
+      "district": "AR State Jobs",
+      "location": "NW Arkansas",
+      "url": "https://arcareers.arkansas.gov/job/Tucker-Unit-CORRECTIONS-PROGRAM-COORDINATOR-AR-72168/1452756300/",
+      "platform": "SuccessFactors",
+      "category": "school",
+      "match_reason": "program coordinator",
+      "posted_date": "",
+      "first_seen": "2026-11-21"
+    },
+    {
       "id": "a30c2ac52d4e",
       "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
       "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72703/1413432700/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-20"
-    },
-    {
-      "id": "f52d9f8d3527",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448567200/",
-      "platform": "SuccessFactors",
-      "category": "school",
-      "match_reason": "program specialist",
-      "posted_date": "",
-      "first_seen": "2026-11-20"
-    },
-    {
-      "id": "652e6ba13fb1",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
-      "district": "AR State Jobs",
-      "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Little-Rock-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1448566600/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
