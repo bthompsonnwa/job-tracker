@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-24T23:00",
+  "last_updated": "2026-11-25T22:19",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -26,18 +26,6 @@
       "first_seen": "2026-11-19"
     },
     {
-      "id": "3878ee9906e5",
-      "title": "Digital Content Creator & Social Media Coordinator",
-      "district": "UCA",
-      "location": "Conway, AR",
-      "url": "https://jobs.uca.edu/postings/19921",
-      "platform": "PeopleAdmin",
-      "category": "school",
-      "match_reason": "content creator",
-      "posted_date": "",
-      "first_seen": "2026-11-09"
-    },
-    {
       "id": "254ec7cb816f",
       "title": "CORRECTIONS PROGRAM COORDINATOR",
       "district": "AR State Jobs",
@@ -50,16 +38,16 @@
       "first_seen": "2026-11-21"
     },
     {
-      "id": "223cd2422872",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "ebdbfd03a9c2",
+      "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Arkadelphia-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1450946400/",
+      "url": "https://arcareers.arkansas.gov/job/De-Queen-HEALTH-PROGRAM-SPECIALIST-AR-71832/1453739700/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-11-24"
+      "first_seen": "2026-11-25"
     },
     {
       "id": "529271a88a6a",
@@ -72,6 +60,18 @@
       "match_reason": "VA IT",
       "posted_date": "",
       "first_seen": "2026-09-29"
+    },
+    {
+      "id": "b00e37e178cf",
+      "title": "2027/28 Colbert Junior High Librarian/Media Specialist",
+      "district": "Adzuna \u00b7 Fayetteville Public Schools",
+      "location": "Fayetteville, Washington County",
+      "url": "https://www.adzuna.com/details/5978310290?utm_medium=api&utm_source=344300f1",
+      "platform": "Adzuna",
+      "category": "community",
+      "match_reason": "media specialist",
+      "posted_date": "",
+      "first_seen": "2026-11-25"
     }
   ],
   "sources": [
