@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-26T22:15",
+  "last_updated": "2026-11-27T21:55",
   "jobs": [
     {
       "id": "ce2847b0e16d",
@@ -26,6 +26,18 @@
       "first_seen": "2026-11-19"
     },
     {
+      "id": "c91f5e2599fd",
+      "title": "Director of Workforce Development Programs",
+      "district": "University of Arkansas (UAF)",
+      "location": "Fayetteville, AR",
+      "url": "https://uasys.wd5.myworkdayjobs.com/en-US/UAF_External_Career_Site/job/Fayetteville-AR/Director-of-Workforce-Development-Programs_R0093967",
+      "platform": "Workday",
+      "category": "community",
+      "match_reason": "workforce development",
+      "posted_date": "Posted 2 Days Ago",
+      "first_seen": "2026-11-27"
+    },
+    {
       "id": "254ec7cb816f",
       "title": "CORRECTIONS PROGRAM COORDINATOR",
       "district": "AR State Jobs",
@@ -38,16 +50,16 @@
       "first_seen": "2026-11-21"
     },
     {
-      "id": "223cd2422872",
-      "title": "EARLY CHILDHOOD PROGRAM SPECIALIST",
+      "id": "a30c2ac52d4e",
+      "title": "HEALTH PROGRAM SPECIALIST",
       "district": "AR State Jobs",
       "location": "NW Arkansas",
-      "url": "https://arcareers.arkansas.gov/job/Arkadelphia-EARLY-CHILDHOOD-PROGRAM-SPECIALIST-AR-72201/1450946400/",
+      "url": "https://arcareers.arkansas.gov/job/Fayetteville-HEALTH-PROGRAM-SPECIALIST-AR-72703/1413432700/",
       "platform": "SuccessFactors",
       "category": "school",
       "match_reason": "program specialist",
       "posted_date": "",
-      "first_seen": "2026-11-26"
+      "first_seen": "2026-11-27"
     },
     {
       "id": "529271a88a6a",
@@ -60,6 +72,18 @@
       "match_reason": "VA IT",
       "posted_date": "",
       "first_seen": "2026-09-29"
+    },
+    {
+      "id": "b00e37e178cf",
+      "title": "2027/28 Colbert Junior High Librarian/Media Specialist",
+      "district": "Adzuna \u00b7 Fayetteville Public Schools",
+      "location": "Fayetteville, Washington County",
+      "url": "https://www.adzuna.com/details/5978310290?utm_medium=api&utm_source=344300f1",
+      "platform": "Adzuna",
+      "category": "community",
+      "match_reason": "media specialist",
+      "posted_date": "",
+      "first_seen": "2026-11-27"
     }
   ],
   "sources": [
